@@ -1,0 +1,144 @@
+
+Laboratory 5. Virus detection and quantification by high-throughput sequencing.
+
+In this lab, you will go through the processes of detecting and quantifying viruses associated with approximately 5,000 randomly selected soybean leaf samples that were collected from soybean fields in 2008, 2009 and 2014. Total RNA was extracted from pools of leaf samples, combined and sequenced as paired-end 100-nt reads on an Illlumina HiSeq 2500. The compressed output file from the sequences has already been downloaded to each computer.
+
+1.	Open a terminal window (e.g., Ctrl-Alt-T), and open the class directory.
+
+cd PLPA404
+
+2.	Extract the compressed sequence file, which contains pairs of reads for each year (R1 and R2).
+
+tar -xzvf Domier.2015215.tgz
+
+Do Trimmomatic!!!
+
+###trim rnaseq adapters with bbduk or bbpmap
+bbduk.sh in1=read1.fq in2=read2.fq out1=clean1.fq out2=clean2.fq
+
+
+First run (before running Trinity) as Trinity needs salmon :
+source activate salmon
+
+for f in *fastq; do echo "Working on :" ${f}; Trinity --seqType fq --max_memory 100G --single $f --CPU 16 --output /media/owner/7ef86942-96a5-48a7-a325-6c5e1aec7408/RNASeq2018414infant/trimmed_baby_samples/trinity_assembly/${f}-trinity-output; done
+
+3.	To assemble the sequence reads using Trinity RNASeq, open a second terminal window (Ctrl-Alt-T), and then open the Trinity RNASeq directory.
+
+cd trinityrnaseq
+
+4.	Start the Trinity Perl script by typing:  
+
+./Trinity --seqType fq --max_memory 100G --right ../PLPA404/2008_survey_ATCACG_L006_R1_001.fastq --left ../PLPA404/2008_survey_ATCACG_L006_R2_001.fastq --CPU 16 --output ../PLPA/2008-trinity-output
+
+OR
+
+./Trinity --seqType fq --max_memory 100G --right ../PLPA404/2009_ILsurvey_GCCAAT_L006_R1_001.fastq --left ../2009_ILsurvey_GCCAAT_L006_R2_001.fastq --CPU 16 --output ../PLPA/2009-trinity-output
+
+5.	When the script starts successfully, press Ctrl-C to terminate, and close the second terminal window. The assembly can take several hours to run. We won't wait for that today.
+
+
+##trinity single end
+for f in *trimmed_sshv2l*; do
+echo "Working on :" ${f}
+Trinity --seqType fq --max_memory 100G --single $f --CPU 16 --output /media/owner/newdrive/phasing/Domier_10RNAseq.2017104.tgz_transcriptome/Domier_10RNAseq.2017104/RNAseq/bbmap_trimmed/filtered_bbtrimmed/de_novo_assembled_contigs/${f}-trinity-output
+done
+
+####Inchworm assebly if required!
+util/fastQ_to_fastA.pl -I left.fq -a 1 --rev > left.fq.fa
+util/fastQ_to_fastA.pl -I right.fq -a 2 > right.fq.fa
+cat left.fq.fa right.fq.fa > both.senseOriented.fa
+
+#then use both.senseOriented.fa as inchworm input
+#the simplest way to run Inchworm is on strand-specific and sense-oriented fasta-formatted sequences like so:
+
+# normal kmer is 25 or 1/3rd of the read, here lowering the kmer to 18, parallel job
+inchworm --reads both.senseOriented.fa  --run_inchworm --kmers 18 --num_threads 20 --PARALLEL_IWORM > assembled.fasta
+
+#If your data are not strand-specific, then you would run it like so:
+
+inchworm --reads $fasta_file  --run_inchworm --DS --kmers 18 --num_threads 20 > assembled.fasta
+
+
+
+6.	In the first terminal window, compare the pre-assembled contigs in the precooked folder to the proteomes of soybean, soybean-associated organisms and all reference virus sequences.
+
+First, build an indexed database for the proteome file
+
+usearch8 -makeudb_ublast vir-fung-Gm-prot.fasta -output vir-fung-Gm-prot.udb
+
+7.	Use usearch to align the contigs to the proteome database. Usearch is much faster than blastx with a similar level of sensitivity.
+
+usearch8 -ublast precooked/2008-trinity-output/Trinity.fasta -db vir-fung-Gm-prot.udb -evalue 0.0001 -blast6out 2008-trinity-vfg-hits.txt
+
+OR
+
+usearch8 -ublast precooked/2009-trinity-output/Trinity.fasta -db vir-fung-Gm-prot.udb -evalue 0.0001 -blast6out 2009-trinity-vfg-hits.txt
+
+8.	Extract the contigs with significant similarity to reference viruses.
+
+./extract-virus-hits.pl 2008-trinity-vfg-hits.txt precooked/2008-trinity-output/Trinity.fasta 2008_trinity 2008-trinity-vfg-tab.csv 2008-trinity-vfg-hits.fasta
+
+OR
+
+./extract-virus-hits.pl 2009-trinity-vfg-hits.txt precooked/2009-trinity-output/Trinity.fasta 2009_trinity 2009-trinity-vfg-tab.csv 2009-trinity-vfg-hits.fasta
+
+9.	Open the csv file with LibreOffice Calc and sort entries by virus.
+
+Examine the list for viruses not normally associated with soybean (see list below) that have long (>2,000 nt) sequences. Ignore large DNA viruses, retroviruses and transposable elements. Look for viruses that sound like they infect plants. The other viruses may be interesting, but won't be used today.
+
+Soybean-associated viruses
+Alfalfa_mosaic_virus
+Bean_pod_mottle_virus
+Broad_bean_mottle_virus
+Cassava_virus_C-like
+Cucumber_mosaic_virus
+ND_Nepovirus
+Soybean_chlorotic_blotch_virus
+Soybean_chlorotic_mottle_virus
+Soybean_chlorotic_spot_virus
+Soybean_dwarf_virus	Soybean_mild_mottle_pararetrovirus
+Soybean_mosaic_virus
+Soybean_vein_necrosis_virus
+Soybean_yellow_common_mosaic_virus
+Soybean_yellow_mottle_mosaic_virus
+Soybean-associated_bicistronic_virus
+Tobacco_mosaic_virus
+Tobacco_ringspot_virus
+Tobacco_streak_virus
+
+10.	If new viruses are found, open "soybean-viruses.fasta" and add a new fasta entry for the new sequence from the far right column of the spreadsheet. Save the file and work with the other group(s) to finalize a list of news soybean-associated viruses.
+
+11.	To determine the prevalence of the viruses in the sequenced samples, first build an index file for the new soybean-viruses.fasta file.
+
+bowtie-build soybean-viruses.fasta soybean-viruses
+
+12.	Align the sequence reads in one of the original fastq files to the new database using bowtie.
+
+bowtie -q -p 18 soybean-viruses 2008_survey_ATCACG_L006_R1_001.fastq 2008-R1-vfg.out
+
+OR
+
+bowtie -q -p 18 soybean-viruses 2009_ILsurvey_GCCAAT_L006_R1_001.fastq 2009-R1-vfg.out
+
+13.	Determine the numbers of sequence reads that align to each virus.  This gives a measure of the prevalence of the different viruses, but does not correct for intrinsic differences in titers among viruses. 
+
+./bowtie-count.pl 2008-R1-vfg.out 2008-R1-vfg-counts.csv
+
+OR
+
+./bowtie-count.pl 2009-R1-vfg.out 2009-R1-vfg-counts.csv
+
+14.	Merge the two count.csv files and compare the prevalence of soybean-associated viruses between the two years.
+
+NOTE: for making the viral database 
+
+wget ftp://ftp.ncbi.nlm.nih.gov/refseq/release/viral/viral.1.protein.faa.gz
+wget ftp://ftp.ncbi.nlm.nih.gov/refseq/release/viral/viral.2.protein.faa.gz
+gunzip viral.1.protein.faa.gz
+gunzip viral.2.protein.faa.gz
+cat viral.1.protein.faa viral.2.protein.faa > viral.protein.fasta
+ 
+sed -i 's/ \[/=/g'  viral.protein.fasta
+sed -i 's/ /_/g'  viral.protein.fasta
+sed -i 's/]//g'  viral.protein.fasta
+

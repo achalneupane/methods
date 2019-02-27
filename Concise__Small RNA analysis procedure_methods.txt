@@ -1,0 +1,57 @@
+perl /home/owner/Dropbox/perl/extract-regions.pl /media/owner/84c287d9-53c7-4145-bf8c-f22aebb71a84/symarzano_201875/bbmap_trimmed_slagem_name_swapped_with_WTDK3/SsGenome/SSchromosomes.fasta /media/owner/84c287d9-53c7-4145-bf8c-f22aebb71a84/symarzano_201875/bbmap_trimmed_slagem_name_swapped_with_WTDK3/SsGenome/ShortStack_1537798872/region.list >/media/owner/84c287d9-53c7-4145-bf8c-f22aebb71a84/symarzano_201875/bbmap_trimmed_slagem_name_swapped_with_WTDK3/SsGenome/ShortStack_1537798872/extract_out.fasta
+
+
+
+for f in *.fastq; do
+echo $f
+bowtie -q -p 18 -v 1 /media/owner/84c287d9-53c7-4145-bf8c-f22aebb71a84/symarzano_201875/bbmap_trimmed_slagem_name_swapped_with_WTDK3/SsGenome/ShortStack_1537798872/extract_out $f /media/owner/84c287d9-53c7-4145-bf8c-f22aebb71a84/symarzano_201875/bbmap_trimmed_slagem_name_swapped_with_WTDK3/SsGenome/fastq.out/fastq.out_1_mismatch_allowed/${f}.out
+done > >(tee /media/owner/84c287d9-53c7-4145-bf8c-f22aebb71a84/symarzano_201875/bbmap_trimmed_slagem_name_swapped_with_WTDK3/SsGenome/fastq.out/fastq.out_1_mismatch_allowed/log.txt) 2>&1
+
+
+
+for f in *.out; do
+cut -d$'\t' -f 3,5 "$f" > /media/owner/84c287d9-53c7-4145-bf8c-f22aebb71a84/symarzano_201875/bbmap_trimmed_slagem_name_swapped_with_WTDK3/SshV2l/assembly.txt/new_${f}_assembly.txt 
+done
+
+
+for f in *_assembly.txt; do
+awk '{printf ">%s\n%s\n",$1,$2}' $f > /media/owner/84c287d9-53c7-4145-bf8c-f22aebb71a84/symarzano_201875/bbmap_trimmed_slagem_name_swapped_with_WTDK3/SshV2l/assembly.txt/assembly.fasta/new_${f}_assembly.fasta 
+done
+
+for f in *.out; do 
+echo "Processing: " $f
+perl /home/owner/Dropbox/perl/bowtie-count.pl $f /media/owner/84c287d9-53c7-4145-bf8c-f22aebb71a84/symarzano_201875/bbmap_trimmed_slagem_name_swapped_with_WTDK3/SshV2l/count.csv/${f}.csv
+done > >(tee /media/owner/84c287d9-53c7-4145-bf8c-f22aebb71a84/symarzano_201875/bbmap_trimmed_slagem_name_swapped_with_WTDK3/SshV2l/count.csv/log.txt) 2>&1
+
+
+for f in *SsHV2L*; do 
+echo "Processing: " $f
+for i in $(seq 18 24); do
+echo "Doing: " $i
+perl /home/owner/Dropbox/perl/bowtie-count-term.pl $f $i > /media/owner/84c287d9-53c7-4145-bf8c-f22aebb71a84/symarzano_201875/bbmap_trimmed_slagem_name_swapped_with_WTDK3/SshV2l/fastq.out/fastq.out_1_mismatch_allowed/terminal_mismatches/${f}_${i}.txt
+done 
+done
+
+
+cd terminal_mismatches
+for f in *.txt; do
+echo "Processing: " $f
+grep -v '^[ATGCD]' $f > //media/owner/84c287d9-53c7-4145-bf8c-f22aebb71a84/symarzano_201875/bbmap_trimmed_slagem_name_swapped_with_WTDK3/SshV2l/fastq.out/fastq.out_1_mismatch_allowed/terminal_mismatches/clean/clean_${f}
+done
+
+for f in *.fastq; do
+echo $f
+bowtie -S -p 18 -v 1 /media/owner/84c287d9-53c7-4145-bf8c-f22aebb71a84/symarzano_201875/bbmap_trimmed_slagem_name_swapped_with_WTDK3/SshV2l/Rev_ssh_virus2_no_polyA $f /media/owner/84c287d9-53c7-4145-bf8c-f22aebb71a84/symarzano_201875/bbmap_trimmed_slagem_name_swapped_with_WTDK3/SshV2l/SAM/${f}_sam.sam
+done > >(tee /media/owner/84c287d9-53c7-4145-bf8c-f22aebb71a84/symarzano_201875/bbmap_trimmed_slagem_name_swapped_with_WTDK3/SshV2l/SAM/output_for_sam_alignment_with_sshv2l.txt) 2>&1
+
+
+for f in *.sam; do
+echo $f
+samtools view -bS -o /media/owner/84c287d9-53c7-4145-bf8c-f22aebb71a84/symarzano_201875/bbmap_trimmed_slagem_name_swapped_with_WTDK3/SshV2l/BAM/${f}.bam $f
+done
+
+
+for f in sorted*.bam; do
+echo $f
+samtools index $f ${f}.bai
+done

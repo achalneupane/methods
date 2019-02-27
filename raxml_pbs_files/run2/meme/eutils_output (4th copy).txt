@@ -1,0 +1,6125 @@
+myid : ALD89117.1
+>Feature gb|KP900907.1|
+2812	572	CDS
+			product	RNA-dependent RNA polymerase
+			transl_table	4
+			protein_id	gb|ALD89117.1|
+
+myid : ALD89128.1
+>Feature gb|KP900918.1|
+700	>2273	CDS
+			product	RNA-dependent RNA polymerase
+			transl_table	4
+			protein_id	gb|ALD89128.1|
+
+myid : ALD89126.1
+>Feature gb|KP900916.1|
+<1	2616	CDS
+			product	RNA-dependent RNA polymerase
+			transl_table	4
+			protein_id	gb|ALD89126.1|
+
+myid : ANR02692.1
+>Feature gb|KX349058.1|
+<1	>672	gene
+			gene	RdRp
+<1	>672	CDS
+			product	RNA-dependent RNA polymerase
+			transl_table	4
+			protein_id	gb|ANR02692.1|
+
+myid : AVA17449.1
+>Feature gb|MG256173.1|
+473	2857	CDS
+			product	RNA-dependent RNA polymerase
+			transl_table	4
+			protein_id	gb|AVA17449.1|
+
+myid : YP_009272901.1
+>Feature ref|NC_030864.1|
+255	2324	gene
+			locus_tag	BHR80_gp1
+			db_xref	GeneID:28715637
+255	2324	CDS
+			product	RNA-dependent RNA polymerase
+			transl_table	4
+			protein_id	ref|YP_009272901.1|
+
+myid : AIS39016.1
+>Feature gb|KJ636844.1|
+<1465	1	CDS
+			product	RNA-dependent RNA polymerase
+			codon_start	2
+			transl_table	4
+			protein_id	gb|AIS39016.1|
+
+myid : YP_002284334.2
+>Feature ref|NC_011372.2|
+477	2693	gene
+			gene	RDRP
+			locus_tag	BCDVp1
+			db_xref	GeneID:6983659
+477	2693	CDS
+			product	RNA-dependent RNA polymerase
+			transl_table	4
+			protein_id	ref|YP_002284334.2|
+
+myid : AVH76945.1
+>Feature gb|MG721540.1|
+299	2680	gene
+			gene	RdRp
+299	2680	CDS
+			product	RNA-dependent RNA polymerase
+			product	RdRp
+			transl_table	4
+			protein_id	gb|AVH76945.1|
+
+myid : CAJ32468.1
+>Feature emb|AM087550.1|
+31	2247	gene
+			gene	RdRp
+31	2247	CDS
+			product	RNA-dependent RNA polymerase
+			transl_table	4
+			protein_id	emb|CAJ32468.1|
+			db_xref	GOA:Q18L78
+			db_xref	InterPro:IPR008686
+			db_xref	UniProtKB/TrEMBL:Q18L78
+
+myid : DAB41758.1
+>Feature tpg|BK010440.1|
+341	2722	gene
+			gene	RdRp
+341	2722	CDS
+			product	RNA-dependent RNA polymerase
+			transl_table	4
+			protein_id	tpg|DAB41758.1|
+
+myid : DAB41742.1
+>Feature tpg|BK010424.1|
+347	>2680	gene
+			gene	RdRp
+347	>2680	CDS
+			product	RNA-dependent RNA polymerase
+			transl_table	4
+			protein_id	tpg|DAB41742.1|
+
+myid : DAB41759.1
+>Feature tpg|BK010441.1|
+355	2736	gene
+			gene	RdRp
+355	2736	CDS
+			product	RNA-dependent RNA polymerase
+			transl_table	4
+			protein_id	tpg|DAB41759.1|
+
+myid : CEZ26296.1
+>Feature emb|LN827940.1|
+485	2701	gene
+			gene	RdRp
+485	2701	CDS
+			product	RNA dependent RNA polymerase
+			transl_table	4
+			protein_id	emb|CEZ26296.1|
+			db_xref	InterPro:IPR008686
+			db_xref	UniProtKB/TrEMBL:A0A0S4GA35
+
+myid : DAB41757.1
+>Feature tpg|BK010439.1|
+342	2723	gene
+			gene	RdRp
+342	2723	CDS
+			product	RNA-dependent RNA polymerase
+			transl_table	4
+			protein_id	tpg|DAB41757.1|
+
+myid : CEZ26300.1
+>Feature emb|LN827944.1|
+486	2702	gene
+			gene	RdRp
+486	2702	CDS
+			product	RNA dependent RNA polymerase
+			transl_table	4
+			protein_id	emb|CEZ26300.1|
+			db_xref	InterPro:IPR008686
+			db_xref	UniProtKB/TrEMBL:A0A0S4GAA2
+
+myid : ALD89119.1
+>Feature gb|KP900909.1|
+<1	3075	CDS
+			product	RNA-dependent RNA polymerase
+			transl_table	4
+			protein_id	gb|ALD89119.1|
+
+myid : AMM45292.1
+>Feature gb|KT823703.1|
+910	3999	CDS
+			product	putative replicase
+			prot_desc	RNA-dependent RNA polymerase
+			transl_table	4
+			protein_id	gb|AMM45292.1|
+
+myid : DAB41743.1
+>Feature tpg|BK010425.1|
+336	2666	gene
+			gene	RdRp
+336	2666	CDS
+			product	RNA-dependent RNA polymerase
+			transl_table	4
+			protein_id	tpg|DAB41743.1|
+
+myid : ALD89120.1
+>Feature gb|KP900910.1|
+706	3591	CDS
+			product	RNA-dependent RNA polymerase
+			transl_table	4
+			protein_id	gb|ALD89120.1|
+
+myid : AWY10970.1
+>Feature gb|MF444242.1|
+300	2411	CDS
+			product	RNA-dependent RNA polymerase
+			transl_table	4
+			protein_id	gb|AWY10970.1|
+
+myid : YP_009465716.1
+>Feature ref|NC_037055.1|
+345	2408	gene
+			locus_tag	C5Y48_gp1
+			db_xref	GeneID:35996800
+345	2408	CDS
+			product	RNA-dependent RNA polymerase
+			transl_table	4
+			protein_id	ref|YP_009465716.1|
+
+myid : ALD89121.1
+>Feature gb|KP900911.1|
+594	2744	CDS
+			product	RNA-dependent RNA polymerase
+			transl_table	4
+			protein_id	gb|ALD89121.1|
+
+myid : AWY10969.1
+>Feature gb|MF444241.1|
+303	2414	CDS
+			product	RNA-dependent RNA polymerase
+			transl_table	4
+			protein_id	gb|AWY10969.1|
+
+myid : DAB41749.1
+>Feature tpg|BK010431.1|
+391	2682	gene
+			gene	RdRp
+391	2682	CDS
+			product	RNA-dependent RNA polymerase
+			transl_table	4
+			protein_id	tpg|DAB41749.1|
+
+myid : AWY10986.1
+>Feature gb|MF444258.1|
+265	2613	CDS
+			product	RNA-dependent RNA polymerase
+			transl_table	4
+			protein_id	gb|AWY10986.1|
+
+myid : AHE13866.1
+>Feature gb|KC601999.1|
+193	>1959	CDS
+			product	Pol
+			prot_desc	RNA-dependent RNA polymerase
+			transl_table	4
+			protein_id	gb|AHE13866.1|
+
+myid : ALM62243.1
+>Feature gb|KT598240.1|
+272	2344	CDS
+			product	RNA-dependent RNA polymerase
+			transl_table	4
+			protein_id	gb|ALM62243.1|
+			note	Replicase
+
+myid : AIF33766.2
+>Feature gb|KJ873059.2|
+802	3312	CDS
+			product	RNA-dependent RNA polymerase
+			transl_table	4
+			protein_id	gb|AIF33766.2|
+
+myid : DAB41747.1
+>Feature tpg|BK010429.1|
+376	2724	gene
+			gene	RdRp
+376	2724	CDS
+			product	RNA-dependent RNA polymerase
+			transl_table	4
+			protein_id	tpg|DAB41747.1|
+
+myid : AHE13867.1
+>Feature gb|KC602000.1|
+14	>1659	CDS
+			product	Pol
+			prot_desc	RNA-dependent RNA polymerase
+			transl_table	4
+			protein_id	gb|AHE13867.1|
+
+myid : DAB41753.1
+>Feature tpg|BK010435.1|
+374	2722	gene
+			gene	RdRp
+374	2722	CDS
+			product	RNA-dependent RNA polymerase
+			transl_table	4
+			protein_id	tpg|DAB41753.1|
+
+myid : DAB41741.1
+>Feature tpg|BK010423.1|
+338	2725	gene
+			gene	RdRp
+338	2725	CDS
+			product	RNA-dependent RNA polymerase
+			transl_table	4
+			protein_id	tpg|DAB41741.1|
+
+myid : NP_660176.1
+>Feature ref|NC_004049.1|
+246	246	variation
+			note	polymorphism
+			replace	c
+269	2425	gene
+			locus_tag	OmV3agp1
+			db_xref	GeneID:951741
+269	2425	CDS
+			product	RNA-dependent RNA polymerase
+			transl_table	4
+			protein_id	ref|NP_660176.1|
+			db_xref	UniProtKB/TrEMBL:O92614
+332	332	variation
+			note	polymorphism
+			replace	a
+349	349	variation
+			note	polymorphism
+			replace	c
+640	640	variation
+			note	polymorphism
+			replace	t
+724	724	variation
+			note	polymorphism
+			replace	g
+1654	1654	variation
+			note	polymorphism
+			replace	a
+1738	1738	variation
+			note	polymorphism
+			replace	g
+1970	1970	variation
+			note	polymorphism
+			replace	c
+1997	1997	variation
+			note	polymorphism
+			replace	c
+2005	2005	variation
+			note	polymorphism
+			replace	g
+2256	2256	variation
+			note	polymorphism
+			replace	c
+2345	2345	variation
+			note	polymorphism
+			replace	t
+
+myid : AAO21337.1
+>Feature gb|AY172454.1|
+272	2434	CDS
+			product	RdRp-like protein
+			prot_desc	RNA-dependent RNA polymerase
+			transl_table	4
+			protein_id	gb|AAO21337.1|
+
+myid : AWY10971.1
+>Feature gb|MF444243.1|
+<1	>1309	CDS
+			product	RNA-dependent RNA polymerase
+			codon_start	2
+			transl_table	4
+			protein_id	gb|AWY10971.1|
+
+myid : AXI69836.1
+>Feature gb|MH047856.1|
+355	2502	gene
+			gene	Rdrp
+355	2502	CDS
+			product	putative RNA-dependent RNA polymerase
+			transl_table	4
+			protein_id	gb|AXI69836.1|
+
+myid : ANR02693.1
+>Feature gb|KX349059.1|
+<1	>663	gene
+			gene	RdRp
+<1	>663	CDS
+			product	RNA-dependent RNA polymerase
+			transl_table	4
+			protein_id	gb|ANR02693.1|
+
+myid : AHF48623.1
+>Feature gb|KF913882.1|
+322	2433	gene
+			gene	gp1
+322	2433	CDS
+			product	RNA-dependent RNA polymerase
+			prot_desc	viral replicase
+			transl_table	4
+			protein_id	gb|AHF48623.1|
+
+myid : YP_009259483.1
+>Feature ref|NC_030397.1|
+1	2479	gene
+			gene	RdRp
+			locus_tag	BBA83_gp1
+			db_xref	GeneID:28218208
+185	2350	CDS
+			product	RNA-dependent RNA polymerase
+			transl_table	4
+			protein_id	ref|YP_009259483.1|
+
+myid : BAN85985.1
+>Feature dbj|AB855794.1|
+958	3465	gene
+			gene	RdRp
+958	3465	CDS
+			product	putative RNA-dependent RNA polymerase
+			transl_table	4
+			protein_id	dbj|BAN85985.1|
+
+myid : AAD17381.1
+>Feature gb|U51331.2|TCU51331
+1	3570	misc_RNA
+			note	virus-like double-stranded RNA element
+422	2686	CDS
+			product	dsRNA viral RNA-dependent RNA polymerase
+			transl_table	4
+			protein_id	gb|AAD17381.1|
+
+myid : ALD89100.1
+>Feature gb|KP900894.1|
+362	2509	CDS
+			product	RNA-dependent RNA polymerase
+			transl_table	4
+			protein_id	gb|ALD89100.1|
+
+myid : AHF48630.1
+>Feature gb|KF913889.1|
+349	2496	gene
+			gene	gp1
+349	2496	CDS
+			product	RNA-dependent RNA polymerase
+			prot_desc	viral replicase
+			transl_table	4
+			protein_id	gb|AHF48630.1|
+
+myid : AHX84133.1
+>Feature gb|KJ462512.1|
+1	355	5'UTR
+356	2503	CDS
+			product	RNA-dependent RNA polymerase
+			transl_table	4
+			protein_id	gb|AHX84133.1|
+2504	2584	3'UTR
+
+myid : YP_009182161.1
+>Feature ref|NC_028472.1|
+404	2764	gene
+			gene	RdRp
+			locus_tag	AT150_gp1
+			db_xref	GeneID:26373852
+404	2764	CDS
+			product	RNA dependent RNA polymerase
+			transl_table	4
+			protein_id	ref|YP_009182161.1|
+			db_xref	InterPro:IPR008686
+			db_xref	UniProtKB/TrEMBL:A0A0S4GAV3
+
+myid : ANJ77670.1
+>Feature gb|KT365896.1|
+292	2430	CDS
+			product	RNA-dependent RNA polymerase
+			transl_table	4
+			protein_id	gb|ANJ77670.1|
+
+myid : ANR02691.1
+>Feature gb|KX349057.1|
+<1	>687	gene
+			gene	RdRp
+<1	>687	CDS
+			product	RNA-dependent RNA polymerase
+			transl_table	4
+			protein_id	gb|ANR02691.1|
+
+myid : AWY10988.1
+>Feature gb|MF444260.1|
+352	2499	CDS
+			product	RNA-dependent RNA polymerase
+			transl_table	4
+			protein_id	gb|AWY10988.1|
+
+myid : AGC24232.1
+>Feature gb|JX401537.1|
+1	297	5'UTR
+298	2436	CDS
+			product	RNA-dependent RNA polymerase
+			transl_table	4
+			protein_id	gb|AGC24232.1|
+2437	2588	3'UTR
+
+myid : XP_015159341.1
+>Feature ref|XM_015303855.1|
+1	1848	gene
+			gene	LOC102589521
+			db_xref	GeneID:102589521
+1	1848	CDS
+			product	LOW QUALITY PROTEIN: uncharacterized protein LOC102589521
+			transl_except	(pos:1402..1404,aa:OTHER)
+			transl_except	(pos:1420..1422,aa:OTHER)
+			protein_id	ref|XP_015159341.1|
+			note	The sequence of the model RefSeq protein was modified relative to its source genomic sequence to represent the inferred CDS: substituted 2 bases at 2 genomic stop codons
+			db_xref	GeneID:102589521
+
+>Feature ref|NW_006239405.1|
+94841	96264	gene
+			gene	LOC107058311
+			db_xref	GeneID:107058311
+94841	95139	mRNA
+95388	96264
+			product	uncharacterized LOC107058311
+			transcript_id	ref|XM_015303851.1|
+			gene	LOC107058311
+			db_xref	GeneID:107058311
+94841	95139	CDS
+95388	96264
+			product	uncharacterized protein LOC107058311
+			protein_id	ref|XP_015159337.1|
+			gene	LOC107058311
+			db_xref	GeneID:107058311
+133897	134439	gene
+			gene	LOC107058312
+			db_xref	GeneID:107058312
+133897	134439	mRNA
+			product	uncharacterized LOC107058312
+			transcript_id	ref|XM_015303853.1|
+			gene	LOC107058312
+			db_xref	GeneID:107058312
+133897	134439	CDS
+			product	uncharacterized protein LOC107058312
+			protein_id	ref|XP_015159339.1|
+			gene	LOC107058312
+			db_xref	GeneID:107058312
+134522	134884	gene
+			gene	LOC107058313
+			db_xref	GeneID:107058313
+134522	134884	mRNA
+			product	uncharacterized LOC107058313
+			transcript_id	ref|XM_015303854.1|
+			gene	LOC107058313
+			db_xref	GeneID:107058313
+134522	134884	CDS
+			product	uncharacterized protein LOC107058313
+			protein_id	ref|XP_015159340.1|
+			gene	LOC107058313
+			db_xref	GeneID:107058313
+185954	196495	gene
+			gene	LOC102585233
+			db_xref	GeneID:102585233
+185954	186191	mRNA
+188281	188403
+188495	188545
+188771	188842
+188935	189048
+189139	189200
+189711	189783
+189938	189994
+190098	190130
+196225	196495
+			product	NAP1-related protein 2-like
+			transcript_id	ref|XM_015303857.1|
+			gene	LOC102585233
+			db_xref	GeneID:102585233
+186081	186191	CDS
+188281	188403
+188495	188545
+188771	188842
+188935	189048
+189139	189200
+189711	189783
+189938	189994
+190098	190130
+196225	196284
+			product	NAP1-related protein 2-like
+			protein_id	ref|XP_015159343.1|
+			gene	LOC102585233
+			db_xref	GeneID:102585233
+231339	231732	STS
+			standard_name	LS142
+			db_xref	UniSTS:255431
+233221	235901	gene
+			gene	LOC102585573
+			db_xref	GeneID:102585573
+233221	235901	mRNA
+			product	uncharacterized mitochondrial protein AtMg01110-like
+			transcript_id	ref|XM_006364190.2|
+			gene	LOC102585573
+			db_xref	GeneID:102585573
+234203	235519	CDS
+			product	uncharacterized mitochondrial protein AtMg01110-like
+			protein_id	ref|XP_006364252.1|
+			gene	LOC102585573
+			db_xref	GeneID:102585573
+254702	258607	gene
+			gene	LOC102588211
+			db_xref	GeneID:102588211
+254702	255600	mRNA
+256208	256333
+258391	258607
+			product	NADH-ubiquinone oxidoreductase chain 6
+			transcript_id	ref|XM_006364193.2|
+			gene	LOC102588211
+			note	The sequence of the model RefSeq transcript was modified relative to this genomic sequence to represent the inferred CDS: inserted 2 bases in 2 codons
+			exception	unclassified transcription discrepancy
+			db_xref	GeneID:102588211
+254896	255600	CDS
+256208	256333
+258391	258607
+			product	LOW QUALITY PROTEIN: NADH-ubiquinone oxidoreductase chain 6
+			transl_except	(pos:254917..254919,aa:OTHER)
+			protein_id	ref|XP_006364255.1|
+			gene	LOC102588211
+			note	The sequence of the model RefSeq protein was modified relative to this genomic sequence to represent the inferred CDS: inserted 2 bases in 2 codons; substituted 1 base at 1 genomic stop codon
+			exception	unclassified translation discrepancy
+			db_xref	GeneID:102588211
+259680	259857	gene
+			gene	LOC107058314
+			db_xref	GeneID:107058314
+259680	259749	ncRNA
+259781	259857
+			ncRNA_class	lncRNA
+			product	uncharacterized LOC107058314
+			transcript_id	ref|XR_001471927.1|
+			gene	LOC107058314
+			db_xref	GeneID:107058314
+292229	293355	gene
+			gene	LOC102586244
+			db_xref	GeneID:102586244
+292229	293355	mRNA
+			product	NADH-ubiquinone oxidoreductase chain 1-like
+			transcript_id	ref|XM_015303856.1|
+			gene	LOC102586244
+			db_xref	GeneID:102586244
+292273	292686	CDS
+			product	NADH-ubiquinone oxidoreductase chain 1-like
+			protein_id	ref|XP_015159342.1|
+			gene	LOC102586244
+			db_xref	GeneID:102586244
+313852	316458	gene
+			gene	LOC107058309
+			db_xref	GeneID:107058309
+313852	316458	mRNA
+			product	60S ribosomal protein L5, mitochondrial
+			transcript_id	ref|XM_015303850.1|
+			gene	LOC107058309
+			note	The sequence of the model RefSeq transcript was modified relative to this genomic sequence to represent the inferred CDS: deleted 1 base in 1 codon
+			exception	unclassified transcription discrepancy
+			db_xref	GeneID:107058309
+315693	316251	CDS
+			product	LOW QUALITY PROTEIN: 60S ribosomal protein L5, mitochondrial
+			protein_id	ref|XP_015159336.1|
+			gene	LOC107058309
+			note	The sequence of the model RefSeq protein was modified relative to this genomic sequence to represent the inferred CDS: deleted 1 base in 1 codon
+			exception	unclassified translation discrepancy
+			db_xref	GeneID:107058309
+318937	321192	gene
+			gene	LOC102589521
+			db_xref	GeneID:102589521
+318937	320446	mRNA
+320556	320735
+321035	321192
+			product	uncharacterized LOC102589521
+			transcript_id	ref|XM_015303855.1|
+			gene	LOC102589521
+			db_xref	GeneID:102589521
+318937	320446	CDS
+320556	320735
+321035	321192
+			product	LOW QUALITY PROTEIN: uncharacterized protein LOC102589521
+			transl_except	(pos:320338..320340,aa:OTHER)
+			transl_except	(pos:320356..320358,aa:OTHER)
+			protein_id	ref|XP_015159341.1|
+			gene	LOC102589521
+			note	The sequence of the model RefSeq protein was modified relative to this genomic sequence to represent the inferred CDS: substituted 2 bases at 2 genomic stop codons
+			db_xref	GeneID:102589521
+
+myid : YP_004564622.1
+>Feature ref|NC_015629.1|
+1	149	5'UTR
+150	2531	gene
+			locus_tag	TuAMV_gp1
+			db_xref	GeneID:11273214
+150	2531	CDS
+			product	RNA-dependent RNA polymerase
+			transl_table	4
+			protein_id	ref|YP_004564622.1|
+			note	RdRp
+2532	3480	3'UTR
+
+myid : AHX84134.1
+>Feature gb|KJ462513.1|
+1	274	5'UTR
+275	2503	CDS
+			product	RNA-dependent RNA polymerase
+			transl_table	4
+			protein_id	gb|AHX84134.1|
+2504	2586	3'UTR
+
+myid : AHY03257.1
+>Feature gb|KJ485703.1|
+176	2605	CDS
+			product	RNA-dependent RNA polymerase
+			transl_table	4
+			protein_id	gb|AHY03257.1|
+
+myid : YP_009182164.1
+>Feature ref|NC_028475.1|
+308	2443	gene
+			gene	RdRp
+			locus_tag	AT152_gp1
+			db_xref	GeneID:26373858
+308	2443	CDS
+			product	RNA dependent RNA polymerase
+			transl_table	4
+			protein_id	ref|YP_009182164.1|
+			db_xref	InterPro:IPR008686
+			db_xref	UniProtKB/TrEMBL:A0A0S4GCV3
+
+myid : YP_717161.1
+>Feature ref|NC_008285.1|
+9801	3648	gene
+			gene	nad7
+			locus_tag	BrnapMp001
+			db_xref	GeneID:4237893
+9801	9659	CDS
+8664	8596
+7486	7020
+5967	5724
+3909	3648
+			product	NADH dehydrogenase subunit 7
+			protein_id	ref|YP_717100.1|
+			exception	RNA editing
+3696	3696	misc_feature
+			note	C to U RNA editing
+3709	3709	misc_feature
+			note	C to U RNA editing
+3730	3730	misc_feature
+			note	C to U RNA editing
+3745	3745	misc_feature
+			note	C to U RNA editing
+3776	3776	misc_feature
+			note	C to U RNA editing
+3783	3783	misc_feature
+			note	C to U RNA editing
+3870	3870	misc_feature
+			note	C to U RNA editing
+3907	3907	misc_feature
+			note	C to U RNA editing
+5878	5878	misc_feature
+			note	C to U RNA editing
+5907	5907	misc_feature
+			note	C to U RNA editing
+5908	5908	misc_feature
+			note	C to U RNA editing
+5913	5913	misc_feature
+			note	C to U RNA editing
+5923	5923	misc_feature
+			note	C to U RNA editing
+5949	5949	misc_feature
+			note	C to U RNA editing
+7020	7020	misc_feature
+			note	C to U RNA editing
+7121	7121	misc_feature
+			note	C to U RNA editing
+7355	7355	misc_feature
+			note	C to U RNA editing
+7364	7364	misc_feature
+			note	C to U RNA editing
+7383	7383	misc_feature
+			note	C to U RNA editing
+7448	7448	misc_feature
+			note	C to U RNA editing
+7455	7455	misc_feature
+			note	C to U RNA editing
+7486	7486	misc_feature
+			note	C to U RNA editing
+8391	8029	gene
+			gene	orf120
+			locus_tag	BrnapMp002
+			db_xref	GeneID:4237922
+8391	8029	CDS
+			product	hypothetical protein
+			protein_id	ref|YP_717101.1|
+8060	8407	gene
+			gene	orf115a
+			locus_tag	BrnapMp003
+			db_xref	GeneID:4237914
+8060	8407	CDS
+			product	hypothetical protein
+			protein_id	ref|YP_717102.1|
+8599	8599	misc_feature
+			note	C to U RNA editing
+8608	8608	misc_feature
+			note	C to U RNA editing
+9665	9665	misc_feature
+			note	C to U RNA editing
+9725	9725	misc_feature
+			note	C to U RNA editing
+9764	9764	misc_feature
+			note	C to U RNA editing
+9778	9778	misc_feature
+			note	C to U RNA editing
+10822	10478	gene
+			gene	orf114
+			locus_tag	BrnapMp004
+			db_xref	GeneID:4237913
+10822	10478	CDS
+			product	hypothetical protein
+			protein_id	ref|YP_717103.1|
+11763	11287	gene
+			gene	orfB
+			locus_tag	BrnapMp005
+			db_xref	GeneID:4237942
+11763	11287	CDS
+			product	hypothetical protein
+			protein_id	ref|YP_717104.1|
+			exception	RNA editing
+11356	11356	misc_feature
+			note	C to U RNA editing
+11375	11375	misc_feature
+			note	C to U RNA editing
+11461	11461	misc_feature
+			note	C to U RNA editing
+12724	13098	gene
+			gene	orf124
+			locus_tag	BrnapMp006
+			db_xref	GeneID:4237924
+12724	13098	CDS
+			product	hypothetical protein
+			protein_id	ref|YP_717105.1|
+13946	13086	gene
+			gene	orf286
+			locus_tag	BrnapMp007
+			db_xref	GeneID:4237939
+13946	13086	CDS
+			product	hypothetical protein
+			protein_id	ref|YP_717106.1|
+13098	13439	gene
+			gene	orf113a
+			locus_tag	BrnapMp008
+			db_xref	GeneID:4237911
+13098	13439	CDS
+			product	hypothetical protein
+			protein_id	ref|YP_717107.1|
+14265	14195	gene
+			gene	trnC
+			locus_tag	BrnapMt001
+			db_xref	GeneID:4237955
+14265	14195	tRNA
+			product	tRNA-Cys
+			note	anticodon:GCA
+14611	14291	gene
+			gene	orf106a
+			locus_tag	BrnapMp009
+			db_xref	GeneID:4237904
+14611	14291	CDS
+			product	hypothetical protein
+			protein_id	ref|YP_717108.1|
+14442	14368	gene
+			gene	trnP
+			locus_tag	BrnapMt002
+			db_xref	GeneID:4237963
+14442	14368	tRNA
+			product	tRNA-Pro
+			note	anticodon:TGG
+14585	14514	gene
+			gene	trnE
+			locus_tag	BrnapMt003
+			db_xref	GeneID:4237957
+14585	14514	tRNA
+			product	tRNA-Glu
+			note	anticodon:TTC
+17209	16877	gene
+			gene	orf110
+			locus_tag	BrnapMp010
+			db_xref	GeneID:4237909
+17209	16877	CDS
+			product	hypothetical protein
+			protein_id	ref|YP_717109.1|
+18872	18570	gene
+			gene	orf100a
+			locus_tag	BrnapMp011
+			db_xref	GeneID:4237895
+18872	18570	CDS
+			product	hypothetical protein
+			protein_id	ref|YP_717110.1|
+20252	20325	gene
+			gene	trnW
+			locus_tag	BrnapMt004
+			db_xref	GeneID:4237968
+20252	20325	tRNA
+			product	tRNA-Trp
+			note	anticodon:CCA~plastid-like form
+21553	21858	gene
+			gene	orf101a
+			locus_tag	BrnapMp012
+			db_xref	GeneID:4237897
+21553	21858	CDS
+			product	hypothetical protein
+			protein_id	ref|YP_717111.1|
+22943	23030	gene
+			gene	trnS
+			locus_tag	BrnapMt005
+			db_xref	GeneID:4237965
+22943	23030	tRNA
+			product	tRNA-Ser
+			note	anticodon:GCT
+23111	23184	gene
+			gene	trnH
+			locus_tag	BrnapMt006
+			db_xref	GeneID:4237958
+23111	23184	tRNA
+			product	tRNA-His
+			note	anticodon:GTG~plastid-like form
+23750	23379	gene
+			gene	orf123
+			locus_tag	BrnapMp013
+			db_xref	GeneID:4237923
+23750	23379	CDS
+			product	hypothetical protein
+			protein_id	ref|YP_717112.1|
+23427	23768	gene
+			gene	orf113b
+			locus_tag	BrnapMp014
+			db_xref	GeneID:4237912
+23427	23768	CDS
+			product	hypothetical protein
+			protein_id	ref|YP_717113.1|
+63062	65346	gene
+43963	43942
+25760	24232
+			gene	nad5
+			locus_tag	BrnapMp015
+			trans_splicing
+			exception	trans-splicing
+			db_xref	GeneID:4237891
+63062	63290	CDS
+64130	65346
+43963	43942
+25760	25367
+24379	24232
+			product	NADH dehydrogenase subunit 5
+			protein_id	ref|YP_717097.1|
+			exception	trans-splicing, RNA editing
+24379	24232	exon
+			number	5
+24284	24284	misc_feature
+			note	C to U RNA editing
+24324	24324	misc_feature
+			note	C to U RNA editing
+24326	24326	misc_feature
+			note	C to U RNA editing
+24347	24347	misc_feature
+			note	C to U RNA editing
+25761	25367	exon
+			number	4
+25619	25619	misc_feature
+			note	C to U RNA editing
+25649	25649	misc_feature
+			note	C to U RNA editing
+25679	25679	misc_feature
+			note	C to U RNA editing
+25739	25739	misc_feature
+			note	C to U RNA editing
+27936	27364	gene
+			gene	nad9
+			locus_tag	BrnapMp016
+			db_xref	GeneID:4237894
+27936	27364	CDS
+			product	NADH dehydrogenase subunit 9
+			protein_id	ref|YP_717114.1|
+			exception	RNA editing
+27498	27498	misc_feature
+			note	C to U RNA editing
+27539	27539	misc_feature
+			note	C to U RNA editing
+27609	27609	misc_feature
+			note	C to U RNA editing
+27639	27639	misc_feature
+			note	C to U RNA editing
+27747	27747	misc_feature
+			note	C to U RNA editing
+27770	27770	misc_feature
+			note	C to U RNA editing
+27845	27845	misc_feature
+			note	C to U RNA editing
+27923	27923	misc_feature
+			note	C to U RNA editing
+<31701	32336	gene
+			gene	ccmFN2
+			locus_tag	BrnapMp017
+			db_xref	GeneID:4237880
+<31701	32336	CDS
+			product	cytochrome c biogenesis ccmF
+			protein_id	ref|YP_717115.1|
+			note	start codon not determined
+			exception	RNA editing
+31789	31789	misc_feature
+			note	C to U RNA editing
+31817	31817	misc_feature
+			note	C to U RNA editing
+31900	31900	misc_feature
+			note	C to U RNA editing
+31932	31932	misc_feature
+			note	C to U RNA editing
+31950	31950	misc_feature
+			note	C to U RNA editing
+31983	31983	misc_feature
+			note	C to U RNA editing
+32001	32001	misc_feature
+			note	C to U RNA editing
+32044	32044	misc_feature
+			note	C to U RNA editing
+32068	32068	misc_feature
+			note	C to U RNA editing
+32115	32115	misc_feature
+			note	C to U RNA editing
+34663	34734	gene
+			gene	trnQ
+			locus_tag	BrnapMt007
+			db_xref	GeneID:4237964
+34663	34734	tRNA
+			product	tRNA-Gln
+			note	anticodon:TTG
+37411	36626	gene
+			gene	atp6
+			locus_tag	BrnapMp018
+			db_xref	GeneID:4237874
+37411	36626	CDS
+			product	ATPase subunit 6
+			protein_id	ref|YP_717116.1|
+			exception	RNA editing
+37309	37309	misc_feature
+			note	C to U RNA editing
+38598	38526	gene
+			gene	trnM
+			locus_tag	BrnapMt008
+			db_xref	GeneID:4237961
+38598	38526	tRNA
+			product	tRNA-Met
+			note	anticodon:CAT~plastid-like form
+41887	41309	gene
+			gene	orf25
+			locus_tag	BrnapMp019
+			db_xref	GeneID:4237936
+41887	41309	CDS
+			product	hypothetical protein
+			protein_id	ref|YP_717117.1|
+			exception	RNA editing
+41472	41472	misc_feature
+			note	C to U RNA editing
+41493	41493	misc_feature
+			note	C to U RNA editing
+41637	41637	misc_feature
+			note	C to U RNA editing
+41638	41638	misc_feature
+			note	C to U RNA editing
+41640	41640	misc_feature
+			note	C to U RNA editing
+41673	41673	misc_feature
+			note	C to U RNA editing
+41750	41750	misc_feature
+			note	C to U RNA editing
+41799	41799	misc_feature
+			note	C to U RNA editing
+42424	42122	gene
+			gene	nad4L
+			locus_tag	BrnapMp020
+			db_xref	GeneID:4237890
+42424	42122	CDS
+			product	NADH dehydrogenase subunit 4L
+			protein_id	ref|YP_717118.1|
+			exception	RNA editing
+42267	42267	misc_feature
+			note	C to U RNA editing
+42294	42294	misc_feature
+			note	C to U RNA editing
+42315	42315	misc_feature
+			note	C to U RNA editing
+42325	42325	misc_feature
+			note	C to U RNA editing
+42330	42330	misc_feature
+			note	C to U RNA editing
+42339	42339	misc_feature
+			note	C to U RNA editing
+42370	42370	misc_feature
+			note	C to U RNA editing
+42384	42384	misc_feature
+			note	C to U RNA editing
+42417	42417	misc_feature
+			note	C to U RNA editing
+43755	43450	gene
+			gene	orf101b
+			locus_tag	BrnapMp021
+			db_xref	GeneID:4237898
+43755	43450	CDS
+			product	hypothetical protein
+			protein_id	ref|YP_717119.1|
+43963	43942	exon
+			gene	nad5
+			number	3
+44947	44279	gene
+			gene	orf222
+			locus_tag	BrnapMp022
+			db_xref	GeneID:4237935
+44947	44279	CDS
+			product	hypothetical protein
+			protein_id	ref|YP_717120.1|
+49319	48753	gene
+			gene	orf188
+			locus_tag	BrnapMp023
+			db_xref	GeneID:4237933
+49319	48753	CDS
+			product	hypothetical protein
+			protein_id	ref|YP_717121.1|
+50371	49925	gene
+			gene	rps7
+			locus_tag	BrnapMp024
+			db_xref	GeneID:4237951
+50371	49925	CDS
+			product	ribosomal protein S7
+			protein_id	ref|YP_717122.1|
+			exception	RNA editing
+50040	50040	misc_feature
+			note	C to U RNA editing
+51119	51039	gene
+			gene	trnI
+			locus_tag	BrnapMt009
+			db_xref	GeneID:4237959
+51119	51039	tRNA
+			product	tRNA-Ile
+			note	anticodon:CAT
+52831	53190	gene
+			gene	orf119
+			locus_tag	BrnapMp025
+			db_xref	GeneID:4237921
+52831	53190	CDS
+			product	hypothetical protein
+			protein_id	ref|YP_717123.1|
+54470	54847	gene
+			gene	orf125
+			locus_tag	BrnapMp026
+			db_xref	GeneID:4237925
+54470	54847	CDS
+			product	hypothetical protein
+			protein_id	ref|YP_717124.1|
+57824	58309	gene
+			gene	orf161
+			locus_tag	BrnapMp027
+			db_xref	GeneID:4237931
+57824	58309	CDS
+			product	hypothetical protein
+			protein_id	ref|YP_717125.1|
+58367	58846	gene
+			gene	orf159
+			locus_tag	BrnapMp028
+			db_xref	GeneID:4237930
+58367	58846	CDS
+			product	hypothetical protein
+			protein_id	ref|YP_717126.1|
+177295	176909	gene
+101147	102344
+59083	62848
+			gene	nad1
+			locus_tag	BrnapMp029
+			trans_splicing
+			exception	trans-splicing
+			db_xref	GeneID:4237888
+177295	176909	CDS
+101147	101227
+102153	102344
+59083	59140
+62589	62848
+			product	NADH dehydrogenase subunit 1
+			protein_id	ref|YP_717098.1|
+			exception	trans-splicing, RNA editing
+59083	59140	exon
+			number	4
+59096	59096	misc_feature
+			note	C to U RNA editing
+<59777	61810	gene
+			gene	matR
+			locus_tag	BrnapMp030
+			db_xref	GeneID:4237886
+<59777	61810	CDS
+			product	maturase-related protein
+			protein_id	ref|YP_717127.1|
+			note	start codon not determined
+			exception	RNA editing
+60162	60162	misc_feature
+			note	C to U RNA editing
+60249	60249	misc_feature
+			note	C to U RNA editing
+61521	61521	misc_feature
+			note	C to U RNA editing
+61542	61542	misc_feature
+			note	C to U RNA editing
+61562	61562	misc_feature
+			note	C to U RNA editing
+61598	61598	misc_feature
+			note	C to U RNA editing
+61668	61668	misc_feature
+			note	C to U RNA editing
+61686	61686	misc_feature
+			note	C to U RNA editing
+62589	62848	exon
+			number	5
+62589	62589	misc_feature
+			note	C to U RNA editing
+62595	62595	misc_feature
+			note	C to U RNA editing
+62613	62613	misc_feature
+			note	C to U RNA editing
+62625	62625	misc_feature
+			note	C to U RNA editing
+62693	62693	misc_feature
+			note	C to U RNA editing
+62768	62768	misc_feature
+			note	C to U RNA editing
+62798	62798	misc_feature
+			note	C to U RNA editing
+62807	62807	misc_feature
+			note	C to U RNA editing
+63062	63290	exon
+			number	1
+63216	63216	misc_feature
+			note	C to U RNA editing
+64130	65346	exon
+			number	2
+64142	64142	misc_feature
+			note	C to U RNA editing
+64172	64172	misc_feature
+			note	C to U RNA editing
+64258	64258	misc_feature
+			note	C to U RNA editing
+64274	64274	misc_feature
+			note	C to U RNA editing
+64298	64298	misc_feature
+			note	C to U RNA editing
+64394	64394	misc_feature
+			note	C to U RNA editing
+64439	64439	misc_feature
+			note	C to U RNA editing
+64448	64448	misc_feature
+			note	C to U RNA editing
+64453	64453	misc_feature
+			note	C to U RNA editing
+64498	64498	misc_feature
+			note	C to U RNA editing
+64508	64508	misc_feature
+			note	C to U RNA editing
+64529	64529	misc_feature
+			note	C to U RNA editing
+64576	64576	misc_feature
+			note	C to U RNA editing
+64613	64613	misc_feature
+			note	C to U RNA editing
+64625	64625	misc_feature
+			note	C to U RNA editing
+64664	64664	misc_feature
+			note	C to U RNA editing
+64735	64735	misc_feature
+			note	C to U RNA editing
+64763	64763	misc_feature
+			note	C to U RNA editing
+64775	64775	misc_feature
+			note	C to U RNA editing
+65300	65300	misc_feature
+			note	C to U RNA editing
+65692	66039	gene
+			gene	orf115b
+			locus_tag	BrnapMp031
+			db_xref	GeneID:4237915
+65692	66039	CDS
+			product	hypothetical protein
+			protein_id	ref|YP_717128.1|
+69670	69552	gene
+			gene	rrn5
+			locus_tag	BrnapMr001
+			db_xref	GeneID:4237954
+69670	69552	rRNA
+			product	5S ribosomal RNA
+71623	69776	gene
+			gene	rrn18
+			locus_tag	BrnapMr002
+			db_xref	GeneID:4237952
+71623	69776	rRNA
+			product	18S ribosomal RNA
+70809	71202	STS
+			standard_name	LS142
+			db_xref	UniSTS:255431
+75338	75652	gene
+			gene	orf104
+			locus_tag	BrnapMp032
+			db_xref	GeneID:4237903
+75338	75652	CDS
+			product	hypothetical protein
+			protein_id	ref|YP_717129.1|
+84943	82272	gene
+			gene	cox2-2
+			locus_tag	BrnapMp033
+			db_xref	GeneID:4237884
+84943	84244	CDS
+82894	82272
+			product	cytochrome c oxidase subunit 2
+			protein_id	ref|YP_717130.1|
+			note	putative pseudogene
+			exception	RNA editing
+82859	82272	gene
+			gene	orf195
+			locus_tag	BrnapMp034
+			db_xref	GeneID:4237934
+82859	82272	CDS
+			product	hypothetical protein
+			protein_id	ref|YP_717131.1|
+82870	85926	repeat_region
+			note	2 kb repeat
+82874	82874	misc_feature
+			note	C to U RNA editing
+84246	84246	misc_feature
+			note	C to U RNA editing
+84363	84363	misc_feature
+			note	C to U RNA editing
+84387	84387	misc_feature
+			note	C to U RNA editing
+84468	84468	misc_feature
+			note	C to U RNA editing
+84666	84666	misc_feature
+			note	C to U RNA editing
+84691	84691	misc_feature
+			note	C to U RNA editing
+84806	84806	misc_feature
+			note	C to U RNA editing
+84873	84873	misc_feature
+			note	C to U RNA editing
+84917	84917	misc_feature
+			note	C to U RNA editing
+85724	86071	gene
+			gene	orf115c
+			locus_tag	BrnapMp035
+			db_xref	GeneID:4237916
+85724	86071	CDS
+			product	hypothetical protein
+			protein_id	ref|YP_717132.1|
+89696	90022	gene
+			gene	orf108a
+			locus_tag	BrnapMp036
+			db_xref	GeneID:4237906
+89696	90022	CDS
+			product	hypothetical protein
+			protein_id	ref|YP_717133.1|
+94615	92301	gene
+			gene	ccmFC
+			locus_tag	BrnapMp037
+			db_xref	GeneID:4237878
+94615	93836	CDS
+92879	92301
+			product	cytochrome c biogenesis ccmF
+			protein_id	ref|YP_717134.1|
+			exception	RNA editing
+92333	92333	misc_feature
+			note	C to U RNA editing
+92414	92414	misc_feature
+			note	C to U RNA editing
+92488	92488	misc_feature
+			note	C to U RNA editing
+92770	92770	misc_feature
+			note	C to U RNA editing
+94201	94201	misc_feature
+			note	C to U RNA editing
+94210	94210	misc_feature
+			note	C to U RNA editing
+94282	94282	misc_feature
+			note	C to U RNA editing
+94456	94456	misc_feature
+			note	C to U RNA editing
+94461	94461	misc_feature
+			note	C to U RNA editing
+94470	94470	misc_feature
+			note	C to U RNA editing
+94495	94495	misc_feature
+			note	C to U RNA editing
+94513	94513	misc_feature
+			note	C to U RNA editing
+94566	94566	misc_feature
+			note	C to U RNA editing
+94811	94740	gene
+			gene	trnG
+			locus_tag	BrnapMt010
+			db_xref	GeneID:4237972
+94811	94740	tRNA
+			product	tRNA-Gly
+			note	anticodon:GCC
+96172	95732	gene
+			gene	orf146
+			locus_tag	BrnapMp038
+			db_xref	GeneID:4237928
+96172	95732	CDS
+			product	hypothetical protein
+			protein_id	ref|YP_717135.1|
+96486	97283	gene
+			gene	cox3
+			locus_tag	BrnapMp039
+			db_xref	GeneID:4237885
+96486	97283	CDS
+			product	cytochrome c oxidase subunit 3
+			protein_id	ref|YP_717136.1|
+			exception	RNA editing
+96597	96597	misc_feature
+			note	C to U RNA editing
+96730	96730	misc_feature
+			note	C to U RNA editing
+96742	96742	misc_feature
+			note	C to U RNA editing
+96796	96796	misc_feature
+			note	C to U RNA editing
+96799	96799	misc_feature
+			note	C to U RNA editing
+96898	96898	misc_feature
+			note	C to U RNA editing
+96907	96907	misc_feature
+			note	C to U RNA editing
+97950	98393	gene
+			gene	orf147
+			locus_tag	BrnapMp040
+			db_xref	GeneID:4237929
+97950	98393	CDS
+			product	hypothetical protein
+			protein_id	ref|YP_717137.1|
+98330	98824	gene
+			gene	orf164
+			locus_tag	BrnapMp041
+			db_xref	GeneID:4237932
+98330	98824	CDS
+			product	hypothetical protein
+			protein_id	ref|YP_717138.1|
+98707	98354	gene
+			gene	orf117a
+			locus_tag	BrnapMp042
+			db_xref	GeneID:4237919
+98707	98354	CDS
+			product	hypothetical protein
+			protein_id	ref|YP_717139.1|
+100744	101046	gene
+			gene	orf100b
+			locus_tag	BrnapMp043
+			db_xref	GeneID:4237896
+100744	101046	CDS
+			product	hypothetical protein
+			protein_id	ref|YP_717140.1|
+101147	101227	exon
+			gene	nad1
+			number	2
+102153	102344	exon
+			gene	nad1
+			number	3
+102174	102174	misc_feature
+			gene	nad1
+			note	C to U RNA editing
+102176	102176	misc_feature
+			gene	nad1
+			note	C to U RNA editing
+102177	102177	misc_feature
+			gene	nad1
+			note	C to U RNA editing
+102184	102184	misc_feature
+			gene	nad1
+			note	C to U RNA editing
+102220	102220	misc_feature
+			gene	nad1
+			note	C to U RNA editing
+102255	102255	misc_feature
+			gene	nad1
+			note	C to U RNA editing
+102264	102264	misc_feature
+			gene	nad1
+			note	C to U RNA editing
+102319	102319	misc_feature
+			gene	nad1
+			note	C to U RNA editing
+105814	105488	gene
+			gene	orf108b
+			locus_tag	BrnapMp044
+			db_xref	GeneID:4237907
+105814	105488	CDS
+			product	hypothetical protein
+			protein_id	ref|YP_717141.1|
+106274	106621	gene
+			gene	orf115d
+			locus_tag	BrnapMp045
+			db_xref	GeneID:4237917
+106274	106621	CDS
+			product	hypothetical protein
+			protein_id	ref|YP_717142.1|
+107794	106649	gene
+			gene	ccmFN1
+			locus_tag	BrnapMp046
+			db_xref	GeneID:4237879
+107794	106649	CDS
+			product	cytochrome c biogenesis ccmF
+			protein_id	ref|YP_717143.1|
+			exception	RNA editing
+106819	106819	misc_feature
+			note	C to U RNA editing
+106843	106843	misc_feature
+			note	C to U RNA editing
+106992	106992	misc_feature
+			note	C to U RNA editing
+107007	107007	misc_feature
+			note	C to U RNA editing
+107019	107019	misc_feature
+			note	C to U RNA editing
+107088	107088	misc_feature
+			note	C to U RNA editing
+107089	107089	misc_feature
+			note	C to U RNA editing
+107423	107423	misc_feature
+			note	C to U RNA editing
+107512	107512	misc_feature
+			note	C to U RNA editing
+107532	107532	misc_feature
+			note	C to U RNA editing
+107539	107539	misc_feature
+			note	C to U RNA editing
+107644	107644	misc_feature
+			note	C to U RNA editing
+107658	107658	misc_feature
+			note	C to U RNA editing
+107697	107697	misc_feature
+			note	C to U RNA editing
+107757	107757	misc_feature
+			note	C to U RNA editing
+112435	112659	gene
+			gene	atp9
+			locus_tag	BrnapMp047
+			db_xref	GeneID:4237875
+112435	112659	CDS
+			product	ATPase subunit 9
+			protein_id	ref|YP_717144.1|
+			exception	RNA editing
+112454	112454	misc_feature
+			note	C to U RNA editing
+112484	112484	misc_feature
+			note	C to U RNA editing
+112568	112568	misc_feature
+			note	C to U RNA editing
+112625	112625	misc_feature
+			note	C to U RNA editing
+112970	113938	gene
+			gene	orf322
+			locus_tag	BrnapMp048
+			db_xref	GeneID:4237940
+112970	113938	CDS
+			product	hypothetical protein
+			protein_id	ref|YP_717145.1|
+114042	114398	gene
+			gene	nad3
+			locus_tag	BrnapMp049
+			db_xref	GeneID:4237970
+114042	114398	CDS
+			product	NADH dehydrogenase subunit 3
+			protein_id	ref|YP_717146.1|
+			exception	RNA editing
+114046	114046	misc_feature
+			note	C to U RNA editing
+114064	114064	misc_feature
+			note	C to U RNA editing
+114121	114121	misc_feature
+			note	C to U RNA editing
+114187	114187	misc_feature
+			note	C to U RNA editing
+114249	114249	misc_feature
+			note	C to U RNA editing
+114250	114250	misc_feature
+			note	C to U RNA editing
+114288	114288	misc_feature
+			note	C to U RNA editing
+114292	114292	misc_feature
+			note	C to U RNA editing
+114385	114385	misc_feature
+			note	C to U RNA editing
+114390	114390	misc_feature
+			note	C to U RNA editing
+114446	114823	gene
+			gene	rps12
+			locus_tag	BrnapMp050
+			db_xref	GeneID:4237947
+114446	114823	CDS
+			product	ribosomal protein S12
+			protein_id	ref|YP_717147.1|
+			exception	RNA editing
+114549	114549	misc_feature
+			note	C to U RNA editing
+114591	114591	misc_feature
+			note	C to U RNA editing
+114641	114641	misc_feature
+			note	C to U RNA editing
+114666	114666	misc_feature
+			note	C to U RNA editing
+114714	114714	misc_feature
+			note	C to U RNA editing
+114729	114729	misc_feature
+			note	C to U RNA editing
+114730	114730	misc_feature
+			note	C to U RNA editing
+115015	115635	gene
+			gene	ccmB
+			locus_tag	BrnapMp051
+			db_xref	GeneID:4237876
+115015	115635	CDS
+			product	cytochrome c biogenesis ccmB
+			protein_id	ref|YP_717148.1|
+			exception	RNA editing
+115030	115030	misc_feature
+			note	C to U RNA editing
+115042	115042	misc_feature
+			note	C to U RNA editing
+115057	115057	misc_feature
+			note	C to U RNA editing
+115085	115085	misc_feature
+			note	C to U RNA editing
+115094	115094	misc_feature
+			note	C to U RNA editing
+115101	115101	misc_feature
+			note	C to U RNA editing
+115142	115142	misc_feature
+			note	C to U RNA editing
+115151	115151	misc_feature
+			note	C to U RNA editing
+115162	115162	misc_feature
+			note	C to U RNA editing
+115163	115163	misc_feature
+			note	C to U RNA editing
+115168	115168	misc_feature
+			note	C to U RNA editing
+115173	115173	misc_feature
+			note	C to U RNA editing
+115174	115174	misc_feature
+			note	C to U RNA editing
+115178	115178	misc_feature
+			note	C to U RNA editing
+115186	115186	misc_feature
+			note	C to U RNA editing
+115193	115193	misc_feature
+			note	C to U RNA editing
+115195	115195	misc_feature
+			note	C to U RNA editing
+115207	115207	misc_feature
+			note	C to U RNA editing
+115208	115208	misc_feature
+			note	C to U RNA editing
+115300	115300	misc_feature
+			note	C to U RNA editing
+115318	115318	misc_feature
+			note	C to U RNA editing
+115352	115352	misc_feature
+			note	C to U RNA editing
+115381	115381	misc_feature
+			note	C to U RNA editing
+115393	115393	misc_feature
+			note	C to U RNA editing
+115394	115394	misc_feature
+			note	C to U RNA editing
+115438	115438	misc_feature
+			note	C to U RNA editing
+115442	115442	misc_feature
+			note	C to U RNA editing
+115481	115481	misc_feature
+			note	C to U RNA editing
+115489	115489	misc_feature
+			note	C to U RNA editing
+115490	115490	misc_feature
+			note	C to U RNA editing
+115499	115499	misc_feature
+			note	C to U RNA editing
+115526	115526	misc_feature
+			note	C to U RNA editing
+115528	115528	misc_feature
+			note	C to U RNA editing
+115565	115565	misc_feature
+			note	C to U RNA editing
+115568	115568	misc_feature
+			note	C to U RNA editing
+115580	115580	misc_feature
+			note	C to U RNA editing
+115583	115583	misc_feature
+			note	C to U RNA editing
+115590	115590	misc_feature
+			note	C to U RNA editing
+115610	115610	misc_feature
+			note	C to U RNA editing
+117763	117458	gene
+			gene	orf101c
+			locus_tag	BrnapMp052
+			db_xref	GeneID:4237899
+117763	117458	CDS
+			product	hypothetical protein
+			protein_id	ref|YP_717149.1|
+119856	123031	gene
+			gene	rrn26
+			locus_tag	BrnapMr003
+			db_xref	GeneID:4237953
+119856	123031	rRNA
+			product	26S ribosomal RNA
+126555	126217	gene
+			gene	orf112
+			locus_tag	BrnapMp053
+			db_xref	GeneID:4237910
+126555	126217	CDS
+			product	hypothetical protein
+			protein_id	ref|YP_717150.1|
+128505	128185	gene
+			gene	orf106b
+			locus_tag	BrnapMp054
+			db_xref	GeneID:4237905
+128505	128185	CDS
+			product	hypothetical protein
+			protein_id	ref|YP_717151.1|
+129791	129864	gene
+			gene	trnfM
+			locus_tag	BrnapMt011
+			db_xref	GeneID:4237971
+129791	129864	tRNA
+			product	tRNA-Met
+			note	anticodon:CAT; fMet
+130799	131185	gene
+			gene	orf128
+			locus_tag	BrnapMp055
+			db_xref	GeneID:4237926
+130799	131185	CDS
+			product	hypothetical protein
+			protein_id	ref|YP_717152.1|
+132626	132321	gene
+			gene	orf101d
+			locus_tag	BrnapMp056
+			db_xref	GeneID:4237900
+132626	132321	CDS
+			product	hypothetical protein
+			protein_id	ref|YP_717153.1|
+135221	134892	gene
+			gene	orf109
+			locus_tag	BrnapMp057
+			db_xref	GeneID:4237908
+135221	134892	CDS
+			product	hypothetical protein
+			protein_id	ref|YP_717154.1|
+137182	135659	gene
+			gene	atp1
+			locus_tag	BrnapMp058
+			db_xref	GeneID:4237873
+137182	135659	CDS
+			product	ATPase subunit 1
+			protein_id	ref|YP_717155.1|
+			exception	RNA editing
+135699	135699	misc_feature
+			note	C to U RNA editing
+135768	135768	misc_feature
+			note	C to U RNA editing
+135891	135891	misc_feature
+			note	C to U RNA editing
+136005	136005	misc_feature
+			note	C to U RNA editing
+137168	137168	misc_feature
+			note	C to U RNA editing
+138964	139317	gene
+			gene	orf117b
+			locus_tag	BrnapMp059
+			db_xref	GeneID:4237920
+138964	139317	CDS
+			product	hypothetical protein
+			protein_id	ref|YP_717156.1|
+140317	143073	gene
+			gene	rpl2
+			locus_tag	BrnapMp060
+			db_xref	GeneID:4237945
+140317	141233	CDS
+142941	143073
+			product	ribosomal protein L2
+			protein_id	ref|YP_717157.1|
+			exception	RNA editing
+140352	140352	misc_feature
+			note	C to U RNA editing
+140528	140528	misc_feature
+			note	C to U RNA editing
+<143241	144050	gene
+			gene	orfX
+			locus_tag	BrnapMp061
+			db_xref	GeneID:4237943
+<143241	144050	CDS
+			product	hypothetical protein
+			protein_id	ref|YP_717158.1|
+			note	start codon not determined
+			exception	RNA editing
+143265	143265	misc_feature
+			note	C to U RNA editing
+143275	143275	misc_feature
+			note	C to U RNA editing
+143313	143313	misc_feature
+			note	C to U RNA editing
+143361	143361	misc_feature
+			note	C to U RNA editing
+143377	143377	misc_feature
+			note	C to U RNA editing
+143380	143380	misc_feature
+			note	C to U RNA editing
+143389	143389	misc_feature
+			note	C to U RNA editing
+143577	143577	misc_feature
+			note	C to U RNA editing
+143580	143580	misc_feature
+			note	C to U RNA editing
+143593	143593	misc_feature
+			note	C to U RNA editing
+143595	143595	misc_feature
+			note	C to U RNA editing
+143622	143622	misc_feature
+			note	C to U RNA editing
+143623	143623	misc_feature
+			note	C to U RNA editing
+143625	143625	misc_feature
+			note	C to U RNA editing
+143628	143628	misc_feature
+			note	C to U RNA editing
+143656	143656	misc_feature
+			note	C to U RNA editing
+143721	143721	misc_feature
+			note	C to U RNA editing
+143746	143746	misc_feature
+			note	C to U RNA editing
+143754	143754	misc_feature
+			note	C to U RNA editing
+143799	143799	misc_feature
+			note	C to U RNA editing
+143803	143803	misc_feature
+			note	C to U RNA editing
+143859	143859	misc_feature
+			note	C to U RNA editing
+143865	143865	misc_feature
+			note	C to U RNA editing
+143881	143881	misc_feature
+			note	C to U RNA editing
+143909	143909	misc_feature
+			note	C to U RNA editing
+143916	143916	misc_feature
+			note	C to U RNA editing
+143962	143962	misc_feature
+			note	C to U RNA editing
+147354	155310	gene
+			gene	nad4
+			locus_tag	BrnapMp062
+			db_xref	GeneID:4237889
+147354	147814	CDS
+149283	149797
+152869	153290
+155221	155310
+			product	NADH dehydrogenase subunit 4
+			protein_id	ref|YP_717159.1|
+			exception	RNA editing
+147354	147814	exon
+			number	1
+147382	147382	misc_feature
+			note	C to U RNA editing
+147427	147427	misc_feature
+			note	C to U RNA editing
+147430	147430	misc_feature
+			note	C to U RNA editing
+147460	147460	misc_feature
+			note	C to U RNA editing
+147477	147477	misc_feature
+			note	C to U RNA editing
+147511	147511	misc_feature
+			note	C to U RNA editing
+147517	147517	misc_feature
+			note	C to U RNA editing
+147519	147519	misc_feature
+			note	C to U RNA editing
+147550	147550	misc_feature
+			note	C to U RNA editing
+147670	147670	misc_feature
+			note	C to U RNA editing
+147715	147715	misc_feature
+			note	C to U RNA editing
+147729	147729	misc_feature
+			note	C to U RNA editing
+147756	147756	misc_feature
+			note	C to U RNA editing
+147789	147789	misc_feature
+			note	C to U RNA editing
+147790	147790	misc_feature
+			note	C to U RNA editing
+147802	147802	misc_feature
+			note	C to U RNA editing
+149283	149797	exon
+			number	2
+149429	149429	misc_feature
+			note	C to U RNA editing
+149480	149480	misc_feature
+			note	C to U RNA editing
+149489	149489	misc_feature
+			note	C to U RNA editing
+149588	149588	misc_feature
+			note	C to U RNA editing
+149605	149605	misc_feature
+			note	C to U RNA editing
+149657	149657	misc_feature
+			note	C to U RNA editing
+149717	149717	misc_feature
+			note	C to U RNA editing
+150771	150421	gene
+			gene	orf116
+			locus_tag	BrnapMp063
+			db_xref	GeneID:4237918
+150771	150421	CDS
+			product	hypothetical protein
+			protein_id	ref|YP_717160.1|
+152869	153290	exon
+			number	3
+152902	152902	misc_feature
+			note	C to U RNA editing
+152925	152925	misc_feature
+			note	C to U RNA editing
+152993	152993	misc_feature
+			note	C to U RNA editing
+153021	153021	misc_feature
+			note	C to U RNA editing
+153040	153040	misc_feature
+			note	C to U RNA editing
+153064	153064	misc_feature
+			note	C to U RNA editing
+153097	153097	misc_feature
+			note	C to U RNA editing
+153247	153247	misc_feature
+			note	C to U RNA editing
+153265	153265	misc_feature
+			note	C to U RNA editing
+155221	155310	exon
+			number	4
+155227	155227	misc_feature
+			note	C to U RNA editing
+155239	155239	misc_feature
+			note	C to U RNA editing
+155255	155255	misc_feature
+			note	C to U RNA editing
+161672	160326	gene
+			gene	orf448
+			locus_tag	BrnapMp064
+			db_xref	GeneID:4237941
+161672	160326	CDS
+			product	hypothetical protein
+			protein_id	ref|YP_717161.1|
+164882	165499	gene
+			gene	nad6
+			locus_tag	BrnapMp065
+			db_xref	GeneID:4237892
+164882	165499	CDS
+			product	NADH dehydrogenase subunit 6
+			protein_id	ref|YP_717162.1|
+			exception	RNA editing
+164907	164907	misc_feature
+			note	C to U RNA editing
+164934	164934	misc_feature
+			note	C to U RNA editing
+164969	164969	misc_feature
+			note	C to U RNA editing
+164970	164970	misc_feature
+			note	C to U RNA editing
+164976	164976	misc_feature
+			note	C to U RNA editing
+164984	164984	misc_feature
+			note	C to U RNA editing
+165042	165042	misc_feature
+			note	C to U RNA editing
+165050	165050	misc_feature
+			note	C to U RNA editing
+165072	165072	misc_feature
+			note	C to U RNA editing
+165327	165327	misc_feature
+			note	C to U RNA editing
+165344	165344	misc_feature
+			note	C to U RNA editing
+169205	168798	gene
+			gene	orf135
+			locus_tag	BrnapMp066
+			db_xref	GeneID:4237927
+169205	168798	CDS
+			product	hypothetical protein
+			protein_id	ref|YP_717163.1|
+169600	169514	gene
+			gene	trnS
+			locus_tag	BrnapMt012
+			db_xref	GeneID:4237967
+169600	169514	tRNA
+			product	tRNA-Ser
+			note	anticodon:TGA
+177295	176909	exon
+			number	1
+176920	176920	misc_feature
+			note	C to U RNA editing
+176988	176988	misc_feature
+			note	C to U RNA editing
+176989	176989	misc_feature
+			note	C to U RNA editing
+177031	177031	misc_feature
+			note	C to U RNA editing
+177129	177129	misc_feature
+			note	C to U RNA editing
+177294	177294	misc_feature
+			note	C to U RNA editing
+184060	183275	gene
+			gene	orf261
+			locus_tag	BrnapMp067
+			db_xref	GeneID:4237938
+184060	183275	CDS
+			product	hypothetical protein
+			protein_id	ref|YP_717164.1|
+185863	184280	gene
+			gene	cox1
+			locus_tag	BrnapMp068
+			db_xref	GeneID:4237882
+185863	184280	CDS
+			product	cytochrome c oxidase subunit 1
+			protein_id	ref|YP_717165.1|
+			exception	RNA editing
+185529	185529	misc_feature
+			note	C to U RNA editing
+187959	187186	gene
+			gene	orf257
+			locus_tag	BrnapMp069
+			db_xref	GeneID:4237937
+187959	187186	CDS
+			product	hypothetical protein
+			protein_id	ref|YP_717166.1|
+188283	188354	gene
+			gene	trnN
+			locus_tag	BrnapMt013
+			db_xref	GeneID:4237962
+188283	188354	tRNA
+			product	tRNA-Asn
+			note	anticodon:GTT~plastid-like form
+189203	189285	gene
+			gene	trnY
+			locus_tag	BrnapMt014
+			db_xref	GeneID:4237969
+189203	189285	tRNA
+			product	tRNA-Tyr
+			note	anticodon:GTA
+219202	217678	gene
+189832	194739
+			gene	nad2
+			locus_tag	BrnapMp070
+			trans_splicing
+			exception	trans-splicing
+			db_xref	GeneID:4237887
+219202	219050	CDS
+218069	217678
+189832	189992
+192256	192828
+194552	194739
+			product	NADH dehydrogenase subunit 2
+			protein_id	ref|YP_717099.1|
+			exception	trans-splicing, RNA editing
+189832	189992	exon
+			number	3
+189948	189948	misc_feature
+			note	C to U RNA editing
+192256	192828	exon
+			number	4
+192337	192337	misc_feature
+			note	C to U RNA editing
+192358	192358	misc_feature
+			note	C to U RNA editing
+192469	192469	misc_feature
+			note	C to U RNA editing
+192477	192477	misc_feature
+			note	C to U RNA editing
+192507	192507	misc_feature
+			note	C to U RNA editing
+192511	192511	misc_feature
+			note	C to U RNA editing
+192607	192607	misc_feature
+			note	C to U RNA editing
+192676	192676	misc_feature
+			note	C to U RNA editing
+192795	192795	misc_feature
+			note	C to U RNA editing
+192796	192796	misc_feature
+			note	C to U RNA editing
+192825	192825	misc_feature
+			note	C to U RNA editing
+194552	194739	exon
+			number	5
+194672	194672	misc_feature
+			note	C to U RNA editing
+194675	194675	misc_feature
+			note	C to U RNA editing
+194729	194729	misc_feature
+			note	C to U RNA editing
+196914	196987	gene
+			gene	trnD
+			locus_tag	BrnapMt015
+			db_xref	GeneID:4237956
+196914	196987	tRNA
+			product	tRNA-Asp
+197589	197284	gene
+			gene	orf101e
+			locus_tag	BrnapMp071
+			db_xref	GeneID:4237901
+197589	197284	CDS
+			product	hypothetical protein
+			protein_id	ref|YP_717167.1|
+198384	198456	gene
+			gene	trnK
+			locus_tag	BrnapMt016
+			db_xref	GeneID:4237960
+198384	198456	tRNA
+			product	tRNA-Lys
+			note	anticodon:TTT
+198619	202000	gene
+			gene	rps3
+			locus_tag	BrnapMp072
+			db_xref	GeneID:4237949
+198619	198693	CDS
+200411	202000
+			product	ribosomal protein S3
+			protein_id	ref|YP_717168.1|
+			exception	RNA editing
+198682	198682	misc_feature
+			note	C to U RNA editing
+200932	200932	misc_feature
+			note	C to U RNA editing
+200980	200980	misc_feature
+			note	C to U RNA editing
+201673	201673	misc_feature
+			note	C to U RNA editing
+201799	201799	misc_feature
+			note	C to U RNA editing
+201863	201863	misc_feature
+			note	C to U RNA editing
+201867	202406	gene
+			gene	rpl16
+			locus_tag	BrnapMp073
+			db_xref	GeneID:4237944
+201867	202406	misc_feature
+			note	stop codon created by C to U RNA editing interrupts a reading frame
+			product	ribosomal protein L16
+201896	201896	misc_feature
+			note	C to U RNA editing
+201927	201927	misc_feature
+			note	C to U RNA editing
+202075	202075	misc_feature
+			note	C to U RNA editing
+202306	202306	misc_feature
+			note	C to U RNA editing
+202372	202372	misc_feature
+			note	C to U RNA editing
+202378	202378	misc_feature
+			note	C to U RNA editing
+202531	203088	gene
+			gene	rpl5
+			locus_tag	BrnapMp074
+			db_xref	GeneID:4237946
+202531	203088	CDS
+			product	ribosomal protein L5
+			protein_id	ref|YP_717169.1|
+			exception	RNA editing
+202565	202565	misc_feature
+			note	C to U RNA editing
+202577	202577	misc_feature
+			note	C to U RNA editing
+202589	202589	misc_feature
+			note	C to U RNA editing
+202594	202594	misc_feature
+			note	C to U RNA editing
+202622	202622	misc_feature
+			note	C to U RNA editing
+202699	202699	misc_feature
+			note	C to U RNA editing
+202847	202847	misc_feature
+			note	C to U RNA editing
+202859	202859	misc_feature
+			note	C to U RNA editing
+203042	203042	misc_feature
+			note	C to U RNA editing
+203090	203392	gene
+			gene	rps14
+			locus_tag	BrnapMp075
+			db_xref	GeneID:4237948
+203090	203392	CDS
+			product	ribosomal protein S14
+			protein_id	ref|YP_717170.1|
+204898	206079	gene
+			gene	cob
+			locus_tag	BrnapMp076
+			db_xref	GeneID:4237881
+204898	206079	CDS
+			product	apocytochrome b
+			protein_id	ref|YP_717171.1|
+			exception	RNA editing
+204915	204915	misc_feature
+			note	C to U RNA editing
+205183	205183	misc_feature
+			note	C to U RNA editing
+205222	205222	misc_feature
+			note	C to U RNA editing
+205465	205465	misc_feature
+			note	C to U RNA editing
+205750	205750	misc_feature
+			note	C to U RNA editing
+205805	205805	misc_feature
+			note	C to U RNA editing
+205879	205879	misc_feature
+			note	C to U RNA editing
+205981	205981	misc_feature
+			note	C to U RNA editing
+206390	206476	gene
+			gene	trnS
+			locus_tag	BrnapMt017
+			db_xref	GeneID:4237966
+206390	206476	tRNA
+			product	tRNA-Ser
+			note	anticodon:GGA~plastid-like form
+209851	207720	gene
+			gene	cox2-1
+			locus_tag	BrnapMp077
+			db_xref	GeneID:4237883
+209851	209152	CDS
+207802	207720
+			product	cytochrome c oxidase subunit 2
+			protein_id	ref|YP_717172.1|
+			exception	RNA editing
+207761	207761	misc_feature
+			note	C to U RNA editing
+207778	210204	repeat_region
+			note	2 kb repeat
+207782	207782	misc_feature
+			note	C to U RNA editing
+209154	209154	misc_feature
+			note	C to U RNA editing
+209271	209271	misc_feature
+			note	C to U RNA editing
+209295	209295	misc_feature
+			note	C to U RNA editing
+209376	209376	misc_feature
+			note	C to U RNA editing
+209536	209536	misc_feature
+			note	C to U RNA editing
+209574	209574	misc_feature
+			note	C to U RNA editing
+209599	209599	misc_feature
+			note	C to U RNA editing
+209714	209714	misc_feature
+			note	C to U RNA editing
+209781	209781	misc_feature
+			note	C to U RNA editing
+209825	209825	misc_feature
+			note	C to U RNA editing
+209827	209827	misc_feature
+			note	C to U RNA editing
+211688	211993	gene
+			gene	orf101f
+			locus_tag	BrnapMp078
+			db_xref	GeneID:4237902
+211688	211993	CDS
+			product	hypothetical protein
+			protein_id	ref|YP_717173.1|
+212548	213291	gene
+			gene	ccmC
+			locus_tag	BrnapMp079
+			db_xref	GeneID:4237877
+212548	213291	CDS
+			product	cytochrome c biogenesis ccmC
+			protein_id	ref|YP_717174.1|
+			exception	RNA editing
+212650	212650	misc_feature
+			note	C to U RNA editing
+212726	212726	misc_feature
+			note	C to U RNA editing
+212731	212731	misc_feature
+			note	C to U RNA editing
+212878	212878	misc_feature
+			note	C to U RNA editing
+212928	212928	misc_feature
+			note	C to U RNA editing
+212942	212942	misc_feature
+			note	C to U RNA editing
+212947	212947	misc_feature
+			note	C to U RNA editing
+212968	212968	misc_feature
+			note	C to U RNA editing
+212983	212983	misc_feature
+			note	C to U RNA editing
+212993	212993	misc_feature
+			note	C to U RNA editing
+213005	213005	misc_feature
+			note	C to U RNA editing
+213010	213010	misc_feature
+			note	C to U RNA editing
+213014	213014	misc_feature
+			note	C to U RNA editing
+213020	213020	misc_feature
+			note	C to U RNA editing
+213044	213044	misc_feature
+			note	C to U RNA editing
+213068	213068	misc_feature
+			note	C to U RNA editing
+213095	213095	misc_feature
+			note	C to U RNA editing
+213115	213115	misc_feature
+			note	C to U RNA editing
+213122	213122	misc_feature
+			note	C to U RNA editing
+213155	213155	misc_feature
+			note	C to U RNA editing
+213161	213161	misc_feature
+			note	C to U RNA editing
+213165	213165	misc_feature
+			note	C to U RNA editing
+213166	213166	misc_feature
+			note	C to U RNA editing
+213171	213171	misc_feature
+			note	C to U RNA editing
+213197	213197	misc_feature
+			note	C to U RNA editing
+218069	217678	exon
+			number	2
+217795	217795	misc_feature
+			note	C to U RNA editing
+217829	217829	misc_feature
+			note	C to U RNA editing
+217862	217862	misc_feature
+			note	C to U RNA editing
+217867	217867	misc_feature
+			note	C to U RNA editing
+217912	217912	misc_feature
+			note	C to U RNA editing
+217915	217915	misc_feature
+			note	C to U RNA editing
+217971	217971	misc_feature
+			note	C to U RNA editing
+219202	219050	exon
+			number	1
+219146	219146	misc_feature
+			note	C to U RNA editing
+219147	219147	misc_feature
+			note	C to U RNA editing
+219177	219177	misc_feature
+			note	C to U RNA editing
+221114	220026	gene
+			gene	rps4
+			locus_tag	BrnapMp080
+			db_xref	GeneID:4237950
+221114	220026	CDS
+			product	ribosomal protein S4
+			protein_id	ref|YP_717175.1|
+			exception	RNA editing
+220058	220058	misc_feature
+			note	C to U RNA editing
+220063	220063	misc_feature
+			note	C to U RNA editing
+220072	220072	misc_feature
+			note	C to U RNA editing
+220073	220073	misc_feature
+			note	C to U RNA editing
+220123	220123	misc_feature
+			note	C to U RNA editing
+220148	220148	misc_feature
+			note	C to U RNA editing
+220159	220159	misc_feature
+			note	C to U RNA editing
+220179	220179	misc_feature
+			note	C to U RNA editing
+220591	220591	misc_feature
+			note	C to U RNA editing
+220738	220738	misc_feature
+			note	C to U RNA editing
+220783	220783	misc_feature
+			note	C to U RNA editing
+220807	220807	misc_feature
+			note	C to U RNA editing
+220816	220816	misc_feature
+			note	C to U RNA editing
+220880	220880	misc_feature
+			note	C to U RNA editing
+220889	220889	misc_feature
+			note	C to U RNA editing
+220940	220940	misc_feature
+			note	C to U RNA editing
+221027	221027	misc_feature
+			note	C to U RNA editing
+221038	221038	misc_feature
+			note	C to U RNA editing
+221090	221090	misc_feature
+			note	C to U RNA editing
+
+myid : YP_004927571.1
+>Feature ref|NC_016120.1|
+1	6580	repeat_region
+			note	first copy of 6.6 kb repeat
+			rpt_type	direct
+7962	8035	gene
+			gene	trnD
+			locus_tag	BrcarMt001
+			db_xref	GeneID:11271868
+7962	8035	tRNA
+			product	tRNA-Asp
+			note	anticodom:GTC
+9430	9502	gene
+			gene	trnK
+			locus_tag	BrcarMt002
+			db_xref	GeneID:11271871
+9430	9502	tRNA
+			product	tRNA-Lys
+			note	anticodom:TTT
+9665	13046	gene
+			gene	rps3
+			locus_tag	BrcarMp001
+			db_xref	GeneID:11271873
+9665	9739	CDS
+11457	13046
+			product	rps3
+			protein_id	ref|YP_004927534.1|
+12913	13452	gene
+			gene	rpl16
+			locus_tag	BrcarMp002
+			db_xref	GeneID:11271877
+12913	13452	CDS
+			product	rpl16
+			protein_id	ref|YP_004927535.1|
+13577	14134	gene
+			gene	rpl5
+			locus_tag	BrcarMp003
+			db_xref	GeneID:11271879
+13577	14134	CDS
+			product	rpl5
+			protein_id	ref|YP_004927536.1|
+14136	14438	gene
+			gene	rps14
+			locus_tag	BrcarMp004
+			db_xref	GeneID:11271881
+14136	14438	CDS
+			product	rps14
+			protein_id	ref|YP_004927537.1|
+15943	17124	gene
+			gene	cob
+			locus_tag	BrcarMp005
+			db_xref	GeneID:11271887
+15943	17124	CDS
+			product	cob
+			protein_id	ref|YP_004927538.1|
+17435	17521	gene
+			gene	trnS
+			locus_tag	BrcarMt003
+			db_xref	GeneID:11271891
+17435	17521	tRNA
+			product	tRNA-Ser
+			note	anticodom:GGA
+20899	18768	gene
+			gene	cox2-1
+			locus_tag	BrcarMp006
+			db_xref	GeneID:11271897
+20899	20200	CDS
+18850	18768
+			product	cox2-1
+			protein_id	ref|YP_004927539.1|
+21747	22094	gene
+			gene	orf115c
+			locus_tag	BrcarMp007
+			db_xref	GeneID:11271900
+21747	22094	CDS
+			product	orf115c
+			protein_id	ref|YP_004927540.1|
+22249	21854	gene
+			gene	orf131
+			locus_tag	BrcarMp008
+			db_xref	GeneID:11271856
+22249	21854	CDS
+			product	orf131
+			protein_id	ref|YP_004927541.1|
+28349	29872	gene
+			gene	atp1
+			locus_tag	BrcarMp009
+			db_xref	GeneID:11271813
+28349	29872	CDS
+			product	atp1
+			protein_id	ref|YP_004927542.1|
+30310	30639	gene
+			gene	orf109
+			locus_tag	BrcarMp010
+			db_xref	GeneID:11271814
+30310	30639	CDS
+			product	orf109
+			protein_id	ref|YP_004927543.1|
+36402	39577	gene
+			gene	rrn26
+			locus_tag	BrcarMr001
+			db_xref	GeneID:11271815
+36402	39577	rRNA
+			product	26S ribosomal RNA
+45047	44727	gene
+			gene	orf106b
+			locus_tag	BrcarMp011
+			db_xref	GeneID:11271816
+45047	44727	CDS
+			product	orf106b
+			protein_id	ref|YP_004927544.1|
+46333	46406	gene
+			gene	trnfM
+			locus_tag	BrcarMt004
+			db_xref	GeneID:11271817
+46333	46406	tRNA
+			product	tRNA-Met
+			note	anticodom:CAT
+46630	47046	gene
+			gene	orf138a
+			locus_tag	BrcarMp012
+			db_xref	GeneID:11271818
+46630	47046	CDS
+			product	orf138a
+			protein_id	ref|YP_004927545.1|
+49807	49583	gene
+			gene	atp9
+			locus_tag	BrcarMp013
+			db_xref	GeneID:11271819
+49807	49583	CDS
+			product	atp9
+			protein_id	ref|YP_004927546.1|
+51906	52403	gene
+			gene	orf165
+			locus_tag	BrcarMp014
+			db_xref	GeneID:11271820
+51906	52403	CDS
+			product	orf165
+			protein_id	ref|YP_004927547.1|
+52384	52770	gene
+			gene	orf128a
+			locus_tag	BrcarMp015
+			db_xref	GeneID:11271821
+52384	52770	CDS
+			product	orf128a
+			protein_id	ref|YP_004927548.1|
+54447	55592	gene
+			gene	ccmFN1
+			locus_tag	BrcarMp016
+			db_xref	GeneID:11271822
+54447	55592	CDS
+			product	ccmFN1
+			protein_id	ref|YP_004927549.1|
+55967	55620	gene
+			gene	orf115d
+			locus_tag	BrcarMp017
+			db_xref	GeneID:11271823
+55967	55620	CDS
+			product	orf115d
+			protein_id	ref|YP_004927550.1|
+56427	56753	gene
+			gene	orf108b
+			locus_tag	BrcarMp018
+			db_xref	GeneID:11271824
+56427	56753	CDS
+			product	orf108b
+			protein_id	ref|YP_004927551.1|
+114771	115157	gene
+60274	59077
+199779	203543
+			gene	nad1
+			locus_tag	BrcarMp019
+			trans_splicing
+			exception	trans-splicing
+			db_xref	GeneID:11271901
+114771	115157	CDS
+60274	60194
+59268	59077
+199779	199836
+203284	203543
+			product	nad1
+			protein_id	ref|YP_004927552.1|
+			exception	trans-splicing, RNA editing
+60677	60375	gene
+			gene	orf100b
+			locus_tag	BrcarMp020
+			db_xref	GeneID:11271826
+60677	60375	CDS
+			product	orf100b
+			protein_id	ref|YP_004927553.1|
+63458	63033	gene
+			gene	orf141
+			locus_tag	BrcarMp021
+			db_xref	GeneID:11271827
+63458	63033	CDS
+			product	orf141
+			protein_id	ref|YP_004927554.1|
+64932	64135	gene
+			gene	cox3
+			locus_tag	BrcarMp022
+			db_xref	GeneID:11271828
+64932	64135	CDS
+			product	cox3
+			protein_id	ref|YP_004927555.1|
+65246	65686	gene
+			gene	orf146
+			locus_tag	BrcarMp023
+			db_xref	GeneID:11271829
+65246	65686	CDS
+			product	orf146
+			protein_id	ref|YP_004927556.1|
+66605	66676	gene
+			gene	trnG
+			locus_tag	BrcarMt005
+			db_xref	GeneID:11271830
+66605	66676	tRNA
+			product	tRNA-Gly
+			note	anticodom:GCC
+66801	69116	gene
+			gene	ccmFC
+			locus_tag	BrcarMp024
+			db_xref	GeneID:11271831
+66801	67580	CDS
+68538	69116
+			product	ccmFC
+			protein_id	ref|YP_004927557.1|
+72429	72782	gene
+			gene	orf117b
+			locus_tag	BrcarMp025
+			db_xref	GeneID:11271832
+72429	72782	CDS
+			product	orf117b
+			protein_id	ref|YP_004927558.1|
+73571	74047	gene
+			gene	atp8
+			locus_tag	BrcarMp026
+			db_xref	GeneID:11271833
+73571	74047	CDS
+			product	atp8
+			protein_id	ref|YP_004927559.1|
+74512	74856	gene
+			gene	orf114
+			locus_tag	BrcarMp027
+			db_xref	GeneID:11271834
+74512	74856	CDS
+			product	orf114
+			protein_id	ref|YP_004927560.1|
+75539	81693	gene
+			gene	nad7
+			locus_tag	BrcarMp028
+			db_xref	GeneID:11271835
+75539	75681	CDS
+76677	76745
+77855	78321
+79374	79617
+81432	81693
+			product	nad7
+			protein_id	ref|YP_004927561.1|
+77281	76934	gene
+			gene	orf115a
+			locus_tag	BrcarMp029
+			db_xref	GeneID:11271855
+77281	76934	CDS
+			product	orf115a
+			protein_id	ref|YP_004927562.1|
+76950	77312	gene
+			gene	orf120
+			locus_tag	BrcarMp030
+			db_xref	GeneID:11271836
+76950	77312	CDS
+			product	orf120
+			protein_id	ref|YP_004927563.1|
+84629	85717	gene
+			gene	rps4
+			locus_tag	BrcarMp031
+			db_xref	GeneID:11271837
+84629	85717	CDS
+			product	rps4
+			protein_id	ref|YP_004927564.1|
+86541	88066	gene
+107950	103141
+			gene	nad2
+			locus_tag	BrcarMp032
+			trans_splicing
+			exception	trans-splicing
+			db_xref	GeneID:11271825
+86541	86693	CDS
+87675	88066
+107950	107790
+105619	105047
+103328	103141
+			product	nad2
+			protein_id	ref|YP_004927565.1|
+			trans_splicing
+			exception	trans-splicing
+93197	92454	gene
+			gene	ccmC
+			locus_tag	BrcarMp033
+			db_xref	GeneID:11271839
+93197	92454	CDS
+			product	ccmC
+			protein_id	ref|YP_004927566.1|
+95749	102328	repeat_region
+			note	second copy of 6.6 kb repeat
+			rpt_type	direct
+108572	108490	gene
+			gene	trnY
+			locus_tag	BrcarMt006
+			db_xref	GeneID:11271840
+108572	108490	tRNA
+			product	tRNA-Tyr
+			note	anticodom:GTA
+109491	109420	gene
+			gene	trnN
+			locus_tag	BrcarMt007
+			db_xref	GeneID:11271841
+109491	109420	tRNA
+			product	tRNA-Asn
+			note	anticodom:GTT
+109815	110588	gene
+			gene	orf257
+			locus_tag	BrcarMp034
+			db_xref	GeneID:11271842
+109815	110588	CDS
+			product	orf257
+			protein_id	ref|YP_004927567.1|
+111878	113461	gene
+			gene	cox1
+			locus_tag	BrcarMp035
+			db_xref	GeneID:11271843
+111878	113461	CDS
+			product	cox1
+			protein_id	ref|YP_004927568.1|
+122470	122556	gene
+			gene	trnS
+			locus_tag	BrcarMt008
+			db_xref	GeneID:11271844
+122470	122556	tRNA
+			product	tRNA-Ser
+			note	anticodom:TGA
+122866	123273	gene
+			gene	orf135
+			locus_tag	BrcarMp036
+			db_xref	GeneID:11271845
+122866	123273	CDS
+			product	orf135
+			protein_id	ref|YP_004927569.1|
+127200	126583	gene
+			gene	nad6
+			locus_tag	BrcarMp037
+			db_xref	GeneID:11271846
+127200	126583	CDS
+			product	nad6
+			protein_id	ref|YP_004927570.1|
+130264	131610	gene
+			gene	orf448
+			locus_tag	BrcarMp038
+			db_xref	GeneID:11271847
+130264	131610	CDS
+			product	orf448
+			protein_id	ref|YP_004927571.1|
+144639	136686	gene
+			gene	nad4
+			locus_tag	BrcarMp039
+			db_xref	GeneID:11271848
+144639	144179	CDS
+142711	142197
+139125	138704
+136775	136686
+			product	nad4
+			protein_id	ref|YP_004927572.1|
+141223	141573	gene
+			gene	orf116
+			locus_tag	BrcarMp040
+			db_xref	GeneID:11271849
+141223	141573	CDS
+			product	orf116
+			protein_id	ref|YP_004927573.1|
+148753	147944	gene
+			gene	tatC
+			locus_tag	BrcarMp041
+			db_xref	GeneID:11271850
+148753	147944	CDS
+			product	tatC
+			protein_id	ref|YP_004927574.1|
+			exception	RNA editing
+151678	148921	gene
+			gene	rpl2
+			locus_tag	BrcarMp042
+			db_xref	GeneID:11271851
+151678	150762	CDS
+149053	148921
+			product	rpl2
+			protein_id	ref|YP_004927575.1|
+152130	152504	gene
+			gene	orf124
+			locus_tag	BrcarMp043
+			db_xref	GeneID:11271852
+152130	152504	CDS
+			product	orf124
+			protein_id	ref|YP_004927576.1|
+158167	158538	gene
+			gene	orf124
+			locus_tag	BrcarMp044
+			db_xref	GeneID:11271853
+158167	158538	CDS
+			product	orf124
+			protein_id	ref|YP_004927577.1|
+159396	158530	gene
+			gene	orf288
+			locus_tag	BrcarMp045
+			db_xref	GeneID:11271854
+159396	158530	CDS
+			product	orf288
+			protein_id	ref|YP_004927578.1|
+158542	158883	gene
+			gene	orf113a
+			locus_tag	BrcarMp046
+			db_xref	GeneID:11271857
+158542	158883	CDS
+			product	orf113a
+			protein_id	ref|YP_004927579.1|
+159688	159618	gene
+			gene	trnC
+			locus_tag	BrcarMt009
+			db_xref	GeneID:11271858
+159688	159618	tRNA
+			product	tRNA-Cys
+			note	anticodom:GCA
+160034	159714	gene
+			gene	orf106a
+			locus_tag	BrcarMp047
+			db_xref	GeneID:11271859
+160034	159714	CDS
+			product	orf106a
+			protein_id	ref|YP_004927580.1|
+159865	159791	gene
+			gene	trnP
+			locus_tag	BrcarMt010
+			db_xref	GeneID:11271860
+159865	159791	tRNA
+			product	tRNA-Pro
+			note	anticodom:TGG
+160008	159937	gene
+			gene	trnE
+			locus_tag	BrcarMt011
+			db_xref	GeneID:11271861
+160008	159937	tRNA
+			product	tRNA-Glu
+			note	anticodom:TTC
+164303	164001	gene
+			gene	orf100c
+			locus_tag	BrcarMp048
+			db_xref	GeneID:11271862
+164303	164001	CDS
+			product	orf100c
+			protein_id	ref|YP_004927581.1|
+165692	165765	gene
+			gene	trnW
+			locus_tag	BrcarMt012
+			db_xref	GeneID:11271863
+165692	165765	tRNA
+			product	tRNA-Trp
+			note	anticodom:CCA
+166993	167298	gene
+			gene	orf101a
+			locus_tag	BrcarMp049
+			db_xref	GeneID:11271864
+166993	167298	CDS
+			product	orf101a
+			protein_id	ref|YP_004927582.1|
+168384	168471	gene
+			gene	trnS
+			locus_tag	BrcarMt013
+			db_xref	GeneID:11271865
+168384	168471	tRNA
+			product	tRNA-Ser
+			note	anticodom:GCT
+168552	168625	gene
+			gene	trnH
+			locus_tag	BrcarMt014
+			db_xref	GeneID:11271866
+168552	168625	tRNA
+			product	tRNA-His
+			note	anticodom:GTG
+168868	169380	gene
+			gene	orf170
+			locus_tag	BrcarMp050
+			db_xref	GeneID:11271867
+168868	169380	CDS
+			product	orf170
+			protein_id	ref|YP_004927583.1|
+203757	206041	gene
+189389	189368
+171203	169675
+			gene	nad5
+			locus_tag	BrcarMp051
+			trans_splicing
+			exception	trans-splicing
+			db_xref	GeneID:11271838
+203757	203985	CDS
+204825	206041
+189389	189368
+171203	170810
+169822	169675
+			product	nad5
+			protein_id	ref|YP_004927584.1|
+			trans_splicing
+			exception	trans-splicing
+173375	172803	gene
+			gene	nad9
+			locus_tag	BrcarMp052
+			db_xref	GeneID:11271869
+173375	172803	CDS
+			product	nad9
+			protein_id	ref|YP_004927585.1|
+177136	177771	gene
+			gene	ccmFN2
+			locus_tag	BrcarMp053
+			db_xref	GeneID:11271870
+177136	177771	CDS
+			product	ccmFN2
+			protein_id	ref|YP_004927586.1|
+			exception	RNA editing
+180099	180170	gene
+			gene	trnQ
+			locus_tag	BrcarMt015
+			db_xref	GeneID:11271872
+180099	180170	tRNA
+			product	tRNA-Gln
+			note	anticodom:TTG
+182845	182060	gene
+			gene	atp6
+			locus_tag	BrcarMp054
+			db_xref	GeneID:11271874
+182845	182060	CDS
+			product	atp6
+			protein_id	ref|YP_004927587.1|
+184032	183960	gene
+			gene	trnM
+			locus_tag	BrcarMt016
+			db_xref	GeneID:11271875
+184032	183960	tRNA
+			product	tRNA-Met
+			note	anticodom:CAT
+187319	186741	gene
+			gene	atp4
+			locus_tag	BrcarMp055
+			db_xref	GeneID:11271878
+187319	186741	CDS
+			product	atp4
+			protein_id	ref|YP_004927588.1|
+187856	187554	gene
+			gene	nad4L
+			locus_tag	BrcarMp056
+			db_xref	GeneID:11271876
+187856	187554	CDS
+			product	nad4L
+			protein_id	ref|YP_004927589.1|
+189181	188876	gene
+			gene	orf101b
+			locus_tag	BrcarMp057
+			db_xref	GeneID:11271880
+189181	188876	CDS
+			product	orf101b
+			protein_id	ref|YP_004927590.1|
+190390	189557	gene
+			gene	orf277
+			locus_tag	BrcarMp058
+			db_xref	GeneID:11271882
+190390	189557	CDS
+			product	orf277
+			protein_id	ref|YP_004927591.1|
+191105	190659	gene
+			gene	rps7
+			locus_tag	BrcarMp059
+			db_xref	GeneID:11271883
+191105	190659	CDS
+			product	rps7
+			protein_id	ref|YP_004927592.1|
+191857	191777	gene
+			gene	trnI
+			locus_tag	BrcarMt017
+			db_xref	GeneID:11271884
+191857	191777	tRNA
+			product	tRNA-Ile
+			note	anticodom:CAT
+193568	193927	gene
+			gene	orf119
+			locus_tag	BrcarMp060
+			db_xref	GeneID:11271885
+193568	193927	CDS
+			product	orf119
+			protein_id	ref|YP_004927593.1|
+195211	195537	gene
+			gene	orf108c
+			locus_tag	BrcarMp061
+			db_xref	GeneID:11271886
+195211	195537	CDS
+			product	orf108c
+			protein_id	ref|YP_004927594.1|
+198519	199004	gene
+			gene	orf161
+			locus_tag	BrcarMp062
+			db_xref	GeneID:11271888
+198519	199004	CDS
+			product	orf161
+			protein_id	ref|YP_004927595.1|
+199062	199541	gene
+			gene	orf159
+			locus_tag	BrcarMp063
+			db_xref	GeneID:11271889
+199062	199541	CDS
+			product	orf159
+			protein_id	ref|YP_004927596.1|
+200473	202506	gene
+			gene	matR
+			locus_tag	BrcarMp064
+			db_xref	GeneID:11271892
+200473	202506	CDS
+			product	matR
+			protein_id	ref|YP_004927597.1|
+			exception	RNA editing
+210364	210246	gene
+			gene	rrn5
+			locus_tag	BrcarMr002
+			db_xref	GeneID:11271890
+210364	210246	rRNA
+			product	5S ribosomal RNA
+212317	210470	gene
+			gene	rrn18
+			locus_tag	BrcarMr003
+			db_xref	GeneID:11271893
+212317	210470	rRNA
+			product	18S ribosomal RNA
+216028	216342	gene
+			gene	orf104
+			locus_tag	BrcarMp065
+			db_xref	GeneID:11271894
+216028	216342	CDS
+			product	orf104
+			protein_id	ref|YP_004927598.1|
+223285	222908	gene
+			gene	rps12
+			locus_tag	BrcarMp066
+			db_xref	GeneID:11271895
+223285	222908	CDS
+			product	rps12
+			protein_id	ref|YP_004927599.1|
+223688	223332	gene
+			gene	nad3
+			locus_tag	BrcarMp067
+			db_xref	GeneID:11271896
+223688	223332	CDS
+			product	nad3
+			protein_id	ref|YP_004927600.1|
+224724	223792	gene
+			gene	orf310
+			locus_tag	BrcarMp068
+			db_xref	GeneID:11271898
+224724	223792	CDS
+			product	orf310
+			protein_id	ref|YP_004927601.1|
+229730	229110	gene
+			gene	ccmB
+			locus_tag	BrcarMp069
+			db_xref	GeneID:11271899
+229730	229110	CDS
+			product	ccmB
+			protein_id	ref|YP_004927602.1|
+
+myid : CEZ26302.1
+>Feature emb|LN827946.1|
+416	2776	gene
+			gene	RdRp
+416	2776	CDS
+			product	RNA dependent RNA polymerase
+			transl_table	4
+			protein_id	emb|CEZ26302.1|
+			db_xref	InterPro:IPR008686
+			db_xref	UniProtKB/TrEMBL:A0A0S4GA51
+
+myid : YP_009259482.1
+>Feature ref|NC_030396.1|
+1	2522	gene
+			gene	RdRp
+			locus_tag	BBA74_gp1
+			db_xref	GeneID:28218206
+238	2379	CDS
+			product	RNA-dependent RNA polymerase
+			transl_table	4
+			protein_id	ref|YP_009259482.1|
+
+myid : YP_005352912.1
+>Feature ref|NC_017003.1|
+305	3718	gene
+			gene	RdRp
+			locus_tag	COV_gp1
+			db_xref	GeneID:11945846
+305	3037	CDS
+3041	3718
+			product	RNA dependent RNA polymerase
+			transl_table	4
+			protein_id	ref|YP_005352912.1|
+			note	putative CP domain detected
+			ribosomal_slippage
+			exception	ribosomal slippage
+			db_xref	UniProtKB/TrEMBL:H8XBW0
+
+myid : AHL25281.1
+>Feature gb|KC792591.1|
+193	2673	CDS
+			product	RNA-dependent RNA polymerase
+			transl_table	4
+			protein_id	gb|AHL25281.1|
+
+myid : YP_009228112.1
+>Feature ref|NC_029182.1|
+14	6587	repeat_region
+			rpt_type	direct
+7975	8048	gene
+			gene	trnD
+			gene_desc	anticodon:GTC
+			locus_tag	AYB38_gt01
+			old_locus_tag	BniMt001
+			db_xref	GeneID:26835740
+7975	8048	tRNA
+			product	tRNA-Asp
+9443	9515	gene
+			gene	trnK
+			gene_desc	anticodon:TTT
+			locus_tag	AYB38_gt02
+			old_locus_tag	BniMt002
+			db_xref	GeneID:26835708
+9443	9515	tRNA
+			product	tRNA-Lys
+11802	13070	gene
+			gene	rps3
+			locus_tag	AYB38_gp77
+			old_locus_tag	BniMp001
+			db_xref	GeneID:26835709
+11802	13070	CDS
+			product	ribosomal protein S3
+			protein_id	ref|YP_009228071.1|
+12937	13476	gene
+			gene	rpl16
+			locus_tag	AYB38_gp76
+			old_locus_tag	BniMp002
+			db_xref	GeneID:26835730
+12937	13476	CDS
+			product	ribosomal protein L16
+			protein_id	ref|YP_009228072.1|
+13601	14158	gene
+			gene	rpl5
+			locus_tag	AYB38_gp75
+			old_locus_tag	BniMp003
+			db_xref	GeneID:26835665
+13601	14158	CDS
+			product	ribosomal protein L5
+			protein_id	ref|YP_009228073.1|
+14100	14462	gene
+			gene	orf120
+			locus_tag	AYB38_gp74
+			old_locus_tag	BniMp004
+			db_xref	GeneID:26835664
+14100	14462	CDS
+			product	hypothetical protein
+			protein_id	ref|YP_009228074.1|
+15967	17148	gene
+			gene	cob
+			locus_tag	AYB38_gp73
+			old_locus_tag	BniMp005
+			db_xref	GeneID:26835684
+15967	17148	CDS
+			product	cytochrome b
+			protein_id	ref|YP_009228075.1|
+17459	17545	gene
+			gene	trnS
+			gene_desc	anticodon:GGA
+			locus_tag	AYB38_gt03
+			old_locus_tag	BniMt003
+			db_xref	GeneID:26835647
+17459	17545	tRNA
+			product	tRNA-Ser
+20923	20033	gene
+			gene	cox2-1
+			locus_tag	AYB38_gp72
+			old_locus_tag	BniMp006
+			db_xref	GeneID:26835710
+20923	20033	CDS
+			product	cytochrome c oxidase subunit 2-1
+			protein_id	ref|YP_009228076.1|
+21771	22118	gene
+			gene	orf115b
+			locus_tag	AYB38_gp71
+			old_locus_tag	BniMp007
+			db_xref	GeneID:26835652
+21771	22118	CDS
+			product	hypothetical protein
+			protein_id	ref|YP_009228077.1|
+22273	21878	gene
+			gene	orf131
+			locus_tag	AYB38_gp70
+			old_locus_tag	BniMp008
+			db_xref	GeneID:26835691
+22273	21878	CDS
+			product	hypothetical protein
+			protein_id	ref|YP_009228078.1|
+28378	29901	gene
+			gene	atp1
+			locus_tag	AYB38_gp69
+			old_locus_tag	BniMp009
+			db_xref	GeneID:26835680
+28378	29901	CDS
+			product	ATPase subunit A
+			protein_id	ref|YP_009228079.1|
+30339	30668	gene
+			gene	orf109
+			locus_tag	AYB38_gp68
+			old_locus_tag	BniMp010
+			db_xref	GeneID:26835645
+30339	30668	CDS
+			product	hypothetical protein
+			protein_id	ref|YP_009228080.1|
+36431	39606	gene
+			gene	rrn26
+			locus_tag	AYB38_gr03
+			old_locus_tag	BniMr001
+			db_xref	GeneID:26835694
+36431	39606	rRNA
+			product	26S ribosomal RNA
+45076	44756	gene
+			gene	orf106c
+			locus_tag	AYB38_gp67
+			old_locus_tag	BniMp011
+			db_xref	GeneID:26835727
+45076	44756	CDS
+			product	hypothetical protein
+			protein_id	ref|YP_009228081.1|
+46362	46435	gene
+			gene	trnM
+			gene_desc	anticodon:CAT
+			locus_tag	AYB38_gt04
+			old_locus_tag	BniMt004
+			db_xref	GeneID:26835700
+46362	46435	tRNA
+			product	tRNA-Met
+46660	47076	gene
+			gene	orf138a
+			locus_tag	AYB38_gp66
+			old_locus_tag	BniMp012
+			db_xref	GeneID:26835711
+46660	47076	CDS
+			product	hypothetical protein
+			protein_id	ref|YP_009228082.1|
+49838	49614	gene
+			gene	atp9
+			locus_tag	AYB38_gp65
+			old_locus_tag	BniMp013
+			db_xref	GeneID:26835677
+49838	49614	CDS
+			product	ATPase subunit 9
+			protein_id	ref|YP_009228083.1|
+51935	54067	gene
+			gene	rpoB
+			locus_tag	AYB38_gp64
+			old_locus_tag	BniMp014
+			db_xref	GeneID:26835707
+51935	54067	CDS
+			product	RNA polymerase subunit beta
+			protein_id	ref|YP_009228084.1|
+54527	54081	gene
+			gene	orf148
+			locus_tag	AYB38_gp63
+			old_locus_tag	BniMp015
+			db_xref	GeneID:26835731
+54527	54081	CDS
+			product	hypothetical protein
+			protein_id	ref|YP_009228085.1|
+54473	55618	gene
+			gene	ccmFN1
+			locus_tag	AYB38_gp62
+			old_locus_tag	BniMp016
+			db_xref	GeneID:26835675
+54473	55618	CDS
+			product	cytochrome c biogenesis protein FN1
+			protein_id	ref|YP_009228086.1|
+55993	55646	gene
+			gene	orf115d
+			locus_tag	AYB38_gp61
+			old_locus_tag	BniMp017
+			db_xref	GeneID:26835648
+55993	55646	CDS
+			product	hypothetical protein
+			protein_id	ref|YP_009228087.1|
+56453	56779	gene
+			gene	orf108b
+			locus_tag	AYB38_gp60
+			old_locus_tag	BniMp018
+			db_xref	GeneID:26835690
+56453	56779	CDS
+			product	hypothetical protein
+			protein_id	ref|YP_009228088.1|
+59342	58956	gene
+			gene	orf128
+			locus_tag	AYB38_gp59
+			old_locus_tag	BniMp019
+			db_xref	GeneID:26835697
+59342	58956	CDS
+			product	hypothetical protein
+			protein_id	ref|YP_009228089.1|
+114803	203632	gene
+199868	199925
+60300	59103
+			gene	nad1
+			locus_tag	AYB38_gp58
+			trans_splicing
+			exception	trans-splicing
+			old_locus_tag	BniMp020
+			db_xref	GeneID:26835741
+114803	115189	CDS
+203373	203632
+199868	199925
+60300	60220
+59294	59103
+			product	NADH dehydrogenase subunit 1
+			protein_id	ref|YP_009228090.1|
+			exception	trans-splicing, RNA editing
+60703	60401	gene
+			gene	orf100
+			locus_tag	AYB38_gp57
+			old_locus_tag	BniMp021
+			db_xref	GeneID:26835739
+60703	60401	CDS
+			product	hypothetical protein
+			protein_id	ref|YP_009228091.1|
+63484	63059	gene
+			gene	orf141
+			locus_tag	AYB38_gp56
+			old_locus_tag	BniMp022
+			db_xref	GeneID:26835706
+63484	63059	CDS
+			product	hypothetical protein
+			protein_id	ref|YP_009228092.1|
+64958	64161	gene
+			gene	cox3
+			locus_tag	AYB38_gp55
+			old_locus_tag	BniMp0223
+			db_xref	GeneID:26835676
+64958	64161	CDS
+			product	cytochrome c oxidase subunit 3
+			protein_id	ref|YP_009228093.1|
+65272	65592	gene
+			gene	orf106b
+			locus_tag	AYB38_gp54
+			old_locus_tag	BniMp024
+			db_xref	GeneID:26835654
+65272	65592	CDS
+			product	hypothetical protein
+			protein_id	ref|YP_009228094.1|
+66631	66702	gene
+			gene	trnG
+			gene_desc	anticodon:GCC
+			locus_tag	AYB38_gt05
+			old_locus_tag	BniMt005
+			db_xref	GeneID:26835699
+66631	66702	tRNA
+			product	tRNA-Gly
+66827	67723	gene
+			gene	ccmFC2
+			locus_tag	AYB38_gp53
+			old_locus_tag	BniMp025
+			db_xref	GeneID:26835712
+66827	67723	CDS
+			product	cytochrome c biogenesis protein FC2
+			protein_id	ref|YP_009228095.1|
+68486	69142	gene
+			gene	ccmFC1
+			locus_tag	AYB38_gp52
+			old_locus_tag	BniMp026
+			db_xref	GeneID:26835651
+68486	69142	CDS
+			product	cytochrome c biogenesis protein FC1
+			protein_id	ref|YP_009228096.1|
+72455	72808	gene
+			gene	orf117
+			locus_tag	AYB38_gp51
+			old_locus_tag	BniMp027
+			db_xref	GeneID:26835659
+72455	72808	CDS
+			product	hypothetical protein
+			protein_id	ref|YP_009228097.1|
+73597	74073	gene
+			gene	atp8
+			locus_tag	AYB38_gp50
+			old_locus_tag	BniMp028
+			db_xref	GeneID:26835687
+73597	74073	CDS
+			product	ATPase subunit 8
+			protein_id	ref|YP_009228098.1|
+74538	74882	gene
+			gene	orf114
+			locus_tag	AYB38_gp49
+			old_locus_tag	BniMp029
+			db_xref	GeneID:26835671
+74538	74882	CDS
+			product	hypothetical protein
+			protein_id	ref|YP_009228099.1|
+77307	76960	gene
+			gene	orf115a
+			locus_tag	AYB38_gp48
+			old_locus_tag	BniMp030
+			db_xref	GeneID:26835692
+77307	76960	CDS
+			product	hypothetical protein
+			protein_id	ref|YP_009228100.1|
+76976	77338	gene
+			gene	rps14
+			locus_tag	AYB38_gp47
+			old_locus_tag	BniMp031
+			db_xref	GeneID:26835689
+76976	77338	CDS
+			product	ribosomal protein S14
+			protein_id	ref|YP_009228101.1|
+77891	78358	gene
+			gene	nad7
+			locus_tag	AYB38_gp46
+			old_locus_tag	BniMp032
+			db_xref	GeneID:26835683
+77891	78358	CDS
+			product	NADH dehydrogenase subunit 7
+			protein_id	ref|YP_009228102.1|
+79598	80119	gene
+			gene	orf173
+			locus_tag	AYB38_gp45
+			old_locus_tag	BniMp033
+			db_xref	GeneID:26835672
+79598	80119	CDS
+			product	hypothetical protein
+			protein_id	ref|YP_009228103.1|
+84652	85740	gene
+			gene	rps4
+			locus_tag	AYB38_gp44
+			old_locus_tag	BniMp034
+			db_xref	GeneID:26835667
+84652	85740	CDS
+			product	ribosomal protein S4
+			protein_id	ref|YP_009228104.1|
+93220	92477	gene
+			gene	ccmC
+			locus_tag	AYB38_gp43
+			old_locus_tag	BniMp035
+			db_xref	GeneID:26835649
+93220	92477	CDS
+			product	cytochrome c biogensis protein C
+			protein_id	ref|YP_009228105.1|
+95775	102352	repeat_region
+			rpt_type	direct
+105639	104995	gene
+			gene	nad2
+			locus_tag	AYB38_gp42
+			old_locus_tag	BniMp036
+			db_xref	GeneID:26835657
+105639	104995	CDS
+			product	NADH dehydrogenase subunit 2
+			protein_id	ref|YP_009228106.1|
+108594	108512	gene
+			gene	trnY
+			gene_desc	anticodon:GTA
+			locus_tag	AYB38_gt06
+			old_locus_tag	BniMt006
+			db_xref	GeneID:26835660
+108594	108512	tRNA
+			product	tRNA-Tyr
+109518	109447	gene
+			gene	trnN
+			gene_desc	anticodon:GTT
+			locus_tag	AYB38_gt07
+			old_locus_tag	BniMt007
+			db_xref	GeneID:26835717
+109518	109447	tRNA
+			product	tRNA-Asn
+109842	110669	gene
+			gene	ycf1
+			locus_tag	AYB38_gp41
+			old_locus_tag	BniMp037
+			db_xref	GeneID:26835716
+109842	110669	CDS
+			product	ycf1
+			protein_id	ref|YP_009228107.1|
+111910	113493	gene
+			gene	cox1
+			locus_tag	AYB38_gp40
+			old_locus_tag	BniMp038
+			db_xref	GeneID:26835734
+111910	113493	CDS
+			product	cytochrome c oxidase subunit 1
+			protein_id	ref|YP_009228108.1|
+122501	122587	gene
+			gene	trnS
+			gene_desc	anticodon:TGA
+			locus_tag	AYB38_gt08
+			old_locus_tag	BniMt008
+			db_xref	GeneID:26835644
+122501	122587	tRNA
+			product	tRNA-Ser
+122897	123304	gene
+			gene	orf135
+			locus_tag	AYB38_gp39
+			old_locus_tag	BniMp039
+			db_xref	GeneID:26835713
+122897	123304	CDS
+			product	hypothetical protein
+			protein_id	ref|YP_009228109.1|
+127231	126614	gene
+			gene	nad6
+			locus_tag	AYB38_gp38
+			old_locus_tag	BniMp040
+			db_xref	GeneID:26835678
+127231	126614	CDS
+			product	NADH dehydrogenase subunit 6
+			protein_id	ref|YP_009228110.1|
+128649	127459	gene
+			gene	rbcl
+			locus_tag	AYB38_gp37
+			old_locus_tag	BniMp041
+			db_xref	GeneID:26835661
+128649	127459	CDS
+			product	ribulose-1,5-bisphosphate carboxylase/oxygenase large subunit
+			protein_id	ref|YP_009228111.1|
+130223	131647	gene
+			gene	orf474
+			locus_tag	AYB38_gp36
+			old_locus_tag	BniMp042
+			db_xref	GeneID:26835733
+130223	131647	CDS
+			product	hypothetical protein
+			protein_id	ref|YP_009228112.1|
+139127	138723	gene
+			gene	nad4
+			locus_tag	AYB38_gp35
+			old_locus_tag	BniMp043
+			db_xref	GeneID:26835646
+139127	138723	CDS
+			product	NADH dehydrogenase subunit 4
+			protein_id	ref|YP_009228113.1|
+141257	141607	gene
+			gene	orf116
+			locus_tag	AYB38_gp34
+			old_locus_tag	BniMp044
+			db_xref	GeneID:26835736
+141257	141607	CDS
+			product	hypothetical protein
+			protein_id	ref|YP_009228114.1|
+142657	142142	gene
+			gene	nad4b
+			locus_tag	AYB38_gp33
+			old_locus_tag	BniMp045
+			db_xref	GeneID:26835688
+142657	142142	CDS
+			product	NADH dehydrogenase subunit 4b
+			protein_id	ref|YP_009228115.1|
+142559	142233	gene
+			gene	orf108a
+			locus_tag	AYB38_gp32
+			old_locus_tag	BniMp046
+			db_xref	GeneID:26835668
+142559	142233	CDS
+			product	hypothetical protein
+			protein_id	ref|YP_009228116.1|
+144673	144146	gene
+			gene	nad4a
+			locus_tag	AYB38_gp31
+			old_locus_tag	BniMp047
+			db_xref	GeneID:26835696
+144673	144146	CDS
+			product	NADH dehydrogenase subunit 4a
+			protein_id	ref|YP_009228117.1|
+148337	147978	gene
+			gene	tatC
+			locus_tag	AYB38_gp30
+			old_locus_tag	BniMp048
+			db_xref	GeneID:26835666
+148337	147978	CDS
+			product	twin arginine translocation
+			protein_id	ref|YP_009228118.1|
+151712	150789	gene
+			gene	rpl2
+			locus_tag	AYB38_gp29
+			old_locus_tag	BniMp049
+			db_xref	GeneID:26835686
+151712	150789	CDS
+			product	ribosomal protein L2
+			protein_id	ref|YP_009228119.1|
+152164	152538	gene
+			gene	orf124
+			locus_tag	AYB38_gp28
+			old_locus_tag	BniMp050
+			db_xref	GeneID:26835650
+152164	152538	CDS
+			product	hypothetical protein
+			protein_id	ref|YP_009228120.1|
+158201	158572	gene
+			gene	orf123
+			locus_tag	AYB38_gp27
+			old_locus_tag	BniMp051
+			db_xref	GeneID:26835681
+158201	158572	CDS
+			product	hypothetical protein
+			protein_id	ref|YP_009228121.1|
+159430	158564	gene
+			gene	orf288
+			locus_tag	AYB38_gp26
+			old_locus_tag	BniMp052
+			db_xref	GeneID:26835682
+159430	158564	CDS
+			product	hypothetical protein
+			protein_id	ref|YP_009228122.1|
+158576	158917	gene
+			gene	orf113a
+			locus_tag	AYB38_gp25
+			old_locus_tag	BniMp053
+			db_xref	GeneID:26835738
+158576	158917	CDS
+			product	hypothetical protein
+			protein_id	ref|YP_009228123.1|
+159722	159652	gene
+			gene	trnC
+			gene_desc	anticodon:GCA
+			locus_tag	AYB38_gt09
+			old_locus_tag	BniMt009
+			db_xref	GeneID:26835693
+159722	159652	tRNA
+			product	tRNA-Cys
+160068	159748	gene
+			gene	orf106a
+			locus_tag	AYB38_gp24
+			old_locus_tag	BniMp054
+			db_xref	GeneID:26835715
+160068	159748	CDS
+			product	hypothetical protein
+			protein_id	ref|YP_009228124.1|
+159899	159825	gene
+			gene	trnP
+			gene_desc	anticodon:TGG
+			locus_tag	AYB38_gt10
+			old_locus_tag	BniMt010
+			db_xref	GeneID:26835698
+159899	159825	tRNA
+			product	tRNA-Pro
+159971	160042	gene
+			gene	trnE
+			gene_desc	anticodon;TTC
+			locus_tag	AYB38_gt11
+			old_locus_tag	BniMt011
+			db_xref	GeneID:26835714
+159971	160042	tRNA
+			product	tRNA-Glu
+163035	163115	gene
+			gene	trnL
+			gene_desc	anticodon:CAA
+			locus_tag	AYB38_gt12
+			old_locus_tag	BniMt012
+			db_xref	GeneID:26835726
+163035	163115	tRNA
+			product	tRNA-Leu
+164801	164025	gene
+			gene	ycf2
+			locus_tag	AYB38_gp23
+			old_locus_tag	BniMp055
+			db_xref	GeneID:26835718
+164801	164025	CDS
+			product	ycf2
+			protein_id	ref|YP_009228125.1|
+165456	165529	gene
+			gene	trnP
+			gene_desc	anticodon:TGG
+			locus_tag	AYB38_gt13
+			old_locus_tag	BniMt013
+			db_xref	GeneID:26835656
+165456	165529	tRNA
+			product	tRNA-Pro
+165762	165835	gene
+			gene	trnW
+			gene_desc	anticodon:CCA
+			locus_tag	AYB38_gt14
+			old_locus_tag	BniMt014
+			db_xref	GeneID:26835719
+165762	165835	tRNA
+			product	tRNA-Trp
+167067	167372	gene
+			gene	orf101a
+			locus_tag	AYB38_gp22
+			old_locus_tag	BniMp056
+			db_xref	GeneID:26835720
+167067	167372	CDS
+			product	hypothetical protein
+			protein_id	ref|YP_009228126.1|
+168459	168546	gene
+			gene	trnS
+			gene_desc	anticodon:GCT
+			locus_tag	AYB38_gt15
+			old_locus_tag	BniMt015
+			db_xref	GeneID:26835704
+168459	168546	tRNA
+			product	tRNA-Ser
+168627	168700	gene
+			gene	trnH
+			gene_desc	anticodon:GTG
+			locus_tag	AYB38_gt16
+			old_locus_tag	BniMt016
+			db_xref	GeneID:26835721
+168627	168700	tRNA
+			product	tRNA-His
+168935	169669	gene
+			gene	psaA
+			locus_tag	AYB38_gp21
+			old_locus_tag	BniMp057
+			db_xref	GeneID:26835722
+168935	169669	CDS
+			product	photosystem I P700 apoprotein A1
+			protein_id	ref|YP_009228127.1|
+173455	172883	gene
+			gene	nad9
+			locus_tag	AYB38_gp20
+			old_locus_tag	BniMp058
+			db_xref	GeneID:26835735
+173455	172883	CDS
+			product	NADH dehydrogenase subunit 9
+			protein_id	ref|YP_009228128.1|
+177492	177851	gene
+			gene	ccmFN2
+			locus_tag	AYB38_gp19
+			old_locus_tag	BniMp059
+			db_xref	GeneID:26835658
+177492	177851	CDS
+			product	cytochrome c biogenesis protein FN2
+			protein_id	ref|YP_009228129.1|
+180180	180251	gene
+			gene	trnQ
+			gene_desc	anticodon:TTG
+			locus_tag	AYB38_gt17
+			old_locus_tag	BniMt017
+			db_xref	GeneID:26835685
+180180	180251	tRNA
+			product	tRNA-Gln
+182932	182147	gene
+			gene	atp6
+			locus_tag	AYB38_gp18
+			old_locus_tag	BniMp060
+			db_xref	GeneID:26835723
+182932	182147	CDS
+			product	ATPase subunit 6
+			protein_id	ref|YP_009228130.1|
+184120	184048	gene
+			gene	trnM
+			gene_desc	anticodon:CAT
+			locus_tag	AYB38_gt18
+			old_locus_tag	BniMt018
+			db_xref	GeneID:26835655
+184120	184048	tRNA
+			product	tRNA-Met
+187406	186828	gene
+			gene	atp4
+			locus_tag	AYB38_gp17
+			old_locus_tag	BniMp061
+			db_xref	GeneID:26835725
+187406	186828	CDS
+			product	ATPase subunit 4
+			protein_id	ref|YP_009228131.1|
+187943	187641	gene
+			gene	nad4L
+			locus_tag	AYB38_gp16
+			old_locus_tag	BniMp062
+			db_xref	GeneID:26835663
+187943	187641	CDS
+			product	NADH dehydrogenase subunit 4L
+			protein_id	ref|YP_009228132.1|
+189269	188964	gene
+			gene	orf101b
+			locus_tag	AYB38_gp15
+			old_locus_tag	BniMp063
+			db_xref	GeneID:26835705
+189269	188964	CDS
+			product	hypothetical protein
+			protein_id	ref|YP_009228133.1|
+190480	189647	gene
+			gene	orf277
+			locus_tag	AYB38_gp14
+			old_locus_tag	BniMp064
+			db_xref	GeneID:26835703
+190480	189647	CDS
+			product	hypothetical protein
+			protein_id	ref|YP_009228134.1|
+191195	190749	gene
+			gene	rps7
+			locus_tag	AYB38_gp13
+			old_locus_tag	BniMp065
+			db_xref	GeneID:26835653
+191195	190749	CDS
+			product	ribosomal protein S7
+			protein_id	ref|YP_009228135.1|
+191948	191868	gene
+			gene	trnM
+			gene_desc	anticodon:CAT
+			locus_tag	AYB38_gt19
+			old_locus_tag	BniMt019
+			db_xref	GeneID:26835674
+191948	191868	tRNA
+			product	tRNA-Met
+193658	194059	gene
+			gene	orf133
+			locus_tag	AYB38_gp12
+			old_locus_tag	BniMp066
+			db_xref	GeneID:26835724
+193658	194059	CDS
+			product	hypothetical protein
+			protein_id	ref|YP_009228136.1|
+195300	195626	gene
+			gene	orf108c
+			locus_tag	AYB38_gp11
+			old_locus_tag	BniMp067
+			db_xref	GeneID:26835679
+195300	195626	CDS
+			product	hypothetical protein
+			protein_id	ref|YP_009228137.1|
+198608	199093	gene
+			gene	orf161
+			locus_tag	AYB38_gp10
+			old_locus_tag	BniMp068
+			db_xref	GeneID:26835695
+198608	199093	CDS
+			product	hypothetical protein
+			protein_id	ref|YP_009228138.1|
+199151	199630	gene
+			gene	orf159
+			locus_tag	AYB38_gp09
+			old_locus_tag	BniMp069
+			db_xref	GeneID:26835669
+199151	199630	CDS
+			product	hypothetical protein
+			protein_id	ref|YP_009228139.1|
+200040	199732	gene
+			gene	orf102
+			locus_tag	AYB38_gp08
+			old_locus_tag	BniMp070
+			db_xref	GeneID:26835670
+200040	199732	CDS
+			product	hypothetical protein
+			protein_id	ref|YP_009228140.1|
+200622	202595	gene
+			gene	matR
+			locus_tag	AYB38_gp07
+			old_locus_tag	BniMp071
+			db_xref	GeneID:26835702
+200622	202595	CDS
+			product	maturase protein
+			protein_id	ref|YP_009228141.1|
+204937	206136	gene
+			gene	nad5
+			locus_tag	AYB38_gp06
+			old_locus_tag	BniMp0072
+			db_xref	GeneID:26835643
+204937	206136	CDS
+			product	NADH dehydrogenase subunit 5
+			protein_id	ref|YP_009228142.1|
+210335	210455	gene
+			gene	rrn5
+			locus_tag	AYB38_gr02
+			old_locus_tag	BniMr002
+			db_xref	GeneID:26835732
+210335	210455	rRNA
+			product	5S ribosomal RNA
+212415	210559	gene
+			gene	rrn18
+			locus_tag	AYB38_gr01
+			old_locus_tag	BniMr003
+			db_xref	GeneID:26835728
+212415	210559	rRNA
+			product	18S ribosomal RNA
+216126	216440	gene
+			gene	orf104
+			locus_tag	AYB38_gp05
+			old_locus_tag	BniMp073
+			db_xref	GeneID:26835729
+216126	216440	CDS
+			product	hypothetical protein
+			protein_id	ref|YP_009228143.1|
+223383	223006	gene
+			gene	rps12
+			locus_tag	AYB38_gp04
+			old_locus_tag	BniMp074
+			db_xref	GeneID:26835701
+223383	223006	CDS
+			product	ribosomal protein S12
+			protein_id	ref|YP_009228144.1|
+223789	223430	gene
+			gene	nad3
+			locus_tag	AYB38_gp03
+			old_locus_tag	BniMp075
+			db_xref	GeneID:26835673
+223789	223430	CDS
+			product	NADH dehydrogenase subunit 3
+			protein_id	ref|YP_009228145.1|
+224821	224234	gene
+			gene	orf195
+			locus_tag	AYB38_gp02
+			old_locus_tag	BniMp076
+			db_xref	GeneID:26835737
+224821	224234	CDS
+			product	hypothetical protein
+			protein_id	ref|YP_009228146.1|
+229825	229205	gene
+			gene	ccmB
+			locus_tag	AYB38_gp01
+			old_locus_tag	BniMp077
+			db_xref	GeneID:26835662
+229825	229205	CDS
+			product	cytochrome c biogenesis B
+			protein_id	ref|YP_009228147.1|
+
+myid : AHF48631.1
+>Feature gb|KF913890.1|
+268	2379	gene
+			gene	gp1
+268	2379	CDS
+			product	RNA-dependent RNA polymerase
+			prot_desc	viral replicase
+			transl_table	4
+			protein_id	gb|AHF48631.1|
+
+myid : CAJ32466.1
+>Feature emb|AM087548.1|
+408	2756	gene
+			gene	RdRp
+408	2756	CDS
+			product	RNA-dependent RNA polymerase
+			transl_table	4
+			protein_id	emb|CAJ32466.1|
+			db_xref	GOA:Q18L80
+			db_xref	InterPro:IPR008686
+			db_xref	UniProtKB/TrEMBL:Q18L80
+
+myid : YP_009388498.1
+>Feature ref|NC_035114.1|
+129	2261	gene
+			locus_tag	CFB55_gp1
+			db_xref	GeneID:33194208
+129	2261	CDS
+			product	RNA-dependent RNA polymerase
+			prot_desc	RdRp
+			transl_table	4
+			protein_id	ref|YP_009388498.1|
+
+myid : AIE42599.1
+>Feature gb|KJ716484.1|
+4024	4476	gene
+			locus_tag	RadishMT_p001
+4024	4476	CDS
+			product	hypothetical protein
+			protein_id	gb|AIE42533.1|
+4356	4793	gene
+			locus_tag	RadishMT_p002
+4356	4793	CDS
+			product	hypothetical protein
+			protein_id	gb|AIE42534.1|
+6624	6697	gene
+			gene	trnD-GUC
+			locus_tag	RadishMT_t001
+6624	6697	tRNA
+			product	tRNA-Asp
+			note	anticodon:GUC
+7302	6997	gene
+			locus_tag	RadishMT_p003
+7302	6997	CDS
+			product	hypothetical protein
+			protein_id	gb|AIE42535.1|
+8097	8169	gene
+			gene	trnK-UUU
+			locus_tag	RadishMT_t002
+8097	8169	tRNA
+			product	tRNA-Lys
+			note	anticodon:UUU
+8332	11721	gene
+			gene	rps3
+			locus_tag	RadishMT_p004
+8332	8400	CDS
+10132	11721
+			product	ribosomal protein small subunit 3
+			protein_id	gb|AIE42536.1|
+11588	12127	gene
+			gene	rpL16
+			locus_tag	RadishMT_p005
+11588	12127	CDS
+			product	ribosomal protein large subunit 16
+			protein_id	gb|AIE42537.1|
+12252	12809	gene
+			gene	rpL5
+			locus_tag	RadishMT_p006
+12252	12809	CDS
+			product	ribosomal protein large subunit 5
+			protein_id	gb|AIE42538.1|
+12811	13113	gene
+			gene	rps14
+			locus_tag	RadishMT_p007
+12811	13113	CDS
+			product	ribosomal protein small subunit 14
+			protein_id	gb|AIE42539.1|
+14623	15804	gene
+			gene	cob
+			locus_tag	RadishMT_p008
+14623	15804	CDS
+			product	apocytochrome b
+			protein_id	gb|AIE42540.1|
+16114	16200	gene
+			gene	trnS-GGA
+			locus_tag	RadishMT_t003
+16114	16200	tRNA
+			product	tRNA-Ser
+			note	anticodon:GGA
+19595	17449	gene
+			gene	cox2
+			locus_tag	RadishMT_p009
+19595	18881	CDS
+17531	17449
+			product	cytochrome c oxidase subunit 2
+			protein_id	gb|AIE42542.1|
+			exception	RNA editing
+18616	18894	gene
+			locus_tag	RadishMT_p010
+18616	18894	CDS
+			product	hypothetical protein
+			protein_id	gb|AIE42541.1|
+20356	20703	gene
+			locus_tag	RadishMT_p011
+20356	20703	CDS
+			product	hypothetical protein
+			protein_id	gb|AIE42543.1|
+20858	20463	gene
+			locus_tag	RadishMT_p012
+20858	20463	CDS
+			product	hypothetical protein
+			protein_id	gb|AIE42544.1|
+24338	24562	gene
+			locus_tag	RadishMT_p013
+24338	24562	CDS
+			product	hypothetical protein
+			protein_id	gb|AIE42545.1|
+29259	26974	gene
+			gene	ccmFC
+			locus_tag	RadishMT_p014
+29259	28480	CDS
+27522	26974
+			product	cytochrome c biogenesis protein ccmFC
+			protein_id	gb|AIE42546.1|
+			exception	RNA editing
+29455	29384	gene
+			gene	trnG-GCC
+			locus_tag	RadishMT_t004
+29455	29384	tRNA
+			product	tRNA-Gly
+			note	anticodon:GCC
+30282	30665	gene
+			locus_tag	RadishMT_p015
+30282	30665	CDS
+			product	hypothetical protein
+			protein_id	gb|AIE42547.1|
+30814	30413	gene
+			locus_tag	RadishMT_p016
+30814	30413	CDS
+			product	hypothetical protein
+			protein_id	gb|AIE42548.1|
+31128	31925	gene
+			gene	cox3
+			locus_tag	RadishMT_p017
+31128	31925	CDS
+			product	cytochrome c oxidase subunit III
+			protein_id	gb|AIE42549.1|
+32592	33035	gene
+			locus_tag	RadishMT_p018
+32592	33035	CDS
+			product	hypothetical protein
+			protein_id	gb|AIE42550.1|
+35396	35698	gene
+			locus_tag	RadishMT_p019
+35396	35698	CDS
+			product	hypothetical protein
+			protein_id	gb|AIE42551.1|
+211663	211277	gene
+35799	36996
+135152	131386
+			gene	nad1
+			locus_tag	RadishMT_p020
+			trans_splicing
+			exception	trans-splicing
+211663	211277	CDS
+35799	35879
+36805	36996
+135152	135095
+131645	131386
+			product	NADH dehydrogenase subunit 1
+			protein_id	gb|AIE42603.1|
+			exception	trans-splicing, RNA editing
+40466	40140	gene
+			locus_tag	RadishMT_p021
+40466	40140	CDS
+			product	hypothetical protein
+			protein_id	gb|AIE42552.1|
+40926	41273	gene
+			locus_tag	RadishMT_p022
+40926	41273	CDS
+			product	hypothetical protein
+			protein_id	gb|AIE42553.1|
+42446	41301	gene
+			gene	ccmFN1
+			locus_tag	RadishMT_p023
+42446	41301	CDS
+			product	cytochrome c biogenesis protein ccmFN1
+			protein_id	gb|AIE42554.1|
+47090	47314	gene
+			gene	atp9
+			locus_tag	RadishMT_p024
+47090	47314	CDS
+			product	ATP synthase subunit 9
+			protein_id	gb|AIE42555.1|
+47624	49908	gene
+130085	130064
+80427	78899
+			gene	nad5
+			locus_tag	RadishMT_p025
+			trans_splicing
+			exception	trans-splicing
+47624	47852	CDS
+48692	49908
+130085	130064
+80427	80034
+79046	78899
+			product	NADH dehydrogenase subunit 5
+			protein_id	gb|AIE42556.1|
+			trans_splicing
+			exception	trans-splicing
+53481	53167	gene
+			locus_tag	RadishMT_p026
+53481	53167	CDS
+			product	hypothetical protein
+			protein_id	gb|AIE42557.1|
+57192	59039	gene
+			gene	rrn18
+			locus_tag	RadishMT_r001
+57192	59039	rRNA
+			product	18S ribosomal RNA
+59145	59263	gene
+			gene	rrn5
+			locus_tag	RadishMT_r002
+59145	59263	rRNA
+			product	5S ribosomal RNA
+67149	66772	gene
+			gene	rps12
+			locus_tag	RadishMT_p027
+67149	66772	CDS
+			product	ribosomal protein small subunit 12
+			protein_id	gb|AIE42558.1|
+67553	67197	gene
+			gene	nad3
+			locus_tag	RadishMT_p028
+67553	67197	CDS
+			product	NADH dehydrogenase subunit 3
+			protein_id	gb|AIE42559.1|
+68625	67657	gene
+			locus_tag	RadishMT_p029
+68625	67657	CDS
+			product	hypothetical protein
+			protein_id	gb|AIE42560.1|
+68915	68845	gene
+			gene	trnC-GCA
+			locus_tag	RadishMT_t005
+68915	68845	tRNA
+			product	tRNA-Cys
+			note	anticodon:GCA
+69254	68970	gene
+			locus_tag	RadishMT_p030
+69254	68970	CDS
+			product	hypothetical protein
+			protein_id	gb|AIE42561.1|
+69094	69020	gene
+			gene	trnP-UGG
+			locus_tag	RadishMT_t006
+69094	69020	tRNA
+			product	tRNA-Pro
+			note	anticodon:UGG
+69237	69166	gene
+			gene	trnE-UUC
+			locus_tag	RadishMT_t007
+69237	69166	tRNA
+			product	tRNA-Glu
+			note	anticodon:UUC
+71859	71527	gene
+			locus_tag	RadishMT_p031
+71859	71527	CDS
+			product	hypothetical protein
+			protein_id	gb|AIE42562.1|
+73087	72854	gene
+			locus_tag	RadishMT_p032
+73087	72854	CDS
+			product	hypothetical protein
+			protein_id	gb|AIE42563.1|
+73526	73224	gene
+			locus_tag	RadishMT_p033
+73526	73224	CDS
+			product	hypothetical protein
+			protein_id	gb|AIE42564.1|
+74913	74986	gene
+			gene	trnW-CCA
+			locus_tag	RadishMT_t008
+74913	74986	tRNA
+			product	tRNA-Trp
+			note	anticodon:CCA
+76217	76522	gene
+			locus_tag	RadishMT_p034
+76217	76522	CDS
+			product	hypothetical protein
+			protein_id	gb|AIE42565.1|
+77608	77695	gene
+			gene	trnS-GCU
+			locus_tag	RadishMT_t009
+77608	77695	tRNA
+			product	tRNA-Ser
+			note	anticodon:GCU
+77776	77849	gene
+			gene	trnH-GUG
+			locus_tag	RadishMT_t010
+77776	77849	tRNA
+			product	tRNA-His
+			note	anticodon:GUG
+78358	78044	gene
+			locus_tag	RadishMT_p035
+78358	78044	CDS
+			product	hypothetical protein
+			protein_id	gb|AIE42566.1|
+78092	78604	gene
+			locus_tag	RadishMT_p036
+78092	78604	CDS
+			product	hypothetical protein
+			protein_id	gb|AIE42567.1|
+82599	82027	gene
+			gene	nad9
+			locus_tag	RadishMT_p037
+82599	82027	CDS
+			product	NADH dehydrogenase subunit 9
+			protein_id	gb|AIE42568.1|
+86369	87004	gene
+			gene	ccmFN2
+			locus_tag	RadishMT_p038
+86369	87004	CDS
+			product	cytochrome c biogenesis protein ccmFN2
+			protein_id	gb|AIE42569.1|
+			exception	RNA editing
+88972	89043	gene
+			gene	trnQ-UUG
+			locus_tag	RadishMT_t011
+88972	89043	tRNA
+			product	tRNA-Gln
+			note	anticodon:UUG
+94930	94538	gene
+			locus_tag	RadishMT_p039
+94930	94538	CDS
+			product	hypothetical protein
+			protein_id	gb|AIE42570.1|
+96600	95980	gene
+			gene	ccmB
+			locus_tag	RadishMT_p040
+96600	95980	CDS
+			product	cytochrome c biogenesis protein ccmB
+			protein_id	gb|AIE42571.1|
+99114	104642	repeat_region
+			note	copy 1
+229523	231048	gene
+114421	111513
+109796	109609
+			gene	nad2
+			locus_tag	RadishMT_p041
+			trans_splicing
+			exception	trans-splicing
+229523	229675	CDS
+230657	231048
+114421	114261
+112085	111513
+109796	109609
+			product	NADH dehydrogenase subunit 2
+			protein_id	gb|AIE42612.1|
+			trans_splicing
+			exception	trans-splicing
+115046	114964	gene
+			gene	trnY-GUA
+			locus_tag	RadishMT_t012
+115046	114964	tRNA
+			product	tRNA-Tyr
+			note	anticodon:GUA
+115966	115895	gene
+			gene	trnN-GUU
+			locus_tag	RadishMT_t013
+115966	115895	tRNA
+			product	tRNA-Asn
+			note	anticodon:GUU
+116290	117063	gene
+			locus_tag	RadishMT_p042
+116290	117063	CDS
+			product	hypothetical protein
+			protein_id	gb|AIE42572.1|
+119249	120772	gene
+			gene	atp1
+			locus_tag	RadishMT_p043
+119249	120772	CDS
+			product	ATP synthase subunit 1
+			protein_id	gb|AIE42573.1|
+121210	121539	gene
+			locus_tag	RadishMT_p044
+121210	121539	CDS
+			product	hypothetical protein
+			protein_id	gb|AIE42574.1|
+124702	124630	gene
+			gene	trnM-CAU
+			locus_tag	RadishMT_t014
+124702	124630	tRNA
+			product	tRNA-Met
+			note	anticodon:CAU
+128019	127441	gene
+			gene	atp4
+			locus_tag	RadishMT_p045
+128019	127441	CDS
+			product	ATP synthase subunit 4
+			protein_id	gb|AIE42575.1|
+128556	128254	gene
+			gene	nad4L
+			locus_tag	RadishMT_p046
+128556	128254	CDS
+			product	NADH dehydrogenase subunit 4L
+			protein_id	gb|AIE42576.1|
+129877	129572	gene
+			locus_tag	RadishMT_p047
+129877	129572	CDS
+			product	hypothetical protein
+			protein_id	gb|AIE42577.1|
+131172	130252	gene
+			locus_tag	RadishMT_p048
+131172	130252	CDS
+			product	hypothetical protein
+			protein_id	gb|AIE42578.1|
+134457	132424	gene
+			gene	matR
+			locus_tag	RadishMT_p049
+134457	132424	CDS
+			product	maturase
+			protein_id	gb|AIE42579.1|
+			exception	RNA editing
+133142	133495	gene
+			locus_tag	RadishMT_p050
+133142	133495	CDS
+			product	hypothetical protein
+			protein_id	gb|AIE42580.1|
+134678	135001	gene
+			locus_tag	RadishMT_p051
+134678	135001	CDS
+			product	hypothetical protein
+			protein_id	gb|AIE42581.1|
+135869	135390	gene
+			locus_tag	RadishMT_p052
+135869	135390	CDS
+			product	hypothetical protein
+			protein_id	gb|AIE42582.1|
+136412	135927	gene
+			locus_tag	RadishMT_p053
+136412	135927	CDS
+			product	hypothetical protein
+			protein_id	gb|AIE42583.1|
+143008	142682	gene
+			locus_tag	RadishMT_p054
+143008	142682	CDS
+			product	hypothetical protein
+			protein_id	gb|AIE42584.1|
+144650	144249	gene
+			locus_tag	RadishMT_p055
+144650	144249	CDS
+			product	hypothetical protein
+			protein_id	gb|AIE42585.1|
+146370	146450	gene
+			gene	trnM-CAU
+			locus_tag	RadishMT_t015
+146370	146450	tRNA
+			product	tRNA-Met
+			note	anticodon:CAU
+147118	147564	gene
+			gene	rps7
+			locus_tag	RadishMT_p056
+147118	147564	CDS
+			product	ribosomal protein small subunit 7
+			protein_id	gb|AIE42586.1|
+			exception	RNA editing
+147761	148012	gene
+			locus_tag	RadishMT_p057
+147761	148012	CDS
+			product	hypothetical protein
+			protein_id	gb|AIE42587.1|
+148689	148901	gene
+			locus_tag	RadishMT_p058
+148689	148901	CDS
+			product	ATP synthase subunit 9-like protein
+			protein_id	gb|AIE42588.1|
+153417	153584	gene
+			locus_tag	RadishMT_p059
+153417	153584	CDS
+			product	hypothetical protein
+			protein_id	gb|AIE42589.1|
+155679	158854	gene
+			gene	rrn26
+			locus_tag	RadishMT_r003
+155679	158854	rRNA
+			product	26S ribosomal RNA
+164319	163999	gene
+			locus_tag	RadishMT_p060
+164319	163999	CDS
+			product	hypothetical protein
+			protein_id	gb|AIE42590.1|
+165606	165677	gene
+			gene	trnM-CAU
+			locus_tag	RadishMT_t016
+165606	165677	tRNA
+			product	tRNA-Met
+			note	anticodon:CAU
+165837	166622	gene
+			gene	atp6
+			locus_tag	RadishMT_p061
+165837	166622	CDS
+			product	ATP synthase subunit 6
+			protein_id	gb|AIE42591.1|
+166836	167774	gene
+			locus_tag	RadishMT_p062
+166836	167774	CDS
+			product	hypothetical protein
+			protein_id	gb|AIE42592.1|
+174646	177404	gene
+			gene	rpL2
+			locus_tag	RadishMT_p063
+174646	175562	CDS
+177272	177404
+			product	ribosomal protein large subunit 2
+			protein_id	gb|AIE42593.1|
+177572	178417	gene
+			gene	tatC
+			locus_tag	RadishMT_p064
+177572	178417	CDS
+			product	transport membrane protein tatC
+			protein_id	gb|AIE42594.1|
+			exception	RNA editing
+181687	189630	gene
+			gene	nad4
+			locus_tag	RadishMT_p065
+181687	182147	CDS
+183607	184121
+187191	187612
+189541	189630
+			product	NADH dehydrogenase subunit 4
+			protein_id	gb|AIE42595.1|
+			trans_splicing
+			exception	trans-splicing
+185095	184745	gene
+			locus_tag	RadishMT_p066
+185095	184745	CDS
+			product	hypothetical protein
+			protein_id	gb|AIE42596.1|
+190990	190661	gene
+			locus_tag	RadishMT_p067
+190990	190661	CDS
+			product	hypothetical protein
+			protein_id	gb|AIE42597.1|
+192879	192682	gene
+			locus_tag	RadishMT_p068
+192879	192682	CDS
+			product	hypothetical protein
+			protein_id	gb|AIE42598.1|
+196026	194680	gene
+			locus_tag	RadishMT_p069
+196026	194680	CDS
+			product	hypothetical protein
+			protein_id	gb|AIE42599.1|
+198021	198962	gene
+			locus_tag	RadishMT_p070
+198021	198962	CDS
+			product	hypothetical protein
+			protein_id	gb|AIE42600.1|
+199229	199846	gene
+			gene	nad6
+			locus_tag	RadishMT_p071
+199229	199846	CDS
+			product	NADH dehydrogenase subunit 6
+			protein_id	gb|AIE42601.1|
+203437	203156	gene
+			locus_tag	RadishMT_p072
+203437	203156	CDS
+			product	hypothetical protein
+			protein_id	gb|AIE42602.1|
+203960	203874	gene
+			gene	trnS-UGA
+			locus_tag	RadishMT_t017
+203960	203874	tRNA
+			product	tRNA-Ser
+			note	anticodon:UGA
+214548	212965	gene
+			gene	cox1
+			locus_tag	RadishMT_p073
+214548	212965	CDS
+			product	cytochrome c oxidase subunit 1
+			protein_id	gb|AIE42604.1|
+215146	215622	gene
+			gene	atp8
+			locus_tag	RadishMT_p074
+215146	215622	CDS
+			product	ATP synthase subunit 8
+			protein_id	gb|AIE42605.1|
+216087	216431	gene
+			locus_tag	RadishMT_p075
+216087	216431	CDS
+			product	hypothetical protein
+			protein_id	gb|AIE42606.1|
+217108	223254	gene
+			gene	nad7
+			locus_tag	RadishMT_p076
+217108	217250	CDS
+218246	218314
+219413	219879
+220933	221176
+222993	223254
+			product	NADH dehydrogenase subunit 7
+			protein_id	gb|AIE42607.1|
+			trans_splicing
+			exception	trans-splicing
+218850	218503	gene
+			locus_tag	RadishMT_p077
+218850	218503	CDS
+			product	hypothetical protein
+			protein_id	gb|AIE42608.1|
+218519	218881	gene
+			locus_tag	RadishMT_p078
+218519	218881	CDS
+			product	hypothetical protein
+			protein_id	gb|AIE42609.1|
+226075	225785	gene
+			locus_tag	RadishMT_p079
+226075	225785	CDS
+			product	hypothetical protein
+			protein_id	gb|AIE42610.1|
+227610	228698	gene
+			gene	rps4
+			locus_tag	RadishMT_p080
+227610	228698	CDS
+			product	ribosomal protein small subunit 4
+			protein_id	gb|AIE42611.1|
+235962	235219	gene
+			gene	ccmC
+			locus_tag	RadishMT_p081
+235962	235219	CDS
+			product	cytochrome c biogenesis protein ccmC
+			protein_id	gb|AIE42613.1|
+236825	236517	gene
+			locus_tag	RadishMT_p082
+236825	236517	CDS
+			product	hypothetical protein
+			protein_id	gb|AIE42614.1|
+238526	244054	repeat_region
+			note	copy 2
+
+myid : AEX57677.1
+>Feature gb|JQ083668.1|
+1	5909	repeat_region
+			note	copy 1
+6023	6475	gene
+			gene	orf150
+			locus_tag	RasatMp001
+6023	6475	CDS
+			product	hypothetical protein
+			protein_id	gb|AEX57632.1|
+6355	6792	gene
+			gene	orf145b
+			locus_tag	RasatMp002
+6355	6792	CDS
+			product	hypothetical protein
+			protein_id	gb|AEX57633.1|
+8623	8696	gene
+			gene	trnD
+			locus_tag	RasatMt001
+8623	8696	tRNA
+			product	tRNA-Asp
+			note	anticodom:GTC
+9301	8996	gene
+			gene	orf101e
+			locus_tag	RasatMp003
+9301	8996	CDS
+			product	hypothetical protein
+			protein_id	gb|AEX57634.1|
+10096	10168	gene
+			gene	trnK
+			locus_tag	RasatMt002
+10096	10168	tRNA
+			product	tRNA-Lys
+			note	anticodom:TTT
+10331	13720	gene
+			gene	rps3
+			locus_tag	RasatMp004
+10331	10405	CDS
+12131	13720
+			product	ribosomal protein S3
+			protein_id	gb|AEX57635.1|
+13587	14126	gene
+			gene	rpl16
+			locus_tag	RasatMp005
+13587	14126	CDS
+			product	ribosomal protein L16
+			protein_id	gb|AEX57636.1|
+14251	14808	gene
+			gene	rpl5
+			locus_tag	RasatMp006
+14251	14808	CDS
+			product	ribosomal protein L5
+			protein_id	gb|AEX57637.1|
+14810	15112	gene
+			gene	rps14
+			locus_tag	RasatMp007
+14810	15112	CDS
+			product	ribosomal protein S14
+			protein_id	gb|AEX57638.1|
+16622	17803	gene
+			gene	cob
+			locus_tag	RasatMp008
+16622	17803	CDS
+			product	cytochrome b
+			protein_id	gb|AEX57639.1|
+18113	18199	gene
+			gene	trnS
+			locus_tag	RasatMt003
+18113	18199	tRNA
+			product	tRNA-Ser
+			note	anticodom:TTT
+21579	19448	gene
+			gene	cox2-1
+			locus_tag	RasatMp009
+21579	20880	CDS
+19530	19448
+			product	cytochrome c oxidase subunit 2-1
+			protein_id	gb|AEX57640.1|
+			exception	RNA editing
+19510	19489	misc_feature
+			note	C to U RNA editing
+20882	20882	misc_feature
+			note	C to U RNA editing
+20999	20999	misc_feature
+			note	C to U RNA editing
+21023	21023	misc_feature
+			note	C to U RNA editing
+21104	21104	misc_feature
+			note	C to U RNA editing
+21201	21201	misc_feature
+			note	C to U RNA editing
+21302	21302	misc_feature
+			note	C to U RNA editing
+21327	21327	misc_feature
+			note	C to U RNA editing
+21442	21442	misc_feature
+			note	C to U RNA editing
+21509	21509	misc_feature
+			note	C to U RNA editing
+21553	21553	misc_feature
+			note	C to U RNA editing
+21578	21578	misc_feature
+			note	C to U RNA editing
+22355	22702	gene
+			gene	orf115c
+			locus_tag	RasatMp010
+22355	22702	CDS
+			product	hypothetical protein
+			protein_id	gb|AEX57641.1|
+22857	22462	gene
+			gene	orf131
+			locus_tag	RasatMp011
+22857	22462	CDS
+			product	hypothetical protein
+			protein_id	gb|AEX57642.1|
+31258	28943	gene
+			gene	ccmFC
+			locus_tag	RasatMp012
+31258	30479	CDS
+29521	28943
+			product	CcmFC
+			protein_id	gb|AEX57643.1|
+31454	31383	gene
+			gene	trnG
+			locus_tag	RasatMt004
+31454	31383	tRNA
+			product	tRNA-Gly
+			note	anticodom:GCC
+32281	32664	gene
+			gene	orf127
+			locus_tag	RasatMp013
+32281	32664	CDS
+			product	hypothetical protein
+			protein_id	gb|AEX57644.1|
+32813	32412	gene
+			gene	orf133a
+			locus_tag	RasatMp014
+32813	32412	CDS
+			product	hypothetical protein
+			protein_id	gb|AEX57645.1|
+33127	33924	gene
+			gene	cox3
+			locus_tag	RasatMp015
+33127	33924	CDS
+			product	cytochrome c oxidase subunit 3
+			protein_id	gb|AEX57646.1|
+			exception	RNA editing
+33238	33238	misc_feature
+			note	C to U RNA editing
+33371	33371	misc_feature
+			note	C to U RNA editing
+33383	33383	misc_feature
+			note	C to U RNA editing
+33437	33437	misc_feature
+			note	C to U RNA editing
+33440	33440	misc_feature
+			note	C to U RNA editing
+33539	33539	misc_feature
+			note	C to U RNA editing
+33729	33729	misc_feature
+			note	C to U RNA editing
+34591	35034	gene
+			gene	orf147
+			locus_tag	RasatMp016
+34591	35034	CDS
+			product	hypothetical protein
+			protein_id	gb|AEX57647.1|
+37395	37697	gene
+			gene	orf100b
+			locus_tag	RasatMp017
+37395	37697	CDS
+			product	hypothetical protein
+			protein_id	gb|AEX57648.1|
+42468	42142	gene
+			gene	orf108b
+			locus_tag	RasatMp019
+42468	42142	CDS
+			product	hypothetical protein
+			protein_id	gb|AEX57650.1|
+42928	43275	gene
+			gene	orf115d
+			locus_tag	RasatMp020
+42928	43275	CDS
+			product	hypothetical protein
+			protein_id	gb|AEX57651.1|
+44448	43303	gene
+			gene	ccmFN1
+			locus_tag	RasatMp021
+44448	43303	CDS
+			product	CcmFN1
+			protein_id	gb|AEX57652.1|
+49092	49316	gene
+			gene	atp9
+			locus_tag	RasatMp022
+49092	49316	CDS
+			product	Atp9
+			protein_id	gb|AEX57653.1|
+			exception	RNA editing
+49111	49111	misc_feature
+			note	C to U RNA editing
+49141	49141	misc_feature
+			note	C to U RNA editing
+49225	49225	misc_feature
+			note	C to U RNA editing
+49282	49282	misc_feature
+			note	C to U RNA editing
+53512	53440	gene
+			gene	trnM
+			locus_tag	RasatMt005
+53512	53440	tRNA
+			product	tRNA-Met
+			note	anticodom:CAT
+56858	56280	gene
+			gene	atp4
+			locus_tag	RasatMp023
+56858	56280	CDS
+			product	Atp4
+			protein_id	gb|AEX57654.1|
+			exception	RNA editing
+56443	56443	misc_feature
+			note	C to U RNA editing
+56464	56464	misc_feature
+			note	C to U RNA editing
+56608	56608	misc_feature
+			note	C to U RNA editing
+56611	56611	misc_feature
+			note	C to U RNA editing
+56644	56644	misc_feature
+			note	C to U RNA editing
+56715	56715	misc_feature
+			note	C to U RNA editing
+56770	56770	misc_feature
+			note	C to U RNA editing
+57395	57093	gene
+			gene	nad4L
+			locus_tag	RasatMp024
+57395	57093	CDS
+			product	NADH dehydrogenase subunit 4L
+			protein_id	gb|AEX57655.1|
+			exception	RNA editing
+57199	57199	misc_feature
+			note	C to U RNA editing
+57208	57208	misc_feature
+			note	C to U RNA editing
+57238	57238	misc_feature
+			note	C to U RNA editing
+57265	57265	misc_feature
+			note	C to U RNA editing
+57286	57286	misc_feature
+			note	C to U RNA editing
+57296	57296	misc_feature
+			note	C to U RNA editing
+57301	57301	misc_feature
+			note	C to U RNA editing
+57310	57310	misc_feature
+			note	C to U RNA editing
+57341	57341	misc_feature
+			note	C to U RNA editing
+57355	57355	misc_feature
+			note	C to U RNA editing
+57388	57388	misc_feature
+			note	C to U RNA editing
+57977	57657	gene
+			gene	orf106
+			locus_tag	RasatMp025
+57977	57657	CDS
+			product	hypothetical protein
+			protein_id	gb|AEX57656.1|
+188177	190461	gene
+58164	58185
+221035	219504
+			gene	nad5
+			locus_tag	RasatMp026
+			trans_splicing
+			exception	trans-splicing
+188177	188405	CDS
+189245	190461
+58164	58185
+221035	220642
+219651	219504
+			product	NADH dehydrogenase subunit 5
+			protein_id	gb|AEX57657.1|
+			trans_splicing
+			exception	trans-splicing
+59119	58352	gene
+			gene	orf255
+			locus_tag	RasatMp027
+59119	58352	CDS
+			product	hypothetical protein
+			protein_id	gb|AEX57658.1|
+65868	59723	gene
+			gene	nad7
+			locus_tag	RasatMp028
+65868	65726	CDS
+64730	64662
+63563	63097
+62044	61801
+59984	59723
+			product	NADH dehydrogenase subunit 7
+			protein_id	gb|AEX57659.1|
+67829	67353	gene
+			gene	atp8
+			locus_tag	RasatMp029
+67829	67353	CDS
+			product	Atp8
+			protein_id	gb|AEX57660.1|
+			exception	RNA editing
+67441	67441	misc_feature
+			note	C to U RNA editing
+68970	68617	gene
+			gene	orf117b
+			locus_tag	RasatMp030
+68970	68617	CDS
+			product	hypothetical protein
+			protein_id	gb|AEX57661.1|
+69907	69443	gene
+			gene	orf154
+			locus_tag	RasatMp031
+69907	69443	CDS
+			product	hypothetical protein
+			protein_id	gb|AEX57662.1|
+71685	71317	gene
+			gene	orf122
+			locus_tag	RasatMp032
+71685	71317	CDS
+			product	hypothetical protein
+			protein_id	gb|AEX57663.1|
+72371	72679	gene
+			gene	orf102a
+			locus_tag	RasatMp033
+72371	72679	CDS
+			product	hypothetical protein
+			protein_id	gb|AEX57664.1|
+77590	79113	gene
+			gene	atp1
+			locus_tag	RasatMp034
+77590	79113	CDS
+			product	Atp1
+			protein_id	gb|AEX57665.1|
+79551	79880	gene
+			gene	orf109
+			locus_tag	RasatMp035
+79551	79880	CDS
+			product	hypothetical protein
+			protein_id	gb|AEX57666.1|
+85654	88829	gene
+			gene	rrn26
+			locus_tag	RasatMr001
+85654	88829	rRNA
+			product	26S ribosomal RNA
+94293	93973	gene
+			gene	orf106b
+			locus_tag	RasatMp036
+94293	93973	CDS
+			product	hypothetical protein
+			protein_id	gb|AEX57667.1|
+95579	95652	gene
+			gene	trnfM
+			locus_tag	RasatMt006
+95579	95652	tRNA
+			product	tRNA-Met
+			note	anticodom:CAT
+95811	96596	gene
+			gene	atp6
+			locus_tag	RasatMp037
+95811	96596	CDS
+			product	Atp6
+			protein_id	gb|AEX57668.1|
+96810	97664	gene
+			gene	orf284
+			locus_tag	RasatMp038
+96810	97664	CDS
+			product	hypothetical protein
+			protein_id	gb|AEX57669.1|
+104043	105131	gene
+			gene	rps4
+			locus_tag	RasatMp039
+104043	105131	CDS
+			product	ribosomal protein S4
+			protein_id	gb|AEX57670.1|
+105956	107482	gene
+126707	121895
+			gene	nad2
+			locus_tag	RasatMp040
+			trans_splicing
+			exception	trans-splicing
+105956	106108	CDS
+107091	107482
+126707	126547
+124371	123799
+122082	121895
+			product	NADH dehydrogenase subunit 2
+			protein_id	gb|AEX57671.1|
+			trans_splicing
+			exception	trans-splicing
+112396	111653	gene
+			gene	ccmC
+			locus_tag	RasatMp041
+112396	111653	CDS
+			product	CcmC
+			protein_id	gb|AEX57672.1|
+114950	120858	repeat_region
+			note	copy 2
+127332	127250	gene
+			gene	trnY
+			locus_tag	RasatMt007
+127332	127250	tRNA
+			product	tRNA-Tyr
+			note	anticodom:GTA
+128252	128181	gene
+			gene	trnN
+			locus_tag	RasatMt008
+128252	128181	tRNA
+			product	tRNA-Asn
+			note	anticodom:GTT
+128576	129211	gene
+			gene	orf211
+			locus_tag	RasatMp042
+128576	129211	CDS
+			product	hypothetical protein
+			protein_id	gb|AEX57673.1|
+130728	132311	gene
+			gene	cox1
+			locus_tag	RasatMp043
+130728	132311	CDS
+			product	cytochrome c oxidase subunit 1
+			protein_id	gb|AEX57674.1|
+133624	134010	gene
+37798	38995
+184197	187963
+			gene	nad1
+			locus_tag	RasatMp018
+			trans_splicing
+			exception	trans-splicing
+133624	134010	CDS
+37798	37878
+38804	38995
+184197	184254
+187704	187963
+			product	NADH dehydrogenase subunit 1
+			protein_id	gb|AEX57649.1|
+			exception	trans-splicing, RNA editing
+141328	141414	gene
+			gene	trnS
+			locus_tag	RasatMt009
+141328	141414	tRNA
+			product	tRNA-Ser
+			note	anticodom:TGA
+141776	142132	gene
+			gene	orf118a
+			locus_tag	RasatMp044
+141776	142132	CDS
+			product	hypothetical protein
+			protein_id	gb|AEX57675.1|
+146055	145438	gene
+			gene	nad6
+			locus_tag	RasatMp045
+146055	145438	CDS
+			product	NADH dehydrogenase subunit 6
+			protein_id	gb|AEX57676.1|
+149180	150604	gene
+			gene	orf474
+			locus_tag	RasatMp046
+149180	150604	CDS
+			product	hypothetical protein
+			protein_id	gb|AEX57677.1|
+154294	154623	gene
+			gene	orf109a
+			locus_tag	RasatMp047
+154294	154623	CDS
+			product	hypothetical protein
+			protein_id	gb|AEX57678.1|
+163599	155654	gene
+			gene	nad4
+			locus_tag	RasatMp048
+163599	163139	CDS
+161679	161165
+158094	157673
+155743	155654
+			product	NADH dehydrogenase subunit 4
+			protein_id	gb|AEX57679.1|
+160191	160541	gene
+			gene	orf116
+			locus_tag	RasatMp049
+160191	160541	CDS
+			product	hypothetical protein
+			protein_id	gb|AEX57680.1|
+167713	166904	gene
+			gene	tatC
+			locus_tag	RasatMp050
+167713	166904	CDS
+			product	TatC
+			protein_id	gb|AEX57681.1|
+			exception	RNA editing
+170639	167881	gene
+			gene	rpl2
+			locus_tag	RasatMp051
+170639	169723	CDS
+168013	167881
+			product	ribosomal protein L2
+			protein_id	gb|AEX57682.1|
+			exception	RNA editing
+170428	170428	misc_feature
+			note	C to U RNA editing
+171176	170844	gene
+			gene	orf110a
+			locus_tag	RasatMp052
+171176	170844	CDS
+			product	hypothetical protein
+			protein_id	gb|AEX57683.1|
+172174	171785	gene
+			gene	rps7
+			locus_tag	RasatMp053
+172174	171785	CDS
+			product	ribosomal protein S7
+			protein_id	gb|AEX57684.1|
+			exception	RNA editing
+171900	171900	misc_feature
+			note	C to U RNA editing
+172979	172899	gene
+			gene	trnI
+			locus_tag	RasatMt010
+172979	172899	tRNA
+			product	tRNA-Ile
+			note	anticodom:CAT
+174699	175100	gene
+			gene	orf133
+			locus_tag	RasatMp054
+174699	175100	CDS
+			product	hypothetical protein
+			protein_id	gb|AEX57685.1|
+176341	176667	gene
+			gene	orf108
+			locus_tag	RasatMp055
+176341	176667	CDS
+			product	hypothetical protein
+			protein_id	gb|AEX57686.1|
+182937	183422	gene
+			gene	orf161
+			locus_tag	RasatMp056
+182937	183422	CDS
+			product	hypothetical protein
+			protein_id	gb|AEX57687.1|
+183480	183959	gene
+			gene	orf159
+			locus_tag	RasatMp057
+183480	183959	CDS
+			product	hypothetical protein
+			protein_id	gb|AEX57688.1|
+184671	184348	gene
+			gene	orf107
+			locus_tag	RasatMp058
+184671	184348	CDS
+			product	hypothetical protein
+			protein_id	gb|AEX57689.1|
+184892	186925	gene
+			gene	matR
+			locus_tag	RasatMp059
+184892	186925	CDS
+			product	MatR
+			protein_id	gb|AEX57690.1|
+			exception	RNA editing
+190807	191151	gene
+			gene	orf114a
+			locus_tag	RasatMp060
+190807	191151	CDS
+			product	hypothetical protein
+			protein_id	gb|AEX57691.1|
+191466	191086	gene
+			gene	orf126
+			locus_tag	RasatMp061
+191466	191086	CDS
+			product	hypothetical protein
+			protein_id	gb|AEX57692.1|
+194028	193714	gene
+			gene	orf104
+			locus_tag	RasatMp062
+194028	193714	CDS
+			product	hypothetical protein
+			protein_id	gb|AEX57693.1|
+197739	199586	gene
+			gene	rrn18
+			locus_tag	RasatMr002
+197739	199586	rRNA
+			product	18S ribosomal RNA
+199692	199810	gene
+			gene	rrn5
+			locus_tag	RasatMr003
+199692	199810	rRNA
+			product	5S ribosomal RNA
+207697	207320	gene
+			gene	rps12
+			locus_tag	RasatMp063
+207697	207320	CDS
+			product	ribosomal protein S12
+			protein_id	gb|AEX57694.1|
+208101	207745	gene
+			gene	nad3
+			locus_tag	RasatMp064
+208101	207745	CDS
+			product	NADH dehydrogenase subunit 3
+			protein_id	gb|AEX57695.1|
+			exception	RNA editing
+207753	207753	misc_feature
+			note	C to U RNA editing
+207758	207758	misc_feature
+			note	C to U RNA editing
+207851	207851	misc_feature
+			note	C to U RNA editing
+207855	207855	misc_feature
+			note	C to U RNA editing
+207893	207893	misc_feature
+			note	C to U RNA editing
+207894	207894	misc_feature
+			note	C to U RNA editing
+208022	208022	misc_feature
+			note	C to U RNA editing
+208097	208097	misc_feature
+			note	C to U RNA editing
+209173	208205	gene
+			gene	orf322
+			locus_tag	RasatMp065
+209173	208205	CDS
+			product	hypothetical protein
+			protein_id	gb|AEX57696.1|
+209521	209451	gene
+			gene	trnC
+			locus_tag	RasatMt011
+209521	209451	tRNA
+			product	tRNA-Cys
+			note	anticodom:GCA
+209700	209626	gene
+			gene	trnP
+			locus_tag	RasatMt012
+209700	209626	tRNA
+			product	tRNA-Pro
+			note	anticodom:TGG
+209843	209772	gene
+			gene	trnE
+			locus_tag	RasatMt013
+209843	209772	tRNA
+			product	tRNA-Glu
+			note	anticodom:TTC
+212466	212134	gene
+			gene	orf110
+			locus_tag	RasatMp066
+212466	212134	CDS
+			product	hypothetical protein
+			protein_id	gb|AEX57697.1|
+214133	213831	gene
+			gene	orf100a
+			locus_tag	RasatMp067
+214133	213831	CDS
+			product	hypothetical protein
+			protein_id	gb|AEX57698.1|
+215518	215591	gene
+			gene	trnW
+			locus_tag	RasatMt014
+215518	215591	tRNA
+			product	tRNA-Trp
+			note	anticodom:CCA
+216822	217127	gene
+			gene	orf101a
+			locus_tag	RasatMp068
+216822	217127	CDS
+			product	hypothetical protein
+			protein_id	gb|AEX57699.1|
+218213	218300	gene
+			gene	trnS
+			locus_tag	RasatMt015
+218213	218300	tRNA
+			product	tRNA-Ser
+			note	anticodom:GCT
+218381	218454	gene
+			gene	trnH
+			locus_tag	RasatMt016
+218381	218454	tRNA
+			product	tRNA-His
+			note	anticodom:GTG
+223207	222635	gene
+			gene	nad9
+			locus_tag	RasatMp069
+223207	222635	CDS
+			product	NADH dehydrogenase subunit 9
+			protein_id	gb|AEX57700.1|
+			exception	RNA editing
+222769	222769	misc_feature
+			note	C to U RNA editing
+222810	222810	misc_feature
+			note	C to U RNA editing
+222880	222880	misc_feature
+			note	C to U RNA editing
+222910	222910	misc_feature
+			note	C to U RNA editing
+223018	223018	misc_feature
+			note	C to U RNA editing
+223041	223041	misc_feature
+			note	C to U RNA editing
+223116	223116	misc_feature
+			note	C to U RNA editing
+223194	223194	misc_feature
+			note	C to U RNA editing
+226979	227614	gene
+			gene	ccmFN2
+			locus_tag	RasatMp070
+226979	227614	CDS
+			product	CcmFN2
+			protein_id	gb|AEX57701.1|
+			exception	RNA editing
+229413	229721	gene
+			gene	orf102b
+			locus_tag	RasatMp071
+229413	229721	CDS
+			product	hypothetical protein
+			protein_id	gb|AEX57702.1|
+229582	229653	gene
+			gene	trnQ
+			locus_tag	RasatMt017
+229582	229653	tRNA
+			product	tRNA-Gln
+			note	anticodom:TTG
+234196	233891	gene
+			gene	orf101g
+			locus_tag	RasatMp072
+234196	233891	CDS
+			product	hypothetical protein
+			protein_id	gb|AEX57703.1|
+235540	235148	gene
+			gene	orf130
+			locus_tag	RasatMp073
+235540	235148	CDS
+			product	hypothetical protein
+			protein_id	gb|AEX57704.1|
+237211	236591	gene
+			gene	ccmB
+			locus_tag	RasatMp074
+237211	236591	CDS
+			product	CcmB
+			protein_id	gb|AEX57705.1|
+
+myid : DAB41740.1
+>Feature tpg|BK010422.1|
+318	2783	gene
+			gene	RdRp
+318	2783	CDS
+			product	RNA-dependent RNA polymerase
+			transl_table	4
+			protein_id	tpg|DAB41740.1|
+
+myid : YP_009465717.1
+>Feature ref|NC_037056.1|
+434	2491	gene
+			locus_tag	C5Y47_gp1
+			db_xref	GeneID:35996802
+434	2491	CDS
+			product	RNA-dependent RNA polymerase
+			transl_table	4
+			protein_id	ref|YP_009465717.1|
+
+myid : DAB41745.1
+>Feature tpg|BK010427.1|
+352	2643	gene
+			gene	RdRp
+352	2643	CDS
+			product	RNA-dependent RNA polymerase
+			transl_table	4
+			protein_id	tpg|DAB41745.1|
+
+myid : AHF48632.1
+>Feature gb|KF913891.1|
+57	>1341	gene
+			gene	gp1
+57	>1341	CDS
+			product	RNA-dependent RNA polymerase
+			prot_desc	viral replicase
+			transl_table	4
+			protein_id	gb|AHF48632.1|
+
+myid : BAJ23143.2
+>Feature dbj|AB558120.2|
+298	2760	gene
+			gene	RdRp
+298	2760	CDS
+			product	RNA-directed RNA polymerase
+			transl_table	4
+			protein_id	dbj|BAJ23143.2|
+
+myid : AEX91879.1
+>Feature gb|JQ013378.1|
+1	311	5'UTR
+312	2342	gene
+			locus_tag	SsMV2_gp1
+312	2342	CDS
+			product	RNA-dependent RNA polymerases
+			transl_table	4
+			protein_id	gb|AEX91879.1|
+			note	RdRp
+2343	2445	3'UTR
+
+myid : AOX47577.1
+>Feature gb|KU291923.1|
+235	2688	CDS
+			product	RNA-dependent RNA polymerase
+			transl_table	4
+			protein_id	gb|AOX47577.1|
+
+myid : NP_660181.1
+>Feature ref|NC_004054.1|
+1	2343	gene
+			gene	pol6
+			locus_tag	OnmV6gp1
+			db_xref	GeneID:951747
+142	2229	CDS
+			product	RNA-dependent RNA polymerase, putative
+			transl_table	4
+			protein_id	ref|NP_660181.1|
+
+myid : NP_660180.1
+>Feature ref|NC_004053.1|
+1	2474	gene
+			gene	pol5
+			locus_tag	OnmV5gp1
+			db_xref	GeneID:951745
+228	2417	CDS
+			product	RNA-dependent RNA polymerase, putative
+			transl_table	4
+			protein_id	ref|NP_660180.1|
+
+myid : AWY10972.1
+>Feature gb|MF444244.1|
+332	2419	CDS
+			product	RNA-dependent RNA polymerase
+			transl_table	4
+			protein_id	gb|AWY10972.1|
+
+myid : AHF48625.1
+>Feature gb|KF913884.1|
+390	2477	gene
+			gene	gp1
+390	2477	CDS
+			product	RNA-dependent RNA polymerase
+			prot_desc	viral replicase
+			transl_table	4
+			protein_id	gb|AHF48625.1|
+
+myid : AHF48627.1
+>Feature gb|KF913886.1|
+589	2640	gene
+			gene	gp1
+589	2640	CDS
+			product	RNA-dependent RNA polymerase
+			prot_desc	viral replicase
+			transl_table	4
+			protein_id	gb|AHF48627.1|
+
+myid : AAR01970.1
+>Feature gb|AY328476.1|
+138	2372	CDS
+			product	RNA-dependent RNA polymerase
+			transl_table	4
+			protein_id	gb|AAR01970.1|
+
+myid : AGC81676.1
+>Feature gb|KC193578.1|
+9731	1	repeat_region
+11432	11680	gene
+			locus_tag	DCGMS_00010
+11432	11680	CDS
+			product	hypothetical protein
+			protein_id	gb|AGC81661.1|
+12290	13033	gene
+			gene	ccmC
+			locus_tag	DCGMS_00020
+12290	13033	CDS
+			product	cytochrome c maturation
+			protein_id	gb|AGC81662.1|
+18729	18577	gene
+17595	17204
+233564	233724
+235903	236475
+238192	238379
+			gene	nad2
+			locus_tag	DCGMS_00030
+			trans_splicing
+			exception	trans-splicing
+18729	18577	CDS
+17595	17204
+233564	233724
+235903	236475
+238192	238379
+			product	NADH dehydrogenase subunit 2
+			protein_id	gb|AGC81663.1|
+			trans_splicing
+			exception	trans-splicing
+20642	19554	gene
+			gene	rps4
+			locus_tag	DCGMS_00040
+20642	19554	CDS
+			product	ribosomal protein S4
+			protein_id	gb|AGC81664.1|
+22177	22467	gene
+			locus_tag	DCGMS_00050
+22177	22467	CDS
+			product	hypothetical protein
+			protein_id	gb|AGC81665.1|
+31143	31001	gene
+30005	29937
+28838	28372
+27318	27075
+25258	24997
+			gene	nad7
+			locus_tag	DCGMS_00060
+			trans_splicing
+			exception	trans-splicing
+31143	31001	CDS
+30005	29937
+28838	28372
+27318	27075
+25258	24997
+			product	NADH dehydrogenase subunit 7
+			protein_id	gb|AGC81666.1|
+			trans_splicing
+			exception	trans-splicing
+29732	29370	gene
+			locus_tag	DCGMS_00070
+29732	29370	CDS
+			product	hypothetical protein
+			protein_id	gb|AGC81667.1|
+29401	29748	gene
+			locus_tag	DCGMS_00080
+29401	29748	CDS
+			product	hypothetical protein
+			protein_id	gb|AGC81668.1|
+32164	31820	gene
+			locus_tag	DCGMS_00090
+32164	31820	CDS
+			product	hypothetical protein
+			protein_id	gb|AGC81669.1|
+33105	32629	gene
+			gene	atp8
+			locus_tag	DCGMS_00100
+33105	32629	CDS
+			product	ATPase subunit 8
+			protein_id	gb|AGC81670.1|
+33703	35286	gene
+			gene	cox1
+			locus_tag	DCGMS_00110
+33703	35286	CDS
+			product	cytochrome c oxidase subunit 1
+			protein_id	gb|AGC81671.1|
+36588	36974	gene
+148284	148364
+149290	149481
+184532	184589
+188039	188298
+			gene	nad1
+			locus_tag	DCGMS_00120
+			trans_splicing
+			exception	trans-splicing
+36588	36974	CDS
+148284	148364
+149290	149481
+184532	184589
+188039	188298
+			product	NADH dehydrogenase subunit 1
+			protein_id	gb|AGC81672.1|
+			exception	trans-splicing, RNA editing
+44290	44376	gene
+			locus_tag	DCGMS_tRNA00020
+44290	44376	tRNA
+			product	tRNA-Ser
+44813	45094	gene
+			locus_tag	DCGMS_00130
+44813	45094	CDS
+			product	hypothetical protein
+			protein_id	gb|AGC81673.1|
+49021	48404	gene
+			gene	nad6
+			locus_tag	DCGMS_00140
+49021	48404	CDS
+			product	NADH dehydrogenase subunit 6
+			protein_id	gb|AGC81674.1|
+50229	49288	gene
+			locus_tag	DCGMS_00150
+50229	49288	CDS
+			product	ribulose-1,5-bisphosphate carboxylase/oxygenase large subunit
+			protein_id	gb|AGC81675.1|
+52224	53570	gene
+			locus_tag	DCGMS_00160
+52224	53570	CDS
+			product	hypothetical protein
+			protein_id	gb|AGC81676.1|
+66558	58615	gene
+			gene	nad4
+			locus_tag	DCGMS_00170
+66558	66098	CDS
+64638	64124
+61054	60633
+58704	58615
+			product	NADH dehydrogenase subunit 4
+			protein_id	gb|AGC81677.1|
+63150	63500	gene
+			locus_tag	DCGMS_00180
+63150	63500	CDS
+			product	hypothetical protein
+			protein_id	gb|AGC81678.1|
+70672	69863	gene
+			gene	tatC
+			locus_tag	DCGMS_00190
+70672	69863	CDS
+			product	transport membrane protein
+			protein_id	gb|AGC81679.1|
+			exception	RNA editing
+73598	70840	gene
+			gene	rpl2
+			locus_tag	DCGMS_00200
+73598	72682	CDS
+70972	70840
+			product	ribosomal protein L2
+			protein_id	gb|AGC81680.1|
+74049	74423	gene
+			locus_tag	DCGMS_00210
+74049	74423	CDS
+			product	hypothetical protein
+			protein_id	gb|AGC81681.1|
+77809	77739	gene
+			locus_tag	DCGMS_tRNA00030
+77809	77739	tRNA
+			product	tRNA-Cys
+78148	77822	gene
+			locus_tag	DCGMS_00220
+78148	77822	CDS
+			product	hypothetical protein
+			protein_id	gb|AGC81682.1|
+77988	77914	gene
+			locus_tag	DCGMS_tRNA00040
+77988	77914	tRNA
+			product	tRNA-Pro
+78131	78060	gene
+			locus_tag	DCGMS_tRNA00050
+78131	78060	tRNA
+			product	tRNA-Glu
+80753	80421	gene
+			locus_tag	DCGMS_00230
+80753	80421	CDS
+			product	hypothetical protein
+			protein_id	gb|AGC81683.1|
+82420	82118	gene
+			locus_tag	DCGMS_00240
+82420	82118	CDS
+			product	hypothetical protein
+			protein_id	gb|AGC81684.1|
+83799	83872	gene
+			locus_tag	DCGMS_tRNA00060
+83799	83872	tRNA
+			product	tRNA-Trp
+85103	85408	gene
+			locus_tag	DCGMS_00250
+85103	85408	CDS
+			product	hypothetical protein
+			protein_id	gb|AGC81685.1|
+86494	86581	gene
+			locus_tag	DCGMS_tRNA00070
+86494	86581	tRNA
+			product	tRNA-Ser
+86662	86735	gene
+			locus_tag	DCGMS_tRNA00080
+86662	86735	tRNA
+			product	tRNA-His
+87244	86930	gene
+			locus_tag	DCGMS_00260
+87244	86930	CDS
+			product	hypothetical protein
+			protein_id	gb|AGC81686.1|
+86978	87490	gene
+			locus_tag	DCGMS_00270
+86978	87490	CDS
+			product	hypothetical protein
+			protein_id	gb|AGC81687.1|
+188512	188740	gene
+189580	190796
+161194	161215
+89313	88920
+87932	87785
+			gene	nad5
+			locus_tag	DCGMS_00280
+			trans_splicing
+			exception	trans-splicing
+188512	188740	CDS
+189580	190796
+161194	161215
+89313	88920
+87932	87785
+			product	NADH dehydrogenase subunit 5
+			protein_id	gb|AGC81688.1|
+			trans_splicing
+			exception	trans-splicing
+91485	90913	gene
+			gene	nad9
+			locus_tag	DCGMS_00290
+91485	90913	CDS
+			product	NADH dehydrogenase subunit 9
+			protein_id	gb|AGC81689.1|
+95258	95890	gene
+			gene	ccmFN2
+			locus_tag	DCGMS_00300
+95258	95890	CDS
+			product	cytochrome c biogenesis FN
+			protein_id	gb|AGC81690.1|
+97858	97929	gene
+			locus_tag	DCGMS_tRNA00090
+97858	97929	tRNA
+			product	tRNA-Gln
+105486	104866	gene
+			gene	ccmB
+			locus_tag	DCGMS_00310
+105486	104866	CDS
+			product	cytochrome c biogenesis B
+			protein_id	gb|AGC81691.1|
+107994	117724	repeat_region
+119110	119183	gene
+			locus_tag	DCGMS_tRNA00100
+119110	119183	tRNA
+			product	tRNA-Asp
+119788	119483	gene
+			locus_tag	DCGMS_00320
+119788	119483	CDS
+			product	hypothetical protein
+			protein_id	gb|AGC81692.1|
+120583	120655	gene
+			locus_tag	DCGMS_tRNA00110
+120583	120655	tRNA
+			product	tRNA-Lys
+120818	124207	gene
+			gene	rps3
+			locus_tag	DCGMS_00330
+120818	120892	CDS
+122618	124207
+			product	ribosomal protein S3
+			protein_id	gb|AGC81693.1|
+124074	124613	gene
+			gene	rpl16
+			locus_tag	DCGMS_00340
+124074	124613	CDS
+			product	ribosomal protein L16
+			protein_id	gb|AGC81694.1|
+124738	125295	gene
+			gene	rpl5
+			locus_tag	DCGMS_00350
+124738	125295	CDS
+			product	ribosomal protein L5
+			protein_id	gb|AGC81695.1|
+125297	125599	gene
+			gene	rps14
+			locus_tag	DCGMS_00360
+125297	125599	CDS
+			product	ribosomal protein S14
+			protein_id	gb|AGC81696.1|
+127109	128290	gene
+			gene	cob
+			locus_tag	DCGMS_00370
+127109	128290	CDS
+			product	apocytochrome b
+			protein_id	gb|AGC81697.1|
+128600	128686	gene
+			locus_tag	DCGMS_tRNA00120
+128600	128686	tRNA
+			product	tRNA-Ser
+132072	129935	gene
+			gene	cox2-1
+			locus_tag	DCGMS_00380
+132072	131367	CDS
+130017	129935
+			product	cytochrome c oxidase subunit 2
+			protein_id	gb|AGC81698.1|
+131102	131380	gene
+			locus_tag	DCGMS_00390
+131102	131380	CDS
+			product	hypothetical protein
+			protein_id	gb|AGC81699.1|
+132842	133189	gene
+			locus_tag	DCGMS_00400
+132842	133189	CDS
+			product	hypothetical protein
+			protein_id	gb|AGC81700.1|
+133344	132949	gene
+			locus_tag	DCGMS_00410
+133344	132949	CDS
+			product	hypothetical protein
+			protein_id	gb|AGC81701.1|
+136824	137048	gene
+			locus_tag	DCGMS_00420
+136824	137048	CDS
+			product	hypothetical protein
+			protein_id	gb|AGC81702.1|
+141745	139430	gene
+			gene	ccmFC
+			locus_tag	DCGMS_00430
+141745	140966	CDS
+140008	139430
+			product	cytochrome c biogenesis FC
+			protein_id	gb|AGC81703.1|
+141941	141870	gene
+			locus_tag	DCGMS_tRNA00130
+141941	141870	tRNA
+			product	tRNA-Gly
+143300	142899	gene
+			locus_tag	DCGMS_00440
+143300	142899	CDS
+			product	hypothetical protein
+			protein_id	gb|AGC81704.1|
+143614	144411	gene
+			gene	cox3
+			locus_tag	DCGMS_00450
+143614	144411	CDS
+			product	cytochrome c oxidase subunit 3
+			protein_id	gb|AGC81705.1|
+145078	145521	gene
+			locus_tag	DCGMS_00460
+145078	145521	CDS
+			product	hypothetical protein
+			protein_id	gb|AGC81706.1|
+147881	148183	gene
+			locus_tag	DCGMS_00470
+147881	148183	CDS
+			product	hypothetical protein
+			protein_id	gb|AGC81707.1|
+152950	152624	gene
+			locus_tag	DCGMS_00480
+152950	152624	CDS
+			product	hypothetical protein
+			protein_id	gb|AGC81708.1|
+153410	153757	gene
+			locus_tag	DCGMS_00490
+153410	153757	CDS
+			product	hypothetical protein
+			protein_id	gb|AGC81709.1|
+154930	153785	gene
+			gene	ccmFN1
+			locus_tag	DCGMS_00500
+154930	153785	CDS
+			product	cytochrome c biogenesis FN
+			protein_id	gb|AGC81710.1|
+159574	159798	gene
+			gene	atp9a
+			locus_tag	DCGMS_00510
+159574	159798	CDS
+			product	ATPase subunit 9
+			protein_id	gb|AGC81711.1|
+160108	161028	gene
+			locus_tag	DCGMS_00520
+160108	161028	CDS
+			product	hypothetical protein
+			protein_id	gb|AGC81712.1|
+161402	161707	gene
+			locus_tag	DCGMS_00530
+161402	161707	CDS
+			product	hypothetical protein
+			protein_id	gb|AGC81713.1|
+162721	163023	gene
+			gene	nad4L
+			locus_tag	DCGMS_00540
+162721	163023	CDS
+			product	NADH dehydrogenase subunit 4L
+			protein_id	gb|AGC81714.1|
+163258	163836	gene
+			gene	atp4
+			locus_tag	DCGMS_00550
+163258	163836	CDS
+			product	ATPase subunit 4
+			protein_id	gb|AGC81715.1|
+166575	166647	gene
+			locus_tag	DCGMS_tRNA00140
+166575	166647	tRNA
+			product	tRNA-Met
+170995	170771	gene
+			gene	atp9b
+			locus_tag	DCGMS_00560
+170995	170771	CDS
+			product	ATPase subunit 9
+			protein_id	gb|AGC81716.1|
+171923	171672	gene
+			locus_tag	DCGMS_00570
+171923	171672	CDS
+			product	hypothetical protein
+			protein_id	gb|AGC81717.1|
+172566	172120	gene
+			gene	rps7
+			locus_tag	DCGMS_00580
+172566	172120	CDS
+			product	ribosomal protein S7
+			transl_except	(pos:complement(172564..172566),aa:Met)
+			protein_id	gb|AGC81718.1|
+173314	173234	gene
+			locus_tag	DCGMS_tRNA00150
+173314	173234	tRNA
+			product	tRNA-Met
+175034	175435	gene
+			locus_tag	DCGMS_00590
+175034	175435	CDS
+			product	hypothetical protein
+			protein_id	gb|AGC81719.1|
+176676	177002	gene
+			locus_tag	DCGMS_00600
+176676	177002	CDS
+			product	hypothetical protein
+			protein_id	gb|AGC81720.1|
+183272	183757	gene
+			locus_tag	DCGMS_00610
+183272	183757	CDS
+			product	hypothetical protein
+			protein_id	gb|AGC81721.1|
+183815	184294	gene
+			locus_tag	DCGMS_00620
+183815	184294	CDS
+			product	hypothetical protein
+			protein_id	gb|AGC81722.1|
+185227	187260	gene
+			gene	matR
+			locus_tag	DCGMS_00630
+185227	187260	CDS
+			product	maturase-related protein
+			transl_except	(pos:185227..185229,aa:Met)
+			protein_id	gb|AGC81723.1|
+186542	186189	gene
+			locus_tag	DCGMS_00640
+186542	186189	CDS
+			product	hypothetical protein
+			protein_id	gb|AGC81724.1|
+195118	195000	gene
+			locus_tag	DCGMS_rRNA00010
+195118	195000	rRNA
+			product	5S ribosomal RNA
+197071	195224	gene
+			locus_tag	DCGMS_rRNA00020
+197071	195224	rRNA
+			product	18S ribosomal RNA
+200782	201096	gene
+			locus_tag	DCGMS_00650
+200782	201096	CDS
+			product	hypothetical protein
+			protein_id	gb|AGC81725.1|
+208037	207660	gene
+			gene	rps12
+			locus_tag	DCGMS_00660
+208037	207660	CDS
+			product	ribosomal protein S12
+			protein_id	gb|AGC81726.1|
+208444	208085	gene
+			gene	nad3
+			locus_tag	DCGMS_00670
+208444	208085	CDS
+			product	NADH dehydrogenase subunit 3
+			protein_id	gb|AGC81727.1|
+209513	208545	gene
+			locus_tag	DCGMS_00680
+209513	208545	CDS
+			product	hypothetical protein
+			protein_id	gb|AGC81728.1|
+210512	209727	gene
+			gene	atp6
+			locus_tag	DCGMS_00690
+210512	209727	CDS
+			product	ATPase subunit 6
+			protein_id	gb|AGC81729.1|
+210744	210671	gene
+			locus_tag	DCGMS_tRNA00160
+210744	210671	tRNA
+			product	tRNA-Met
+212030	212350	gene
+			locus_tag	DCGMS_00700
+212030	212350	CDS
+			product	hypothetical protein
+			protein_id	gb|AGC81730.1|
+220670	217495	gene
+			locus_tag	DCGMS_rRNA00030
+220670	217495	rRNA
+			product	26S ribosomal RNA
+226815	226444	gene
+			locus_tag	DCGMS_00710
+226815	226444	CDS
+			product	hypothetical protein
+			protein_id	gb|AGC81731.1|
+228736	227213	gene
+			gene	atp1
+			locus_tag	DCGMS_00720
+228736	227213	CDS
+			product	ATPase subunit 1
+			protein_id	gb|AGC81732.1|
+231695	230922	gene
+			locus_tag	DCGMS_00730
+231695	230922	CDS
+			product	hypothetical protein
+			protein_id	gb|AGC81733.1|
+232019	232090	gene
+			locus_tag	DCGMS_tRNA00170
+232019	232090	tRNA
+			product	tRNA-Asn
+232939	233021	gene
+			locus_tag	DCGMS_tRNA00180
+232939	233021	tRNA
+			product	tRNA-Tyr
+
+myid : YP_009165597.1
+>Feature ref|NC_027921.1|
+195	2684	gene
+			locus_tag	APL37_gp1
+			db_xref	GeneID:26039976
+195	2684	CDS
+			product	ORF
+			transl_table	4
+			protein_id	ref|YP_009165597.1|
+
+myid : AAR01975.1
+>Feature gb|AY328481.1|
+893	2398	CDS
+			product	RNA-dependent RNA polymerase
+			transl_table	4
+			protein_id	gb|AAR01975.1|
+
+myid : DAB41756.1
+>Feature tpg|BK010438.1|
+425	>2805	gene
+			gene	RdRp
+425	>2805	CDS
+			product	RNA-dependent RNA polymerase
+			transl_table	4
+			protein_id	tpg|DAB41756.1|
+
+myid : YP_009408146.1
+>Feature ref|NC_035463.1|
+347	2629	gene
+			locus_tag	CKM65_gp1
+			db_xref	GeneID:33867886
+347	2629	CDS
+			product	RNA-dependent RNA polymerase
+			transl_table	4
+			protein_id	ref|YP_009408146.1|
+
+myid : AAR01974.1
+>Feature gb|AY328480.1|
+893	>2257	CDS
+			product	RNA-dependent RNA polymerase
+			transl_table	4
+			protein_id	gb|AAR01974.1|
+
+myid : AAR01973.1
+>Feature gb|AY328479.1|
+893	2563	CDS
+			product	RNA-dependent RNA polymerase
+			transl_table	4
+			protein_id	gb|AAR01973.1|
+
+myid : YP_009182160.1
+>Feature ref|NC_028471.1|
+316	2448	gene
+			gene	RdRp
+			locus_tag	AT151_gp1
+			db_xref	GeneID:26373850
+316	2448	CDS
+			product	RNA dependent RNA polymerase
+			transl_table	4
+			protein_id	ref|YP_009182160.1|
+			db_xref	InterPro:IPR008686
+			db_xref	UniProtKB/TrEMBL:A0A0S4GA49
+
+myid : AWY10985.1
+>Feature gb|MF444257.1|
+407	2599	CDS
+			product	RNA-dependent RNA polymerase
+			transl_table	4
+			protein_id	gb|AWY10985.1|
+
+myid : AWY10980.1
+>Feature gb|MF444252.1|
+<1	>929	CDS
+			product	RNA-dependent RNA polymerase
+			codon_start	3
+			transl_table	4
+			protein_id	gb|AWY10980.1|
+
+myid : YP_009121785.1
+>Feature ref|NC_026510.1|
+308	2479	gene
+			locus_tag	UG57_gp1
+			db_xref	GeneID:23632167
+308	2479	CDS
+			product	RNA-dependent RNA polymerase
+			transl_table	4
+			protein_id	ref|YP_009121785.1|
+
+myid : AWY10963.1
+>Feature gb|MF444235.1|
+282	2450	CDS
+			product	RNA-dependent RNA polymerase
+			transl_table	4
+			protein_id	gb|AWY10963.1|
+
+myid : AHX84129.1
+>Feature gb|KJ462508.1|
+1	313	5'UTR
+314	2350	CDS
+			product	RNA-dependent RNA polymerase
+			transl_table	4
+			protein_id	gb|AHX84129.1|
+2351	2438	3'UTR
+
+myid : AGW51760.1
+>Feature gb|KF298270.1|
+386	2398	CDS
+			product	RNA-dependent RNA polymerase-like protein
+			transl_table	4
+			protein_id	gb|AGW51760.1|
+
+myid : CEZ26301.1
+>Feature emb|LN827945.1|
+326	2458	gene
+			gene	RdRp
+326	2458	CDS
+			product	RNA dependent RNA polymerase
+			transl_table	4
+			protein_id	emb|CEZ26301.1|
+			db_xref	InterPro:IPR008686
+			db_xref	UniProtKB/TrEMBL:A0A0S4GA47
+
+myid : YP_009182162.1
+>Feature ref|NC_028473.1|
+416	2575	gene
+			gene	RdRp
+			locus_tag	AT153_gp1
+			db_xref	GeneID:26373854
+416	2575	CDS
+			product	RNA dependent RNA polymerase
+			transl_table	4
+			protein_id	ref|YP_009182162.1|
+			db_xref	GOA:A0A0S4GA55
+			db_xref	InterPro:IPR008686
+			db_xref	UniProtKB/TrEMBL:A0A0S4GA55
+
+myid : DAB41746.1
+>Feature tpg|BK010428.1|
+441	2828	gene
+			gene	RdRp
+441	2828	CDS
+			product	RNA-dependent RNA polymerase
+			transl_table	4
+			protein_id	tpg|DAB41746.1|
+
+myid : NP_660174.1
+>Feature ref|NC_004046.1|
+87	2516	gene
+			locus_tag	CpmV1gp1
+			db_xref	GeneID:949211
+87	2516	CDS
+			product	putative RNA-dependent RNA polymerase
+			transl_except	(pos:132..134,aa:OTHER)
+			transl_table	4
+			protein_id	ref|NP_660174.1|
+			note	TAG stop codon exception
+
+myid : AKN79252.1
+>Feature gb|KP705075.1|
+225	2384	gene
+			gene	RdRp
+225	2384	CDS
+			product	RNA-dependent RNA polymerases
+			transl_table	4
+			protein_id	gb|AKN79252.1|
+
+myid : ANR02694.1
+>Feature gb|KX349060.1|
+<1	>633	gene
+			gene	RdRp
+<1	>633	CDS
+			product	RNA-dependent RNA polymerase
+			transl_table	4
+			protein_id	gb|ANR02694.1|
+

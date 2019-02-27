@@ -1,0 +1,16 @@
+#merge each group of degradome, smallrnaseq, RNAseq files(virus infected, not infected) separately
+
+#remove space from the header
+sed 's, ,_,g' merged_sshv2l_smallRNA_seq.fasta > no_space_merged_sshv2l_smallRNA_seq.fasta
+
+#also replace any weird characters in the fasta header; here replacing + with _
+sed 's,+,_,g' test.fasta > no_plus_test.fasta
+
+#Can perform the analysis in different modes:
+With mode 1:
+
+CleaveLand4.pl -e Path to FASTA-formatted_degradome_reads -u Path_to_FASTA-formatted_small_RNA_queries -n Path_to_FASTA-formatted_transcriptome -o plots_mode1 > mode1_results.txt
+
+#or
+
+CleaveLand4.pl -e /media/owner/newdrive/phasing/degradome/Marzano_degradome.20171210/no_space_merged_degradome_HV2.fasta -u /media/owner/newdrive/phasing/small_RNA/no_space_merged_sshv2l_smallRNA_seq.fasta -n /media/owner/newdrive/phasing/Domier_10RNAseq.2017104.tgz_transcriptome/Domier_10RNAseq.2017104/no_plus_no_space_sshv2l_RNAseq_merged.fasta -o plots_mode1 > mode1_results.txt

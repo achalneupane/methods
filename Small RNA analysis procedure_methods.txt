@@ -1,0 +1,774 @@
+Trimming (single end): http://www.usadellab.org/cms/?page=trimmomatic
+
+java -jar trimmomatic-0.36.jar SE -phred33 /media/owner/c92ed9e9-3d94-497c-bb2e-514a4806bbcd/RNAseq/pool_of_small_RNA_libraries_AN/Domier_26_smallRNA.20171119/DCL2_VF_1_ACTGAT_L008_R1_001.fastq DCL2_VF_1.fq.gz ILLUMINACLIP:NEB-SE.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:18
+
+#######looping (put NEB-SE.fa file in the same directory where fastq files are located); cd to #fastq directory
+
+for f in *.fastq; do
+java -jar /media/owner/c92ed9e9-3d94-497c-bb2e-514a4806bbcd/trimmomatic-0.36/trimmomatic-0.36.jar SE -phred33 $f /media/owner/c92ed9e9-3d94-497c-bb2e-514a4806bbcd/RNAseq/pool_of_small_RNA_libraries_AN/Domier_26_smallRNA.20171119/trimmed_files/trimmed_${f}.fq.gz ILLUMINACLIP:NEB-SE.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:18
+done
+
+##2018 data
+for f in *.fastq; do
+java -jar /home/owner/Desktop/Achal/executables/trimmomatic-0.36/trimmomatic-0.36.jar SE -phred33 $f /media/owner/7ef86942-96a5-48a7-a325-6c5e1aec7408/symarzano2018June.201875/2018June.201875.bz2_files/trimmed_files/trimmed_${f}.fq.gz ILLUMINACLIP:NEB-SE.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:18
+done
+
+
+
+
+java -jar trimmomatic-0.36.jar SE -phred33 Ago2.fq ILLUMINACLIP:NEB-SE.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:18
+
+
+#or change adapter file true_seq_small_rna.fa
+for f in *.fastq; do
+java -jar /media/owner/c92ed9e9-3d94-497c-bb2e-514a4806bbcd/trimmomatic-0.36/trimmomatic-0.36.jar SE -phred33 $f /media/owner/c92ed9e9-3d94-497c-bb2e-514a4806bbcd/RNAseq/pool_of_small_RNA_libraries_AN/Domier_26_smallRNA.20171119/trimmed_files/QC_contamination/uncontaminated_files/old_data/trimmed_files/trimmed_${f}.fq.gz ILLUMINACLIP:true_seq_small_rna.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:18
+done
+
+###Instead of trimmmomatic, use bbduk.sh; does far better job
+###Trimming using another tool called bbduk.sh; http://seqanswers.com/forums/showthread.php?t=42776
+for f in *.fastq; do
+bbduk.sh -Xmx1g in=$f out=/media/owner/7ef86942-96a5-48a7-a325-6c5e1aec7408/symarzano2018June.201875/2018June.201875.bz2_files/trimmed_files/bbmap_trimmed/bbduk_trimmed_${f} ref=NEB-SE.fa ktrim=r k=13 mink=6 minlength=18 hdist=0
+done > >(tee log.txt) 2>&1
+
+##can also set maximumm length; overwrite to overwrite the file
+bbduk.sh -Xmx1g in=Ago2_SsHV2L_1_CATGGC_L003_R1_001.fastq out=bduk_trimmed_test.fastq ref=NEB-SE.fa ktrim=r k=13 mink=6 minlength=18 maxlength=24 hdist=0 overwrite=TRUE
+
+
+
+##check fastqc on all files
+for f in *.fastq; do 
+fastqc $f
+done
+
+#gunzip
+for f in *fq.gz; do 
+gunzip -k $f
+done 
+
+##then remove file extension .fq
+for file in *.fq; do
+    mv -- "$file" "${file%%.fq}"
+done
+
+
+###remove space in file name 
+for f in *\ *; do mv "$f" "${f// /_}"; done 
+
+###if wanted remove all files with fq.gz
+find . -name '*.fq.gz' -delete
+
+
+##check the adapter, shouldn't be there anymore
+cat trimmed_Ago2_SsHV2L_1_CATGGC_L003_R1_001.fastq | head -n 20000 | grep AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC
+
+
+##Can extract fasta from fastq:
+seqtk seq -a trimmed_Ago2_SsHV2L_1_CATGGC_L003_R1_001.fastq > trimmed_Ago2_SsHV2L_1_CATGGC_L003_R1_001.fastq.fasta
+
+Step1.
+
+##Merge all fastq files to find the cluster within the merged file using shortstack; also removes the adapter.
+cat file1 file2 file3 file4 file5 file6 > merged.fastq
+## cat specific file types (selected files)
+for f in *_VF_*; do
+cat ${f} >> merged_vf.fastq
+done
+
+
+for f in *.fastq; do
+echo $f
+done
+
+for f in *.fastq; do
+cat ${f} >> merged.fastq
+done
+
+for f in not_contaminated*; do
+cat ${f} >> merged.fastq
+done
+
+Or
+ls | grep -v _VF_ | xargs cat > merged_vf.fastq
+
+#cd /home/owner/Downloads/ShortStack-3.4  or full path
+
+./home/owner/Downloads/ShortStack-3.4/ShortStack --readfile /media/owner/c92ed9e9-3d94-497c-bb2e-514a48bbcd/RNAseq/20170821small_trimmed/merged.fastq --genomefile /home/owner/Downloads/ShortStack-3.4/SSchromosomes.fasta --bowtie_cores 10 --adapter AGATCGGAA
+
+#OR 
+perl /home/owner/Dropbox/perl/ShortStack --readfile merged.fastq --genomefile /home/owner/Downloads/ShortStack-3.4/SSchromosomes.fasta --bowtie_cores 10 --adapter AGATCGGAA 
+
+###without adapter
+perl /home/owner/Dropbox/perl/ShortStack --readfile merged.fastq --genomefile /media/owner/b54f3251-5380-4288-9ddf-fa3357ea8294/Domier_26_smallRNA.20171119/trimmed_files/ss_genome/SSchromosomes.fasta --bowtie_cores 10
+
+#or
+perl /home/owner/Downloads/ShortStack-3.4/ShortStack --readfile /media/owner/c92ed9e9-3d94-497c-bb2e-514a4806bbcd/RNAseq/pool_of_small_RNA_libraries_AN/Domier_26_smallRNA.20171119/trimmed_files/merged_trimmed/merged.fastq --genomefile /media/owner/c92ed9e9-3d94-497c-bb2e-514a4806bbcd/RNAseq/pool_of_small_RNA_libraries_AN/Domier_26_smallRNA.20171119/trimmed_files/viral2/viral2_reverse/test/Rev_ssh_virus2.fasta --bowtie_cores 10 --adapter AGATCGGAA 
+
+
+perl /home/owner/Downloads/ShortStack-3.4/ShortStack --readfile /media/owner/c92ed9e9-3d94-497c-bb2e-514a4806bbcd/RNAseq/pool_of_small_RNA_libraries_AN/Domier_26_smallRNA.20171119/trimmed_files/QC_contamination/uncontaminated_files/merged.fastq --genomefile /home/owner/Downloads/ShortStack-3.4/SSchromosomes.fasta --bowtie_cores 10 --adapter AGATCGGAA
+
+
+perl /home/owner/Downloads/ShortStack-3.4/ShortStack --readfile /media/owner/c92ed9e9-3d94-497c-bb2e-514a4806bbcd/RNAseq/pool_of_small_RNA_libraries_AN/Domier_26_smallRNA.20171119/trimmed_files/merged_trimmed/merged.fastq --genomefile /home/owner/Downloads/ShortStack-3.4/SSchromosomes.fasta --bowtie_cores 10 --adapter AGATCGGAA
+
+
+/media/owner/c92ed9e9-3d94-497c-bb2e-514a4806bbcd/RNAseq/pool_of_small_RNA_libraries_AN/Domier_26_smallRNA.20171119/trimmed_files/QC_contamination/uncontaminated_files
+
+perl /home/owner/Dropbox/perl/ShortStack --readfile /media/owner/c92ed9e9-3d94-497c-bb2e-514a4806bbcd/RNAseq/pool_of_small_RNA_libraries_AN/Domier_26_smallRNA.20171119/trimmed_files/merged_trimmed/merged.fastq --genomefile /media/owner/c92ed9e9-3d94-497c-bb2e-514a4806bbcd/RNAseq/pool_of_small_RNA_libraries_AN/Domier_26_smallRNA.20171119/trimmed_files/viral1/sshad_virus1.fasta --bowtie_cores 10 --adapter AGATCGGAA 
+
+
+
+###If using well trimmed data using bbmap###################
+
+#first cd to respective virus directories
+##genome
+perl /home/owner/Dropbox/perl/ShortStack --readfile /media/owner/7ef86942-96a5-48a7-a325-6c5e1aec7408/symarzano2018June.201875/2018June.201875.bz2_files/trimmed_files/bbmap_trimmed/merged.fastq --genomefile /media/owner/7ef86942-96a5-48a7-a325-6c5e1aec7408/symarzano2018June.201875/2018June.201875.bz2_files/trimmed_files/bbmap_trimmed/Ssgenome/SSchromosomes.fasta --bowtie_cores 10 --adapter AGATCGGAA
+
+#virus1
+perl /home/owner/Dropbox/perl/ShortStack --readfile /media/owner/7ef86942-96a5-48a7-a325-6c5e1aec7408/symarzano2018June.201875/2018June.201875.bz2_files/trimmed_files/bbmap_trimmed/merged.fastq --genomefile /media/owner/7ef86942-96a5-48a7-a325-6c5e1aec7408/symarzano2018June.201875/2018June.201875.bz2_files/trimmed_files/bbmap_trimmed/virus1_sshadv1/Rev_sshad_virus1.fasta --bowtie_cores 10 --adapter AGATCGGAA
+
+#virus2
+perl /home/owner/Dropbox/perl/ShortStack --readfile /media/owner/7ef86942-96a5-48a7-a325-6c5e1aec7408/symarzano2018June.201875/2018June.201875.bz2_files/trimmed_files/bbmap_trimmed/merged.fastq --genomefile /media/owner/7ef86942-96a5-48a7-a325-6c5e1aec7408/symarzano2018June.201875/2018June.201875.bz2_files/trimmed_files/bbmap_trimmed/virus2_ssh/Rev_ssh_virus2_no_polyA.fasta --bowtie_cores 10 --adapter AGATCGGAA
+
+#virus3
+perl /home/owner/Dropbox/perl/ShortStack --readfile /media/owner/7ef86942-96a5-48a7-a325-6c5e1aec7408/symarzano2018June.201875/2018June.201875.bz2_files/trimmed_files/bbmap_trimmed/merged.fastq --genomefile /media/owner/7ef86942-96a5-48a7-a325-6c5e1aec7408/symarzano2018June.201875/2018June.201875.bz2_files/trimmed_files/bbmap_trimmed/virus3_SlaGem_2mer/slagem_2mer.fasta --bowtie_cores 10 --adapter AGATCGGAA
+
+
+Step2.
+##modify Results.txt present in Shortstack_ directory to region.list format (Use this R code (RSCRTIPT) to modify: /home/owner/Dropbox/rcodes/extract_split_columns.r)
+##This is how Results.list file should look like:
+S.sclerotiorum_Ch16          535           228
+S.sclerotiorum_Ch16         1002           250
+S.sclerotiorum_Ch16         1852           132
+S.sclerotiorum_Ch16         2378            71
+S.sclerotiorum_Ch16         2557            72
+S.sclerotiorum_Ch16         2734            49
+
+##now extract clustered fasta 
+perl /home/owner/Dropbox/perl/extract-regions.pl /media/owner/b54f3251-5380-4288-9ddf-fa3357ea8294/Domier_26_smallRNA.20171119/trimmed_files/ss_genome/SSchromosomes.fasta /media/owner/7ef86942-96a5-48a7-a325-6c5e1aec7408/symarzano2018June.201875/2018June.201875.bz2_files/trimmed_files/bbmap_trimmed/ShortStack_1532293660/region.list >/media/owner/7ef86942-96a5-48a7-a325-6c5e1aec7408/symarzano2018June.201875/2018June.201875.bz2_files/trimmed_files/bbmap_trimmed/ShortStack_1532293660/extract_out.fasta
+
+##Same command On the desired directory:
+perl /media/owner/c92ed9e9-3d94-497c-bb2e-514a4806bbcd/Dropbox/perl/extract-regions.pl /home/owner/Downloads/ShortStack-3.4/SSchromosomes.fasta /media/owner/c92ed9e9-3d94-497c-bb2e-514a4806bbcd/RNAseq/pool_of_small_RNA_libraries_AN/Domier_26_smallRNA.20171119/trimmed_files/QC_contamination/uncontaminated_files/ShortStack_1515428918/region.list >/media/owner/c92ed9e9-3d94-497c-bb2e-514a4806bbcd/RNAseq/pool_of_small_RNA_libraries_AN/Domier_26_smallRNA.20171119/trimmed_files/QC_contamination/uncontaminated_files/ShortStack_1515428918/extract_out.fasta
+
+##or
+perl //media/owner/c92ed9e9-3d94-497c-bb2e-514a4806bbcd/Dropbox/perl/extract-regions.pl /home/owner/Downloads/ShortStack-3.4/SSchromosomes.fasta /media/owner/c92ed9e9-3d94-497c-bb2e-514a4806bbcd/RNAseq/pool_of_small_RNA_libraries_AN/degradomes/ShortStack_1513893629/region.list >/media/owner/c92ed9e9-3d94-497c-bb2e-514a4806bbcd/RNAseq/pool_of_small_RNA_libraries_AN/degradomes/ShortStack_1513893629/extract_out.fasta
+
+
+##or for virus
+perl /home/owner/Dropbox/perl/extract-regions.pl /media/owner/7ef86942-96a5-48a7-a325-6c5e1aec7408/symarzano2018June.201875/2018June.201875.bz2_files/trimmed_files/bbmap_trimmed/virus3_SlaGem_2mer/slagem_2mer.fasta region.list > extract_out.fasta
+
+#or
+
+perl /media/owner/c92ed9e9-3d94-497c-bb2e-514a4806bbcd/Dropbox/perl/extract-regions.pl /media/owner/c92ed9e9-3d94-497c-bb2e-514a4806bbcd/RNAseq/pool_of_small_RNA_libraries_AN/Domier_26_smallRNA.20171119/trimmed_files/viral1/viral1_reverse/Rev_sshad_virus1.fasta /media/owner/c92ed9e9-3d94-497c-bb2e-514a4806bbcd/RNAseq/pool_of_small_RNA_libraries_AN/Domier_26_smallRNA.20171119/trimmed_files/viral1/viral1_reverse/ShortStack_1513376692/region.list >/media/owner/c92ed9e9-3d94-497c-bb2e-514a4806bbcd/RNAseq/pool_of_small_RNA_libraries_AN/Domier_26_smallRNA.20171119/trimmed_files/viral1/viral1_reverse/ShortStack_1513376692/extract_out.fasta
+
+
+
+perl /media/owner/c92ed9e9-3d94-497c-bb2e-514a4806bbcd/Dropbox/perl/extract-regions.pl /media/owner/c92ed9e9-3d94-497c-bb2e-514a4806bbcd/RNAseq/pool_of_small_RNA_libraries_AN/Domier_26_smallRNA.20171119/trimmed_files/viral1/WT_sshadv_vs_dcld_shadv/ShortStack_1517613074_subset_6_samples/sshad_virus1.fasta /media/owner/c92ed9e9-3d94-497c-bb2e-514a4806bbcd/RNAseq/pool_of_small_RNA_libraries_AN/Domier_26_smallRNA.20171119/trimmed_files/viral1/WT_sshadv_vs_dcld_shadv/ShortStack_1517613074_subset_6_samples/region.list >/media/owner/c92ed9e9-3d94-497c-bb2e-514a4806bbcd/RNAseq/pool_of_small_RNA_libraries_AN/Domier_26_smallRNA.20171119/trimmed_files/viral1/WT_sshadv_vs_dcld_shadv/ShortStack_1517613074_subset_6_samples/extract_out.fasta
+
+##Go to step 3 and 4 if doing in a batch; if working on individual files follow two commands below and skip step 3 and 4.
+bowtie-build extract_out.fasta extract_out   
+bowtie -q -p 18 extract_out WT_1_TGACCA_L008_R1_001.fastq WT_1.out
+
+##Using -a (also also comes with default -n subsidiary option) option includes mismatched sequences with  default of 2 mismatches permitted in the "seed". We should use below command to report fully matched sequences.
+
+Step 3. Indexing
+
+bowtie-build all_LTR_from_the_list.fasta  all_LTR_from_the_list_out
+or
+bowtie-build extract_out.fasta  extract_out
+Step 4. Alignment
+
+bowtie -q -p 18 -v 0 all_LTR_from_the_list_out /media/owner/c92ed9e9-3d94-497c-bb2e-514a4806bbcd/RNAseq/20170821small_trimmed/WT_1_TGACCA_L008_R1_001.fastq new_WT_1.out
+
+##for paired-end alignment on bowtie:
+bowtie -q -p 18 -v 0 seq1 -1 /media/owner/b54f3251-5380-4288-9ddf-fa3357ea8294/mycorrhizal-mycovirus/achal_sra/SRR916888/bbtrimed/bbduk_trimmed_SRR916888_1.fastq -2 /media/owner/b54f3251-5380-4288-9ddf-fa3357ea8294/mycorrhizal-mycovirus/achal_sra/SRR916888/bbtrimed/bbduk_trimmed_SRR916888_2.fastq bbtrimmed_seq_1.out
+
+##Using bash loop (step 4); -v 0 option allows for zero mismatch
+
+for f in *.fastq; do
+echo "Processing: " $f
+bowtie -q -p 18 -v 0 /media/owner/7ef86942-96a5-48a7-a325-6c5e1aec7408/symarzano2018June.201875/2018June.201875.bz2_files/trimmed_files/bbmap_trimmed/ShortStack_1532293660/extract_out $f /media/owner/7ef86942-96a5-48a7-a325-6c5e1aec7408/symarzano2018June.201875/2018June.201875.bz2_files/trimmed_files/bbmap_trimmed/Ssgenome/fastq.out/new_${f}.out
+done > >(tee log.txt) 2>&1
+
+
+##For terminal mismatches as Les sugested(https://mail.google.com/mail/u/0/#search/les+mismatches/KtbxLvhNTpWbMxZPnScGzWdCxgTgwQNDVq)
+for f in *.fastq; do
+echo "Processing: " $f
+bowtie -q -p 18 -n 1 -m 1 /media/owner/7ef86942-96a5-48a7-a325-6c5e1aec7408/symarzano2018June.201875/2018June.201875.bz2_files/trimmed_files/bbmap_trimmed_slagem_name_swapped_with_WTDK3/SshV2l/ShortStack_1537384425/extract_out $f /media/owner/7ef86942-96a5-48a7-a325-6c5e1aec7408/symarzano2018June.201875/2018June.201875.bz2_files/trimmed_files/bbmap_trimmed_slagem_name_swapped_with_WTDK3/SshV2l/fastq.out_1_mismatch_allowed_as_les_suggested/new_${f}.out
+done > >(tee /media/owner/7ef86942-96a5-48a7-a325-6c5e1aec7408/symarzano2018June.201875/2018June.201875.bz2_files/trimmed_files/bbmap_trimmed_slagem_name_swapped_with_WTDK3/SshV2l/fastq.out_1_mismatch_allowed_as_les_suggested/log.txt) 2>&1
+
+
+#########cat with condition
+#or 
+for f in sshv2l*; do
+echo "Merging file :" $f
+cat ${f} >> sshv2l_RNAseq_merged.fastq
+done
+
+#or simply
+cat sshv2l* >> sshv2l_RNAseq_merged.fastq
+
+##merging files without sshv2l
+# enable extglob
+shopt -s extglob nullglob
+
+cat !(sshv2l*) >> not_sshv2l_RNAseq_merged.fastq
+
+##
+# disable extglob
+shopt -u extglob nullglob
+############
+
+##DNA virus
+bowtie -q -p 18 -v 0 /media/owner/c92ed9e9-3d94-497c-bb2e-514a4806bbcd/RNAseq/pool_of_small_RNA_libraries_AN/Domier_26_smallRNA.20171119/trimmed_files/viral1/viral1_reverse/ShortStack_1513376692/extract_out trimmed_WT_SSHADV1_1_GGCTAC_L008_R1_001.fastq trimmed_WT_SSHADV1_1_GGCTAC_L008_R1_001.fastq.out
+
+##or -v 1 to check mismatches
+bowtie -q -p 18 -v 1 /media/owner/c92ed9e9-3d94-497c-bb2e-514a4806bbcd/RNAseq/pool_of_small_RNA_libraries_AN/Domier_26_smallRNA.20171119/trimmed_files/viral1/viral1_reverse/ShortStack_1513376692/extract_out trimmed_WT_SSHADV1_1_GGCTAC_L008_R1_001.fastq trimmed_WT_SSHADV1_1_GGCTAC_L008_R1_001.fastq.out
+
+##RNA virus
+bowtie -q -p 18 -v 0 /media/owner/c92ed9e9-3d94-497c-bb2e-514a4806bbcd/RNAseq/pool_of_small_RNA_libraries_AN/Domier_26_smallRNA.20171119/trimmed_files/viral2/viral2_reverse/ShortStack_1513377940/extract_out trimmed_WT_SSHV2L_1_GCCAAT_L008_R1_001.fastq trimmed_WT_SSHV2L_1_GCCAAT_L008_R1_001.fastq.out
+
+##or 
+for f in *.fastq; do
+bowtie -q -p 18 -v 0 /media/owner/c92ed9e9-3d94-497c-bb2e-514a4806bbcd/RNAseq/pool_of_small_RNA_libraries_AN/Domier_26_smallRNA.20171119/trimmed_files/QC_contamination/uncontaminated_files/ShortStack_1515428918/extract_out $f /media/owner/c92ed9e9-3d94-497c-bb2e-514a4806bbcd/RNAseq/pool_of_small_RNA_libraries_AN/Domier_26_smallRNA.20171119/trimmed_files/QC_contamination/uncontaminated_files/fastq.out/new_${f}.out
+done
+
+
+for f in *.fastq; do
+echo $f
+bowtie -q -p 18 -v 0 /media/owner/c92ed9e9-3d94-497c-bb2e-514a4806bbcd/RNAseq/pool_of_small_RNA_libraries_AN/Domier_26_smallRNA.20171119/trimmed_files/viral1/WT_sshadv_vs_dcld_shadv/ShortStack_1517613074_subset_6_samples/extract_out $f /media/owner/c92ed9e9-3d94-497c-bb2e-514a4806bbcd/RNAseq/pool_of_small_RNA_libraries_AN/Domier_26_smallRNA.20171119/trimmed_files/viral1/WT_sshadv_vs_dcld_shadv/ShortStack_1517613074_subset_6_samples/fastq.out/new_${f}.out
+done
+
+
+#or for selected samples matching pattern
+
+for f in *_VF_*; do
+bowtie -q -p 18 -v 0 /media/owner/c92ed9e9-3d94-497c-bb2e-514a4806bbcd/RNAseq/pool_of_small_RNA_libraries_AN/Domier_26_smallRNA.20171119/merged_vf_/ShortStack_1512415347/extract_out $f /media/owner/c92ed9e9-3d94-497c-bb2e-514a4806bbcd/RNAseq/pool_of_small_RNA_libraries_AN/Domier_26_smallRNA.20171119/merged_vf_/fastq.out/new_${f}.out
+done
+
+#or
+for f in *.fastq; do
+bowtie -q -p 18 -v 0 /media/owner/c92ed9e9-3d94-497c-bb2e-514a4806bbcd/RNAseq/pool_of_small_RNA_libraries_AN/Domier_26_smallRNA.20171119/trimmed_files/viral2/viral2_reverse/ShortStack_1513377940/extract_out $f /media/owner/c92ed9e9-3d94-497c-bb2e-514a4806bbcd/RNAseq/pool_of_small_RNA_libraries_AN/Domier_26_smallRNA.20171119/trimmed_files/viral2/viral2_reverse/fastq.out/new_${f}.out
+done
+
+
+
+#Then extract columns  3 and 5 from the output file new_WT_1.out
+cut -f 3,5 WT_1_LTR.out > WT_1_LTR_assembly.txt 
+
+##cut if separated by coma
+cut -d$',' -f 1,15 coma_separated.csv > test.txt
+
+###modify the file WT_1_LTR_assembly.txt  to fasta format
+awk '{printf ">%s\n%s\n",$1,$2}' WT_1_LTR_assembly.txt > WT_1_LTR_assembly.fasta
+
+##or for the tab separated file; check: https://stackoverflow.com/questions/52788098/convert-tab-to-fasta-format-in-linux#52788154
+
+awk -F '\t' '{printf ">%s\n%s\n",$1,$2}' infile-table.txt
+#or 
+awk -F'\t' -v OFS='\n' '{$1 = ">" $1} 1' infile-table.txt 
+#or
+sed 's/^/>/;s/\t/\n/' infile-table.txt
+
+
+
+##Using bash loop Step 6
+for f in *.out; do
+cut -d$'\t' -f 3,5 "$f" > "/media/owner/84c287d9-53c7-4145-bf8c-f22aebb71a84/symarzano_201875/bbmap_trimmed_slagem_name_swapped_with_WTDK3/SshV2l/fastq.out/fastq.out_0_mismatch_allowed/assembly.txt/new_${f}_assembly.txt" 
+done
+
+
+##Bash loop to change assembly.txt to fasta (cd to assembly.txt folder)
+for f in *_assembly.txt; do
+awk '{printf ">%s\n%s\n",$1,$2}' $f > "/media/owner/7ef86942-96a5-48a7-a325-6c5e1aec7408/symarzano2018June.201875/2018June.201875.bz2_files/trimmed_files/bbmap_trimmed_slagem_name_swapped_with_WTDK3/SsGenome/fastq.out/fastq.out_zero_mismatch_allowed/assembly.txt/assembly.fasta/new_${f}_assembly.fasta" 
+done
+
+#or
+for f in *_assembly.txt; do
+awk '{printf ">%s\n%s\n",$1,$2}' $f > "/media/owner/c92ed9e9-3d94-497c-bb2e-514a4806bbcd/RNAseq/pool_of_small_RNA_libraries_AN/Domier_26_smallRNA.20171119/trimmed_files/viral2/viral2_reverse/assembly.fasta/new_${f}_assembly.fasta" 
+done
+
+
+# Step 7
+./bowtie-count.pl WT_1.out WT_1-counts.csv   
+
+##Using bash loop (step 4; cd to fastq.out folder)
+for f in *.out; do 
+echo "Processing: " $f
+perl /home/owner/Dropbox/perl/bowtie-count.pl $f /media/owner/84c287d9-53c7-4145-bf8c-f22aebb71a84/symarzano_201875/bbmap_trimmed_slagem_name_swapped_with_WTDK3/SshV2l/fastq.out/fastq.out_0_mismatch_allowed/count.csv/${f}.csv
+done > >(tee /media/owner/84c287d9-53c7-4145-bf8c-f22aebb71a84/symarzano_201875/bbmap_trimmed_slagem_name_swapped_with_WTDK3/SshV2l/fastq.out/fastq.out_0_mismatch_allowed/count.csv/log.txt) 2>&1
+
+#Step 8
+## for making 5’ termini frequency and length distribution
+./count-smRNAs.pl merged.fastq 18 34
+
+## for counting by specific sequence (used in cleveland)
+./count-seq.pl /DCLd_1_GCCAAT_L008_R1_001.fasta DCLd_1_out_file 18 34 30
+
+ #or using loop  (Used in cleveland)
+for f in *.fasta; do
+perl /media/owner/c92ed9e9-3d94-497c-bb2e-514a4806bbcd/Dropbox/perl/count-seq.pl $f /media/owner/c92ed9e9-3d94-497c-bb2e-514a4806bbcd/RNAseq/pool_of_small_RNA_libraries_AN/Domier_26_smallRNA.20171119/trimmed_files/QC_contamination/uncontaminated_files/count.seq/${f}.out_file 18 34 1
+done
+
+
+
+##For fastq files
+##frequency in main fastq file
+for f in *.fastq; do
+perl /media/owner/c92ed9e9-3d94-497c-bb2e-514a4806bbcd/Dropbox/perl/count-smRNAs.pl $f 18 34 > /media/owner/c92ed9e9-3d94-497c-bb2e-514a4806bbcd/RNAseq/pool_of_small_RNA_libraries_AN/Domier_26_smallRNA.20171119/trimmed_files/QC_contamination/uncontaminated_files/nucleotide_frequency_in_main_fastq_files/${f}.txt
+done
+
+################################NEW counts from perfectly aligned TR regions
+##For fasta files (Fasta from the cluster obtained from shortstack)
+for f in *.fasta; do
+perl /home/owner/Dropbox/perl/count-smrna-fasta_min_max_length.pl $f 18 34 > /media/owner/7ef86942-96a5-48a7-a325-6c5e1aec7408/symarzano2018June.201875/2018June.201875.bz2_files/trimmed_files/bbmap_trimmed_slagem_name_swapped_with_WTDK3/SsGenome/fastq.out/fastq.out_zero_mismatch_allowed/assembly.txt/assembly.fasta/nucleotide_frequency/${f}.txt
+done
+
+
+
+##Degradome analysis : (copied from PLPA 404 file)  
+11.	To determine the prevalence of the viruses in the sequenced samples, first build an index file for the new soybean-viruses.fasta file.
+
+bowtie-build soybean-viruses.fasta soybean-viruses
+
+12.	Align the sequence reads in one of the original fastq files to the new database using bowtie.
+for f in *.fastq; do
+bowtie -q -p 18 /media/owner/c92ed9e9-3d94-497c-bb2e-514a4806bbcd/RNAseq/pool_of_small_RNA_libraries_AN/degradomes/viral2/viral2_reverse/Rev_ssh_virus2 $f /media/owner/c92ed9e9-3d94-497c-bb2e-514a4806bbcd/RNAseq/pool_of_small_RNA_libraries_AN/degradomes/viral2/viral2_reverse/virus2_rev.out/${f}.out
+done
+
+OR
+
+bowtie -q -p 18 soybean-viruses 2009_ILsurvey_GCCAAT_L006_R1_001.fastq 2009-R1-vfg.out
+
+13.	Determine the numbers of sequence reads that align to each virus.  This gives a measure of the prevalence of the different viruses, but does not correct for intrinsic differences in titers among viruses. 
+
+for f in *.fastq.out; do
+perl /home/owner/Dropbox/perl/bowtie-count.pl $f count{f}.csv
+done
+
+##to get the terminal mismatches
+##first get extract_out.fasta
+##for genome
+perl /home/owner/Dropbox/perl/extract-regions.pl /media/owner/7ef86942-96a5-48a7-a325-6c5e1aec7408/symarzano2018June.201875/2018June.201875.bz2_files/trimmed_files/bbmap_trimmed/Ssgenome/SSchromosomes.fasta /media/owner/7ef86942-96a5-48a7-a325-6c5e1aec7408/symarzano2018June.201875/2018June.201875.bz2_files/trimmed_files/bbmap_trimmed/Ssgenome/ShortStack_1532712819/region.list >/media/owner/7ef86942-96a5-48a7-a325-6c5e1aec7408/symarzano2018June.201875/2018June.201875.bz2_files/trimmed_files/bbmap_trimmed/Ssgenome/ShortStack_1532712819/extract_out.fasta
+
+##for virus
+perl /home/owner/Dropbox/perl/extract-regions.pl media/owner/7ef86942-96a5-48a7-a325-6c5e1aec7408/symarza
+no2018June.201875/2018June.201875.bz2_files/trimmed_files/virus1_sshadv/Rev_sshad_virus1.fasta /media/owner/7ef86942-96a5-48a7-a325-6c5e1aec7408/symarzano2018June.201875/2018June.201875.bz2_files/trimmed_files/bbmap_trimmed/ShortStack_1532361444_Rev_sshad_virus1/region.list >/media/owner/7ef86942-96a5-48a7-a325-6c5e1aec7408/symarzano2018June.201875/2018June.201875.bz2_files/trimmed_files/bbmap_trimmed/ShortStack_1532361444_Rev_sshad_virus1/extract_out.fasta
+
+
+#or 
+perl /home/owner/Dropbox/perl/extract-regions.pl /media/owner/7ef86942-96a5-48a7-a325-6c5e1aec7408/symarzano2018June.201875/2018June.201875.bz2_files/trimmed_files/virus1_sshadv/Rev_sshad_virus1.fasta region.list > extract_out.fasta
+
+##for virus2
+cd /media/owner/7ef86942-96a5-48a7-a325-6c5e1aec7408/symarzano2018June.201875/2018June.201875.bz2_files/trimmed_files/bbmap_trimmed/ShortStack_1532373884_Rev_ssh_virus2
+
+perl /home/owner/Dropbox/perl/extract-regions.pl /media/owner/7ef86942-96a5-48a7-a325-6c5e1aec7408/symarzano2018June.201875/2018June.201875.bz2_files/trimmed_files/virus2_ssh/Rev_ssh_virus2_no_polyA.fasta region.list > extract_out.fasta
+
+##for virus3
+
+
+##Then do
+bowtie-build extract_out.fasta  extract_out
+
+
+#first align with 1 mismatch allowed
+##for Ss genome
+for f in *.fastq; do
+echo "Processing: " $f
+bowtie -q -p 18 -v 1 /media/owner/7ef86942-96a5-48a7-a325-6c5e1aec7408/symarzano2018June.201875/2018June.201875.bz2_files/trimmed_files/bbmap_trimmed/Ssgenome/ShortStack_1532712819/extract_out $f /media/owner/7ef86942-96a5-48a7-a325-6c5e1aec7408/symarzano2018June.201875/2018June.201875.bz2_files/trimmed_files/bbmap_trimmed/virus2_ssh/unaligned_to_virus_fastq/fastq.out_fastq_unaligned_to_virus_getting_aligned_with_ssgenome/${f}.out
+done > >(tee /media/owner/7ef86942-96a5-48a7-a325-6c5e1aec7408/symarzano2018June.201875/2018June.201875.bz2_files/trimmed_files/bbmap_trimmed/virus2_ssh/unaligned_to_virus_fastq/fastq.out_fastq_unaligned_to_virus_getting_aligned_with_ssgenome/log.txt) 2>&1
+
+#for virus 1
+for f in *.fastq; do
+echo "Processing: " $f
+bowtie -q -p 18 -v 1 /media/owner/7ef86942-96a5-48a7-a325-6c5e1aec7408/symarzano2018June.201875/2018June.201875.bz2_files/trimmed_files/bbmap_trimmed/virus1_sshadv1/ShortStack_1532710754/extract_out $f /media/owner/7ef86942-96a5-48a7-a325-6c5e1aec7408/symarzano2018June.201875/2018June.201875.bz2_files/trimmed_files/bbmap_trimmed/virus1_sshadv1/fastq.out/${f}.out
+done > >(tee /media/owner/7ef86942-96a5-48a7-a325-6c5e1aec7408/symarzano2018June.201875/2018June.201875.bz2_files/trimmed_files/bbmap_trimmed/virus1_sshadv1/fastq.out/log.txt) 2>&1
+
+##for virus 2
+
+for f in *.fastq; do
+echo "Processing: " $f
+bowtie -q -p 18 -v 1 /media/owner/7ef86942-96a5-48a7-a325-6c5e1aec7408/symarzano2018June.201875/2018June.201875.bz2_files/trimmed_files/bbmap_trimmed/virus2_ssh/ShortStack_1532710824/extract_out $f /media/owner/7ef86942-96a5-48a7-a325-6c5e1aec7408/symarzano2018June.201875/2018June.201875.bz2_files/trimmed_files/bbmap_trimmed/virus2_ssh/fastq.out/${f}.out
+done > >(tee /media/owner/7ef86942-96a5-48a7-a325-6c5e1aec7408/symarzano2018June.201875/2018June.201875.bz2_files/trimmed_files/bbmap_trimmed/virus2_ssh/fastq.out/log.txt) 2>&1
+
+#####then
+perl /home/owner/Dropbox/perl/bowtie-count-term.pl trimmed_WT_SSHADV1_1_GGCTAC_L008_R1_001.fastq.out 18
+#repeat all the way upto 24 or do as in loop below
+
+
+#in loop (for ShHV2L fastq.out files only)
+for f in *SsHV2L*; do 
+echo "Processing: " $f
+for i in $(seq 18 24); do
+echo "Doing: " $i
+perl /home/owner/Dropbox/perl/bowtie-count-term.pl $f $i > /media/owner/84c287d9-53c7-4145-bf8c-f22aebb71a84/symarzano_201875/bbmap_trimmed_slagem_name_swapped_with_WTDK3/SshV2l/fastq.out/fastq.out_1_mismatch_allowed/terminal_mismatches/${f}_${i}.txt
+done 
+done
+
+##Count strands for aligned reads
+cut -f 2 new_bbduk_trimmed_Dcl2_SsHV2L_1_ATGAGC_L003_R1_001.fastq.out | sort | uniq -c
+
+#Or in loop
+for f in *.fastq.out; do
+echo "Processing :" $f
+cut -f 2  $f | sort | uniq -c 
+done > >(tee strand_counts.txt) 2>&1
+
+##or redirection can also be done within loop like this:
+for f in *SsHV2L*;
+do 
+  echo "Processing: " $f
+  for i in $(seq 18 24);
+  do
+    {
+      echo "Doing: " $i
+      perl /home/owner/Dropbox/perl/bowtie-count-term.pl $f $i
+    } > >(tee /media/owner/7ef86942-96a5-48a7-a325-6c5e1aec7408/symarzano2018June.201875/2018June.201875.bz2_files/trimmed_files/bbmap_trimmed/virus2_ssh/fastq.out/fastq.out_1_mismatch_allowed/terminal_mismatches/test/${f}_${i}.txt) 2>&1
+  done
+done
+
+##or use this code to get the reference change as well
+/home/owner/Dropbox/perl/bowtie-count-term_with_ref.pl
+
+#or in loop
+cd 
+for f in *.fastq.out;
+do 
+  echo "Processing: " $f
+  for i in $(seq 18 24); 
+  do
+    {
+      echo "Doing: " $i
+      perl /home/owner/Dropbox/perl/bowtie-count-term_with_ref.pl $f $i
+    } > >(tee /media/owner/newdrive/2015_small_RNA/bbduk_trimmed/sshv2l/fastq.out_with_1_mismatch_as_les_suggested/terminal_mismatches_with_references/${f}_${i}.txt) 2>&1
+  done
+done
+
+
+###uracil bias (https://mail.google.com/mail/u/0/#search/5'+terminal+/FMfcgxmZTJBCLkgLGrzPczXgCPxBltFB)
+
+
+##then you may have to delete lines that start with A T G C in this files generated above. Can be done like this:
+
+sed '/^[ATGC]/d' infile.txt
+Or grep:
+
+grep -v '^[ATGC]' infile.txt
+Or bash itself:
+
+while read -r line; do [[ $line =~ ^[ATGC] ]] || echo "$line"; done < infile.txt
+
+#instead we can loop over all files:
+for f in *.txt; do
+echo "Processing: " $f
+grep -v '^[ATGCD]' $f > /media/owner/newdrive/2015_small_RNA/bbduk_trimmed/sshv2l/fastq.out_with_1_mismatch_as_les_suggested/terminal_mismatches_with_references/clean/clean_${f}
+done
+
+##Then use r script (terminal_mismatch_histogram_plot.r). That is when the columns are A, C, G and T only
+
+##Then use (terminal_mismatch_histogram_plot_for_nucleotide_change.r) script to plot individual reference and alt positions.
+
+##check cleveland4 tutorial
+
+
+
+
+
+
+####How to plot alignment:
+1 Get bam alignment 
+steps:
+a) align fastq file with the virus(reference) sequence and get sam file output from bowtie (bowtie -q -p 18 -v 0 indicates no mismatch allowed)
+
+for f in *.fastq; do
+echo $f
+bowtie -S -p 18 -v 1 /media/owner/c92ed9e9-3d94-497c-bb2e-514a4806bbcd/RNAseq/pool_of_small_RNA_libraries_AN/Domier_26_smallRNA.20171119/trimmed_files/viral1/WT_sshadv_vs_dcld_shadv/sshad_virus1 $f ${f}_sam.sam
+done > >(tee output_for_sam_alignment_with_sshadv1.txt) 2>&1
+
+###
+#### To check the mismatches as les suggested
+for f in *.fastq; do
+echo "Processing: " $f
+bowtie -S -p 18 -n 1 -m 1 /media/owner/c3c5fbb4-73f6-45dc-a475-988ad914056e/phasing/Domier_10RNAseq.2017104.tgz_transcriptome/Domier_10RNAseq.2017104/RNAseq/bbmap_trimmed/filtered_bbtrimmed/ssgenome/SSchromosomes $f /media/owner/c3c5fbb4-73f6-45dc-a475-988ad914056e/phasing/Domier_10RNAseq.2017104.tgz_transcriptome/Domier_10RNAseq.2017104/RNAseq/bbmap_trimmed/filtered_bbtrimmed/ssgenome/endogenous_rna_editing/SAM_1_mismatch_allowed_as_les_suggested/new_${f}.sam
+done > >(tee /media/owner/c3c5fbb4-73f6-45dc-a475-988ad914056e/phasing/Domier_10RNAseq.2017104.tgz_transcriptome/Domier_10RNAseq.2017104/RNAseq/bbmap_trimmed/filtered_bbtrimmed/ssgenome/endogenous_rna_editing/SAM_1_mismatch_allowed_as_les_suggested/log.txt) 2>&1
+
+##same for sshv2l alignment
+
+for f in /media/owner/c92ed9e9-3d94-497c-bb2e-514a4806bbcd/RNAseq/pool_of_small_RNA_libraries_AN/Domier_26_smallRNA.20171119/trimmed_files/viral2/WT_sshv2l_vs_dcld_sshv2l/*.fastq; do
+echo $f
+bowtie -S -p 18 -v 0 /media/owner/c92ed9e9-3d94-497c-bb2e-514a4806bbcd/RNAseq/pool_of_small_RNA_libraries_AN/Domier_26_smallRNA.20171119/trimmed_files/viral2/WT_sshv2l_vs_dcld_sshv2l/Rev_sshv2l_no_polyA $f ${f}_sam.sam
+done > >(tee output_for_sam_alignment_with_sshv2l.txt) 2>&1
+
+
+for f in /media/owner/c92ed9e9-3d94-497c-bb2e-514a4806bbcd/RNAseq/pool_of_small_RNA_libraries_AN/Domier_26_smallRNA.20171119/trimmed_files/QC_contamination/*.fastq; do
+echo $f
+bowtie -S -p 18 -v 0 /media/owner/c92ed9e9-3d94-497c-bb2e-514a4806bbcd/RNAseq/pool_of_small_RNA_libraries_AN/Domier_26_smallRNA.20171119/trimmed_files/viral2/WT_sshv2l_vs_dcld_sshv2l/Rev_sshv2l_no_polyA $f ${f}_sam.sam
+done > >(tee output_for_sam_alignment_with_sshv2l.txt) 2>&1
+
+
+/media/owner/c92ed9e9-3d94-497c-bb2e-514a4806bbcd/RNAseq/pool_of_small_RNA_libraries_AN/Domier_26_smallRNA.20171119/trimmed_files/viral2/WT_sshv2l_vs_dcld_sshv2l/not_contaminated_qc
+
+#Allowing no mismatch 
+
+for f in *.fastq; do
+echo $f
+bowtie -S -p 18 -v 0 /media/owner/c92ed9e9-3d94-497c-bb2e-514a4806bbcd/RNAseq/pool_of_small_RNA_libraries_AN/Domier_26_smallRNA.20171119/trimmed_files/viral1/WT_sshadv_vs_dcld_shadv/sshad_virus1 $f /media/owner/c92ed9e9-3d94-497c-bb2e-514a4806bbcd/RNAseq/pool_of_small_RNA_libraries_AN/Domier_26_smallRNA.20171119/trimmed_files/viral1/WT_sshadv_vs_dcld_shadv/sam_allowing_no_mismatch/${f}_sam.sam
+done > >(tee /media/owner/c92ed9e9-3d94-497c-bb2e-514a4806bbcd/RNAseq/pool_of_small_RNA_libraries_AN/Domier_26_smallRNA.20171119/trimmed_files/viral1/WT_sshadv_vs_dcld_shadv/sam_allowing_no_mismatch/output_for_sam_alignment_with_sshadv1.txt) 2>&1
+
+
+
+#To extract specific sequence from fasta
+perl -ne 'if(/^>(\S+)/){$c=grep
+{/^$1$/}qw(S.sclerotiorum_Ch1)}print if $c' SSchromosomes.fasta > new_SSchromosome1.fasta
+
+##for Ss genome alignment
+###reorder Ss genome fasta sequence
+
+
+
+for f in *.fastq; do
+echo $f
+bowtie -S -p 18 -v 0 /media/owner/7ef86942-96a5-48a7-a325-6c5e1aec7408/symarzano2018June.201875/2018June.201875.bz2_files/trimmed_files/bbmap_trimmed_slagem_name_swapped_with_WTDK3/SsGenome/bam/SSchromosomes $f /media/owner/7ef86942-96a5-48a7-a325-6c5e1aec7408/symarzano2018June.201875/2018June.201875.bz2_files/trimmed_files/bbmap_trimmed_slagem_name_swapped_with_WTDK3/SsGenome/bam/sam_allowing_no_mismatch/${f}_sam.sam
+done > >(tee /media/owner/7ef86942-96a5-48a7-a325-6c5e1aec7408/symarzano2018June.201875/2018June.201875.bz2_files/trimmed_files/bbmap_trimmed_slagem_name_swapped_with_WTDK3/SsGenome/bam/sam_allowing_no_mismatch/output_for_sam_alignment_with_Ssgenome.txt) 2>&1
+
+
+
+#allowing only 1 mismatch
+
+for f in *.fastq; do
+echo $f
+bowtie -S -p 18 -v 1 /media/owner/c92ed9e9-3d94-497c-bb2e-514a4806bbcd/RNAseq/pool_of_small_RNA_libraries_AN/Domier_26_smallRNA.20171119/trimmed_files/viral1/WT_sshadv_vs_dcld_shadv/sshad_virus1 $f /media/owner/c92ed9e9-3d94-497c-bb2e-514a4806bbcd/RNAseq/pool_of_small_RNA_libraries_AN/Domier_26_smallRNA.20171119/trimmed_files/viral1/WT_sshadv_vs_dcld_shadv/sam_allowing_one_mismatch/${f}_sam.sam
+done > >(tee /media/owner/c92ed9e9-3d94-497c-bb2e-514a4806bbcd/RNAseq/pool_of_small_RNA_libraries_AN/Domier_26_smallRNA.20171119/trimmed_files/viral1/WT_sshadv_vs_dcld_shadv/sam_allowing_one_mismatch/output_for_sam_alignment_with_sshadv1.txt) 2>&1
+
+#allowing only two mismatch
+
+for f in *.fastq; do
+echo $f
+bowtie -S -p 18 -v 2 /media/owner/c92ed9e9-3d94-497c-bb2e-514a4806bbcd/RNAseq/pool_of_small_RNA_libraries_AN/Domier_26_smallRNA.20171119/trimmed_files/viral1/WT_sshadv_vs_dcld_shadv/sshad_virus1 $f /media/owner/c92ed9e9-3d94-497c-bb2e-514a4806bbcd/RNAseq/pool_of_small_RNA_libraries_AN/Domier_26_smallRNA.20171119/trimmed_files/viral1/WT_sshadv_vs_dcld_shadv/sam_allowing_two_mismatch/${f}_sam.sam
+done > >(tee /media/owner/c92ed9e9-3d94-497c-bb2e-514a4806bbcd/RNAseq/pool_of_small_RNA_libraries_AN/Domier_26_smallRNA.20171119/trimmed_files/viral1/WT_sshadv_vs_dcld_shadv/sam_allowing_two_mismatch/output_for_sam_alignment_with_sshadv1.txt) 2>&1
+
+
+
+
+
+b) Convert sam to bam
+
+samtools view -bS -o trimmed_WT_SSHADV1_sam.bam trimmed_WT_SSHADV1_sam.sam
+
+##or in loop
+for f in *.sam; do
+echo $f
+samtools view -bS -o ./bam/${f}.bam $f
+done
+
+
+##If need to replace part of the file name, do this:
+#https://unix.stackexchange.com/questions/336866/how-to-replace-a-character-in-a-set-of-file-names
+#Here, replacing space with _ .
+for f in * *.bam; do mv -- "$f" "${f// /_}"; done
+
+c) Sort the bam file
+samtools sort trimmed_WT_SSHADV1_sam.bam -o sorted_trimmed_WT_SSHADV1_sam.bam
+
+##or in a loop
+
+for f in *.bam; do
+echo $f
+samtools sort $f -o ./sorted_bam/sorted_${f}
+done
+
+d) index the bam file
+samtools index sorted_trimmed_WT_SSHADV1_sam.bam sorted_trimmed_WT_SSHADV1_sam.bam.bai
+
+#Or in a loop
+
+for f in sorted*.bam; do
+echo $f
+samtools index $f ${f}.bai
+done
+
+##NOW CAN VISUALIZE BAM ALIGNMENT USING REFERENCE SEQUENCE IN IGV GENOME BROWSER
+
+2. Read the resulting BAM files into R using the GenomicAlignments Bioconductor package.
+
+3. VISUALIZE DATA USING GVIZ OR QUALIMAP IN R (can also try this: https://www.biostars.org/p/240594/); not tested though
+
+4. Follow the R code to do coverage plot (GenomicAlignmentsIntroduction.R); need to get the coverage data using commands described below.
+
+##working with the bedtools
+#calculate the coverage in the region 
+
+for f in sorted*.bam; do
+echo $f
+bedtools coverage -a my_region.bed -b $f -bed
+done > >(tee coverage_output.txt) 2>&1
+
+
+###now get the coverage data extracted
+  # # calculate the coverage per base pair in this region
+  # # on the same strand (note -s)
+
+bedtools coverage -a my_region.bed -b wgEncodeRikenCageHchCellPapAlnRep1.bam -bed -d -s | gzip > wgEncodeRikenCageHchCellPapAlnRep1_chr22_my_region_pos.tsv.gz
+
+## on the opposite strand (note -S; see: bedtools coverage -h)
+
+bedtools coverage -a my_region.bed -b wgEncodeRikenCageHchCellPapAlnRep1.bam -bed -d -S | gzip > wgEncodeRikenCageHchCellPapAlnRep1_chr22_my_region_neg.tsv.gz
+
+
+
+##or in a loop (both positive and negative coverage in one go); need latest version of bedtools--version2.25.0
+
+for f in sorted*.bam; do
+bedtools coverage -a my_region.bed -b $f -bed -d -s | gzip > /media/owner/7ef86942-96a5-48a7-a325-6c5e1aec7408/symarzano2018June.201875/2018June.201875.bz2_files/trimmed_files/bbmap_trimmed_slagem_name_swapped_with_WTDK3/SshV2l/sam/bam/sorted_bam/strand/strands/${f}_my_region_pos.tsv.gz
+bedtools coverage -a my_region.bed -b $f -bed -d -S | gzip > /media/owner/7ef86942-96a5-48a7-a325-6c5e1aec7408/symarzano2018June.201875/2018June.201875.bz2_files/trimmed_files/bbmap_trimmed_slagem_name_swapped_with_WTDK3/SshV2l/sam/bam/sorted_bam/strand/strands/${f}_my_region_neg.tsv.gz
+done
+
+
+##for Ssgenome
+for f in sorted*.bam; do
+bedtools coverage -a my_region.bed -b $f -bed -d -s | gzip > /media/owner/7ef86942-96a5-48a7-a325-6c5e1aec7408/symarzano2018June.201875/2018June.201875.bz2_files/trimmed_files/bbmap_trimmed_slagem_name_swapped_with_WTDK3/SsGenome/bam/sam_allowing_no_mismatch/bam/sorted_bam/strands/${f}_my_region_pos.tsv.gz
+bedtools coverage -a my_region.bed -b $f -bed -d -S | gzip > /media/owner/7ef86942-96a5-48a7-a325-6c5e1aec7408/symarzano2018June.201875/2018June.201875.bz2_files/trimmed_files/bbmap_trimmed_slagem_name_swapped_with_WTDK3/SsGenome/bam/sam_allowing_no_mismatch/bam/sorted_bam/strands/${f}_my_region_neg.tsv.gz
+done
+
+
+
+#Or : https://bedtools.readthedocs.io/en/latest/content/tools/genomecov.html
+###Info on bedformat
+#https://uswest.ensembl.org/info/website/upload/bed.html
+
+
+######Also for total read counts on each positive and negative strand:
+for f in sorted*.bam; do
+echo "Counts for positive: " $f
+bedtools coverage -a my_region.bed -b $f -bed -s
+echo "Counts for negative: " $f
+bedtools coverage -a my_region.bed -b $f -bed -S 
+done > >(tee total_coverage_on_each_strand.txt) 2>&1
+
+
+#Now plot the frequency using R code (GenomicAlignmentsIntroduction.R)
+
+
+#######
+
+### Extract aligned reads from bam files
+
+for f in sorted*.bam; do
+samtools fasta -F 4 $f > ${f}.fasta
+done
+
+
+
+##Now do the frequency counting of reads in fasta file using perl script below. This script will count the number of reads of min and max read lengths and the nucleotides in 5' terminal
+
+for f in *.bam.fasta; do
+perl /media/owner/c92ed9e9-3d94-497c-bb2e-514a4806bbcd/Dropbox/perl/count-smrna-fasta_min_max_length.pl $f 18 34 > /media/owner/c92ed9e9-3d94-497c-bb2e-514a4806bbcd/RNAseq/pool_of_small_RNA_libraries_AN/Domier_26_smallRNA.20171119/trimmed_files/viral2/WT_sshv2l_vs_dcld_sshv2l/sam_alignment_with_sshv2l_default_3_mismatches/sshv2l_aligned_fasta_reads_from_bam_files/nucleotide_frequency_from_fasta/${f}.txt
+done
+
+
+##Then use these two R codes to plot to plot read counts and Uridylation in 5' of aligned reads(VsiRNA)
+/home/owner/Dropbox/rcodes/combined_nucleotide_frequency_and_size_distribution_barplot_with_raw_reads_set1.r (for raw reads plot; Also to plot reads and Uracil bias separately)
+/home/owner/Dropbox/rcodes/combined_nucleotide_frequency_and_size_distribution_barplot_normalized_percentage.r  (for normalized read plots)
+
+#Or use this code to get the reference and alt alleles as well: /home/owner/Dropbox/rcodes/terminal_mismatch_histogram_plot_for_nucleotide_change.r
+
+#Total aligned read count
+for f in *.bam.fasta; do
+echo $f
+grep -c "^>"  $f
+done > >(tee totalreads_for_each_file.txt) 2>&1
+
+###################test
+samsift \
+  -i /media/owner/c92ed9e9-3d94-497c-bb2e-514a4806bbcd/RNAseq/pool_of_small_RNA_libraries_AN/Domier_26_smallRNA.20171119/trimmed_files/viral1/WT_sshadv_vs_dcld_shadv/test/sorted_Link\ to\ trimmed_DCLd_SSHADV1_2_ATGTCA_L008_R1_001.fastq_sam.sam.bam  \
+  -f '18 <= len(SEQ) <= 34 and MD[-1]=="0" and not MD[-2].isdigit()' \
+  -m nonstop-remove
+
+#####################
+get the mapped and unmapped reads from bam file and separate positive and negatively aligned reads from bam files. 
+
+##get the read stats
+samtools flagstat sorted_Link_to_trimmed_WT_SSHADV1_1_GGCTAC_L008_R1_001.fastq_sam.sam.bam 
+
+#get the unmapped reads
+samtools view -b -f 4 sorted_Link_to_trimmed_WT_SSHADV1_1_GGCTAC_L008_R1_001.fastq_sam.sam.bam > WT_SSHADV1_unmapped.bam
+
+#get the mapped reads
+samtools view -b -F 4 sorted_Link_to_trimmed_WT_SSHADV1_1_GGCTAC_L008_R1_001.fastq_sam.sam.bam > WT_SSHADV1_mapped.bam
+
+##Now from the mapped reads, get the positive strands only
+samtools view -h -F 0x10 -b WT_SSHADV1_mapped.bam > postiveStrand.sam
+
+#Then convert sam to bam
+ samtools view -bS -o forwardStrandReads.bam postiveStrand.sam
+
+#now get the stat on positively mapped reads 
+samtools flagstat forwardStrandReads.bam
+
+#now for negatively mapped reads:
+samtools view -h -f 0x10 -b WT_SSHADV1_mapped.bam > negativeStrand.sam
+
+#convert sam to bam
+samtools view -bS -o negativeStrandReads.bam negativeStrand.sam
+
+#then finally get the stats
+samtools flagstat negativeStrandReads.bam
+
+
+
+
+####extracting positive and negative strands from bam in loop:#######
+
+#positive
+
+for f in sorted_bbduk_trimmed*.bam; do
+echo "Doing :" $f
+samtools view -h -F 0x10 -b $f > /media/owner/7ef86942-96a5-48a7-a325-6c5e1aec7408/symarzano2018June.201875/2018June.201875.bz2_files/trimmed_files/bbmap_trimmed/virus2_ssh/bam_alignment_with_one_mismatch_to_check_terminal_mismatch_test/sam/bam/positive_sam/positiveStrand_${f}.sam
+done
+
+#negative
+for f in sorted_bbduk_trimmed*.bam; do
+echo "Doing :" $f
+samtools view -h -f 0x10 -b $f > /media/owner/7ef86942-96a5-48a7-a325-6c5e1aec7408/symarzano2018June.201875/2018June.201875.bz2_files/trimmed_files/bbmap_trimmed/virus2_ssh/bam_alignment_with_one_mismatch_to_check_terminal_mismatch_test/sam/bam/negative_sam/negativeStrand_${f}.sam
+done
+##together
+for f in sorted_bbduk_trimmed*.bam; do
+echo "Doing Positive :" $f
+samtools view -h -F 0x10 -b $f > /media/owner/7ef86942-96a5-48a7-a325-6c5e1aec7408/symarzano2018June.201875/2018June.201875.bz2_files/trimmed_files/bbmap_trimmed/virus2_ssh/bam_alignment_with_one_mismatch_to_check_terminal_mismatch_test/sam/bam/positive_sam/positiveStrand_${f}.sam
+echo "Doing Negative :" $f
+samtools view -h -f 0x10 -b $f > /media/owner/7ef86942-96a5-48a7-a325-6c5e1aec7408/symarzano2018June.201875/2018June.201875.bz2_files/trimmed_files/bbmap_trimmed/virus2_ssh/bam_alignment_with_one_mismatch_to_check_terminal_mismatch_test/sam/bam/negative_sam/negativeStrand_${f}.sam
+done
+
+
+##convert sam to fastq
+samtools fastq in.query_sorted.bam
+
+for f in *.sam; do
+samtools fastq $f > ./sam2fastq/${f}.fastq
+done
+
+###replace the extension with nothing, eg. negativeStrand_sorted_bbduk_trimmed_Ago2_SsHV2L_1_CATGGC_L003_R1_001.fastq.sam.bam.sam.fastq >> to give negativeStrand_sorted_bbduk_trimmed_Ago2_SsHV2L_1_CATGGC_L003_R1_001.fastq:
+rename 's/fastq.sam.bam.sam.//' *.fastq
+
+
+###find file name on linux or search file on linux:
+sudo find . -type f -print | grep 'extract-tigs*'                  
+
+##extract sequence ids from fasta for a given sequence
+grep -B 1 "TCCGAATTAGTGTAGGGGTTAACATAACTC" final_with_barcode_merged.fasta.uniq.fasta_count-seq.fasta 
+
+#################Extract reads of certain length from fastq
+
+
+##to get endogenous read statistics, fir tun this r code (GenomicAlignmentsIntroduction_for_Ssgenome_cleaned.R)and get csv files and plot. and based on the coordinated for the peaks do the followin:
+
+
+samtools view -b /media/owner/7ef86942-96a5-48a7-a325-6c5e1aec7408/symarzano2018June.201875/2018June.201875.bz2_files/trimmed_files/bbmap_trimmed_slagem_name_swapped_with_WTDK3/SsGenome/bam/sam_allowing_no_mismatch/bam/sorted_bam/extracted_reads_for_genomic_alignment_clusters/WtDK3_SsHV2L_2/sorted_bbduk_trimmed_WTDK3_SsHV2L_2_TATAAT_L003_R1_001.fastq_sam.sam.bam S.sclerotiorum_Ch:26580715-26580807 > Ch10subset.bam
+
+
+#Then
+samtools fasta Ch10subset.bam  > Ch10subset.fasta
+
+#count the number of repeated sequences
+perl /home/owner/Dropbox/perl/count-seq.pl Ch10subset.fasta Ch10subset_counted.fasta 18 35 5000
+
+
+

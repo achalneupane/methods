@@ -1,0 +1,25 @@
+#price
+fastq_to_fasta -n -i SF_2_TTAGGC_L002_R2_001.fastq -o SF_2_TTAGGC_L002_R2_001.fasta
+
+
+
+##concatenated R1 and R2 price
+./PriceTI -fpp SF_1_2_CGATGT_R1_concatenated.fasta SF_1_2_CGATGT_R2_concatenated.fasta 200 95 -icf SF1_1cycle30.fasta 1 1 5 -nc 30 -dbmax 72 -mol 30 -tol 20 -mpi 80 -target 90 2 1 1 -o /media/owner/b45f8e7a-003c-4573-8841-bcb5f76f281f/analysis/second_30_cycles/SF_merged.fasta -a 30
+
+
+
+#####for Rhizophagus
+
+fastq_to_fasta -n -i /media/owner/b54f3251-5380-4288-9ddf-fa3357ea8294/mycorrhizal-mycovirus/achal_sra/RT/RT_5_GCCAAT_L002_R1_001.fastq -o RT_5_GCCAAT_L002_R1_001.fasta
+
+
+fastq_to_fasta -n -i /media/owner/b54f3251-5380-4288-9ddf-fa3357ea8294/mycorrhizal-mycovirus/achal_sra/RT/RT_5_GCCAAT_L002_R2_001.fastq -o RT_5_GCCAAT_L002_R2_001.fasta
+
+PriceTI -fpp /media/owner/b54f3251-5380-4288-9ddf-fa3357ea8294/mycorrhizal-mycovirus/achal_sra/SRA_price/SRR916888/SRR916888_1.fastq.fasta /media/owner/b54f3251-5380-4288-9ddf-fa3357ea8294/mycorrhizal-mycovirus/achal_sra/SRA_price/SRR916888/SRR916888_2.fastq.fasta 200 95 -icf /media/owner/b54f3251-5380-4288-9ddf-fa3357ea8294/mycorrhizal-mycovirus/achal_sra/RT/rirMV1_price/mitovirus_nucleotide.fasta 1 1 5 -nc 30 -dbmax 72 -mol 30 -tol 20 -mpi 80 -target 90 2 1 1 -o mitovirus_nucleotide_30cycles.fasta -a 30
+
+##
+for f in *.fastq; do
+fastq_to_fasta -n -i $f -o ${f}.fasta
+done
+
+##################

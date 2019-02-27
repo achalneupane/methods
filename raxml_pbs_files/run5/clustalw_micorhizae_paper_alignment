@@ -1,0 +1,122 @@
+CLUSTAL 2.1 multiple sequence alignment
+
+
+RdMV1           -------------MKNFFKNFVERQDRARIEKLGSGVGNYISLTLR--------------
+RirMV1          -------------MKNLFQNFVERKDRARIEKLGTGVGNYVSLIIR--------------
+RiMV1           ----------------MINMLLERKNRVRFEKLGSGAGNLIGLLRN--------------
+RdMV2           MLLLTRLPLLYPFRVNLFGTLTGTNQKRDISYLINGVVIDSEVVMKKDPLKRTVSEWLSL
+                                ::  :   :::  :. * .*.     :  .              
+
+RdMV1           ----FGFFLAHVIGGRRHARLFLAVTHYGLFLRNWRGGPYGLVRYLKSAYVTLMQFAGES
+RirMV1          ----FGYAIAFLLGGRRHARFYLAVVHYGKWLREWNGSNKALVKYLKACSVTLMQFAGQG
+RiMV1           ----FGSAVAYLVAGRRGKSFILAVERVVSLALRWKGGTLGLVKYLKASQITLMQVVSKG
+RdMV2           VDWDLHRLQPYVVVDPLNPSELLYMNKPEYLSVWKVAGSRDLPFIVIAGPKTARPSKSTD
+                    :    ..:: .       * : :         ..   *   : :   *     . .
+
+RdMV1           P-IAGCRD-------------------------LGGIHRRARDGIPCIIPVYHRVAIRRR
+RirMV1          P-IASSRD-------------------------LGGVHGRSRSNLPRVIPVYHRVGIRRG
+RiMV1           P-VSDSRK-------------------------LGGVHRRGLGALPGIIPYSHRVSIMRG
+RdMV2           PNISDSSNKNQNSPWDWRLDSSSERKSTLSWEVFCNFKRSLHLLLPKTLKEKGLVAADAT
+                * ::.. .                         : ..:      :*  :     *.    
+
+RdMV1           NL-DVIRFWLSLLAVYRIIEVR--------------------------------------
+RirMV1          DS-RIIQFWLSLLGVYRIIECK--------------------------------------
+RiMV1           DV-PTIRLWLSLLGVYRIIECP--------------------------------------
+RdMV2           SIGRSLYLWARELAHYAEMQQPSKIFDLITPLVLYIERLYTHNGAPYAISAFKVMLFTLY
+                .    : :*   *. *  ::                                        
+
+RdMV1           ----------------------------GKVSFKSITERGVDTIFKVQYQVQSLMGEMRN
+RirMV1          ----------------------------GRVSYKSITQPGVERQFKVVYELGVMLQSLKT
+RiMV1           ----------------------------GRSSYQTITQP---KKVDINQPLAEFSLYLKW
+RdMV2           TYMMGAPLKNTDPLGTRIALRNGLPACWGTELRNLVRGRKNLRIVRILASLLNIYRALDA
+                                            *    : :        . :   :  :   :  
+
+RdMV1           TKGFGGIGRAVLAPVDLS-SLKFKPRALLTS-------GANVPGGIGSFWALAWDALKIW
+RirMV1          SD---RTAQRVLDPIDLKSELKFQPRALLTS-------GANVPGGVGGFWALAWDALKIW
+RiMV1           AKGNIPLCGKILKRVPVP-KLAFKPLAILTS-------GPNVPPEVGAMWAVVFDAFAIW
+RdMV2           EHPEPSVTTIIQPHPNFEENLIFHQFRRFCEDHWPALLGDHINGGEGENLPYFRYSSQVG
+                 .        :     .  .* *:    : .       * ::    *   .    :  : 
+
+RdMV1           KVRETPFGGAIVTWVRSTNQLDLLGLIELAATTAMHDFRK-----------PEEVQSARI
+RirMV1          KVRETPFGGAVNAFAYLTGQLDLLGLIELAATTATHDFRN-----------PESVQDKRV
+RiMV1           HARNTAWYRSLEDYCLRTMNTKVLGLIRQAVGSVPNKIGV-----------ERAAMLQWM
+RdMV2           LNIRTAGANGSSAMASLDLDARALELHKKNHVRKWFELHKDLEALQLLDEISKDHHWGRP
+                   .*.   .         :   * * .        .:              .       
+
+RdMV1           TGKNSRETKSNKGFATLFGKMYKKEKG---TEWRLAPLAN--FLNNLSLGRLHVLPEPAG
+RirMV1          GSKDS-VMGVQKGFATLFGKMNKTGEDRSCTQWRMAPLSN--FVTNLVLGRLHVIPEPAG
+RiMV1           GKNNHKVGETLRERTLYILQVIDRFKDDEGTHIRKGYMYVRTWTGQLRLGRIHEIPEPAG
+RdMV2           KLEEFYTTKRLRGMSSAQLWLATRTYASKGLRVEPPVDPRDPETPGPILGRLHPIPEAAG
+                  ::       :  :     :          . .              ***:* :**.**
+
+RdMV1           KMRVIAMGTWWVQCMLYPLHKLIYD-RLGLIPQDGTWDQEKPIKALACRILEVFKSTGVY
+RirMV1          KMRVVAMGTWWVQCMLYPLHRILYR-KLGLIPNDGTWDQSKPLEGMAAKVKEILSS-GGI
+RiMV1           KVRVVAMVTWWIQCLLYPLHDYIFQSVLRLIPQDGTHDQGKPLLALNQKIVETLRT-TGK
+RdMV2           KVRVVAIVDYFTQIAMKPVHSHLLS-ILSKIKTDATFDQ-------SGRVKEYYES--NH
+                *:**:*:  :: *  : *:*  :    *  *  *.* **         :: *   :    
+
+RdMV1           PEAFSYDLSAATDRFPVWYQLEVLSFLTNRRFAEA----WRDLLVLPGYSPKPITIIPRG
+RirMV1          PQVFSYDLSAATDRFPVWYQVEVLAFLTNRRFAET----WRDLLIMPRYYTGSITVIPRG
+RiMV1           AHVYSFDLKAATDRIP--------------------------------------------
+RdMV2           SRHWSYDLKAATDLIPRALYLEVLAPLLVAPSETGGEARKRAELWVDVMSDREFLSPSKD
+                .. :*:**.**** :*                                            
+
+RdMV1           EPLKYGAGQPMGLYSSWAMFSLSHHMLVQQAASRIGYK--GWYPWYALLGDDLVILGRD-
+RirMV1          DALVYGSGQPMGLYSSWAMFSLAHHLLVQQAASRVGYK--GWYPWYALLGDDIVILGED-
+RiMV1           ------------------------------------------------------------
+RdMV2           LWVKYGTGLPMGAYSHWASMALVHHALVQFAWFRVNGQRLSWYMLYLILGDDLDIAKYPR
+                                                                            
+
+RdMV1           VAMAYKDLCDEIGVKIGLHKSLISSNGSFEFAKRYFVSGIDCSPISIREYWVAINCLPAF
+RirMV1          VAGAYKDLCDQLQVKIGLAKSLISSNGSFEFAKRYYYKGNDCSPVSIREYWVSLSSLPAF
+RiMV1           ---------SELTVSAGVTK----------------------------------------
+RdMV2           VAEEYLAICQALGIQIGLHKSLQSNLNAFEFANRRFIPAGDISPLSLKEELAATSWSQRV
+                         . : :. *: *                                        
+
+RdMV1           AELIARVKRYIPSLRLADAVRGYKMGYHSVAKLTKCMVKLGNTRLASLLAILMLPNGPFA
+RirMV1          AEMVMRIKRSVPDIRLSDAVRAYKYGYHSVAKLTQCIVKLGNSRLANLLAILMLPGGPFE
+RiMV1           ------------------------------------------------------------
+RdMV2           EYAKRILERMGTSLKNSALAQVRKMVTFSG--WTAMKAELAGLRHTAFLPTIRFIAGNPF
+                                                                            
+
+RdMV1           SPLEALFSPTSTAVRPNTHLVDTPITERKVLSTARALGKSMVS---------IGIRSAEY
+RirMV1          RSLLSLFSPTSTAVRPNDNVVDSPITERRVKSVSRTLGQSLCS---------VSARASSY
+RiMV1           ------------------------------------------------------------
+RdMV2           RELKWNIPIESLVNWLILLLPSKEAEKVRKLTTATMFGNNAVDSSKDVREAFIAVLYTEL
+                                                                            
+
+RdMV1           LTSEQKYETTFMGFDPLGLLRYVMKSR---------------------------------
+RirMV1          LSSLTVYENELRVFDPIGFLRSVVISR---------------------------------
+RiMV1           ------------------------------------------------------------
+RdMV2           AKGLAKDLNKLRSDTVKGFLGFKFSRRDRGYLNHLIEQIELAPREMFNDLAAQLLNCHPG
+                                                                            
+
+RdMV1           ----LQVTLTNKRYVDLLDRFGRYLLAGKLRSRGLITLLGKVLPLWKFSNQ---------
+RirMV1          ----MRVTLTNSSHVGLLERFGRYLLDGKLNSRGLVTLLGRIIPIWKFSVG---------
+RiMV1           ------------------------------------------------------------
+RdMV2           RIMYLTSYFSDHTWASYLERLNLITGGLTPTERRLGSYASIVYMFWVCYRHNFWLNHKIT
+                                                                            
+
+RdMV1           ------------------------------------------------------------
+RirMV1          ------------------------------------------------------------
+RiMV1           ------------------------------------------------------------
+RdMV2           LLLGILEDIQMSIDFEFSRKLNRTTLNFEDPITEIGDDLFASRVRNLLKENIPEGETPPH
+                                                                            
+
+RdMV1           -----------DVAAYPDPFSLDALG--------------GIIRKPLASKILKIRVRLLG
+RirMV1          -----------DVAAYPDPFALDAAG--------------GVLARPQTTKFLKLRVRLLG
+RiMV1           ------------------------------------------------------------
+RdMV2           TVGEFLNWMYISYISLPKPLIIDLSETMDSWNSPEPIDKSGVVIQSDKGRVTNVSLKDLG
+                                                                            
+
+RdMV1           LAWGKRPKDGKTGTKRGRKVAMGRTVNK--------------------------------
+RirMV1          LPWKGRPKGGPKVTRKGSKARMGRKLTT--------------------------------
+RiMV1           ------------------------------------------------------------
+RdMV2           ESLKGPLGDLVLGFTKGTGVLIPPIPKLQLKSDRNLLQSGAIFYRNYIEAPPRLSRQGIF
+                                                                            
+
+RdMV1           ------
+RirMV1          ------
+RiMV1           ------
+RdMV2           YESILY
+                      

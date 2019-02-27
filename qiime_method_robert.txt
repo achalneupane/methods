@@ -1,0 +1,303 @@
+###########################Installation of Qiime
+#first get the latest version of qiime as the commands are different for each version. They also keep changing versions every 2 months.
+cd /home/owner/anaconda3/envs
+conda update conda
+conda install wget
+
+#https://docs.qiime2.org/2018.8/install/native/
+wget https://data.qiime2.org/distro/core/qiime2-2018.8-py35-linux-conda.yml
+conda env create -n qiime2-2018.8 --file qiime2-2018.8-py35-linux-conda.yml
+# OPTIONAL CLEANUP
+rm qiime2-2018.8-py35-linux-conda.yml
+
+
+##################################### analysis with Qiime
+##To activate qiime
+source activate /home/owner/anaconda3/envs/qiime2-2018.8
+
+##to deactivate
+source deactive
+
+#cd to where fastq files are
+cd /media/owner/b54f3251-5380-4288-9ddf-fa3357ea8294/Saline_project
+
+
+
+#######USiNG qiime2-2018.6########
+source activate /home/owner/anaconda3/envs/qiime2-2018.6 
+
+##https://docs.qiime2.org/2018.6/tutorials/importing/
+
+##Import file (Note phred should be between 0 to 62
+
+qiime tools import \
+  --type 'SampleData[PairedEndSequencesWithQuality]' \
+  --input-path manifest_corrected.csv \
+  --output-path paired-end-demux.qza \
+  --source-format PairedEndFastqManifestPhred33
+
+#summarize the data (visualize the data):
+qiime demux summarize \
+--i-data paired-end-demux.qza \
+--o-visualization paired-end-demux
+
+#to view it
+qiime tools view paired-end-demux.qzv
+
+#denoise (quality filtering for low phred reads: https://docs.qiime2.org/2018.6/plugins/available/dada2/denoise-paired/)
+
+qiime dada2 denoise-paired \
+--i-demultiplexed-seqs paired-end-demux.qza \
+--p-trim-left-f 6 \
+--p-trim-left-r 7 \
+--p-trunc-len-f 250 \
+--p-trunc-len-r 220 \
+--o-table table.qza \
+--o-representative-sequences rep_seqs.qza \
+--o-denoising-stats denoising_stats.qza
+
+##summarize the output from dada2
+qiime feature-table summarize \
+--i-table table.qza \
+--o-visualization table \
+--m-sample-metadata-file metadata.tsv
+
+##view
+qiime tools view table.qzv
+
+##Create tabulated data for denoised stats
+qiime metadata tabulate --m-input-file denoising_stats.qza --o-visualization denoising_stats 
+
+#then view the denoised stats (starting number of reads and final remained read counts (first and last columns, respectively)
+
+qiime tools view denoising_stats.qzv
+
+
+##Now create phylogenetic tree
+
+qiime alignment mafft \
+--i-sequences rep_seqs.qza \
+--o-alignment aligned_rep_seqs
+
+##Then mask or filter the alignment
+qiime alignment mask \
+--i-alignment aligned_rep_seqs.qza \
+--o-masked-alignment masked_aligned_rep_seqs.qza
+
+##Now finally build a phylogenetic tree
+qiime phylogeny fasttree \
+--i-alignment masked_aligned_rep_seqs.qza \
+--o-tree unrooted_tree
+
+##Now root the above tree
+qiime phylogeny midpoint-root \
+--i-tree unrooted_tree.qza \
+--o-rooted-tree rooted_tree
+
+
+##Diversity analysis in qiime
+#several diversity analyses are default in the core-metrics-phylogenetic method:
+	# *Alpha diversity                       * Beta diversity
+	  #Shannon diversity index		 Jaccard distance 
+	  #Observed OTUs			 Bray-Curtis distance
+	 #Faith's phylogenetic diversity	 Unweighted UniFrac distance
+	 #Pielou's evenness			 Weighted UniFra distance
+#For exhaustive list, check : https://forum.qiime2.org/t/alpha-and-beta-diversity-explanations-and-commands/2282
+
+# So we will now do the diversity analysis(here the sampling depth indicates the lowest number of reads left in denoising stats file, we had about 5000 in the sample with the lowest depth). This will eliminate any samples with less than 5000 reads (or it is a way to weed out bad samples):
+qiime diversity core-metrics-phylogenetic \
+--i-phylogeny rooted_tree.qza \
+--i-table table.qza \
+--p-sampling-depth 5000 \
+--m-metadata-file metadata.tsv \
+--output-dir core_metrics_results
+
+
+#####Diversity Analyses
+####Now create visualization for alpha diversity metrics
+qiime diversity alpha-group-significance \
+--i-alpha-diversity core_metrics_results/faith_pd_vector.qza \
+--m-metadata-file metadata.tsv \
+--o-visualization core_metrics_results/faith_pd_group_significance
+
+#Now view the .qzv file just created (The box plot will the diversity changes over different time period or conditions)
+qiime tools view core_metrics_results/faith_pd_group_significance.qzv
+
+#######Diversity analysis###########
+##alpha diversity: How diverse is each sample (tells diversity within samples)
+##Beta diversity: How different are you samples (tells diversity between the samples)
+
+$ qiime diversity alpha-group-significance \
+--i-alpha-diversity core_metrics_results/evenness_vector.qza \
+--m-metadata-file metadata.tsv \
+--o-visualization core_metrics_results/evenness_group_significance
+
+#view
+qiime tools view core_metrics_results/evenness_group_significance.qzv
+
+qiime diversity alpha-group-significance \
+--i-alpha-diversity core_metrics_results/shannon_vector.qza \
+--m-metadata-file metadata.tsv \
+--o-visualization core_metrics_results/shannon_group_significance
+
+#view
+qiime tools view core_metrics_results/shannon_group_significance.qzv
+
+
+##view
+qiime tools view core_metrics_results/unweighted_unifrac_emperor.qzv
+
+#view
+qiime tools view core_metrics_results/bray_curtis_emperor.qzv
+
+##alpha refraction plot (max depth should be more than or equal to the minimum reads in each sample after filtering i.e more than 5000, so we have 5000 here)
+qiime diversity alpha-rarefaction \
+--i-table core_metrics_results/rarefied_table.qza \
+--p-max-depth 5000 \
+--m-metadata-file metadata.tsv \
+--p-steps 25 \
+--o-visualization alpha_rarefaction.qzv
+
+
+#view
+qiime tools view alpha_rarefaction.qzv
+
+
+###Training the classifier##############
+
+qiime tools import \
+--type 'FeatureData[Sequence]' \
+--input-path /media/owner/b54f3251-5380-4288-9ddf-fa3357ea8294/Saline_project/silva_release/Silva_132_release/SILVA_132_QIIME_release/rep_set/rep_set_16S_only/99/silva_132_99_16S.fna \
+--output-path silva132_99
+
+##Then
+qiime tools import \
+--type 'FeatureData[Taxonomy]' \
+--source-format HeaderlessTSVTaxonomyFormat \
+--input-path /media/owner/b54f3251-5380-4288-9ddf-fa3357ea8294/Saline_project/silva_release/Silva_132_release/SILVA_132_QIIME_release/taxonomy/16S_only/99/taxonomy_7_levels.txt \
+--output-path silva132_99_ref_taxonomy
+
+
+##extract the reference reads
+qiime feature-classifier extract-reads \
+--i-sequences silva132_99.qza \
+--p-f-primer GTGCCAGCMGCCCGCGGTAA \
+--p-r-primer GGACTACHVGGGTWTCTAAT \
+--p-trunc-len 300 \
+--o-reads ref_seqs
+
+
+#Train the classifier
+qiime feature-classifier fit-classifier-naive-bayes \
+--i-reference-reads ref_seqs.qza \
+--i-reference-taxonomy silva132_99_ref_taxonomy.qza \
+--o-classifier classifier.qza
+
+##########Assign taxonomy################
+qiime feature-classifier classify-sklearn \
+--i-classifier classifier.qza \
+--i-reads rep_seqs.qza \
+--o-classification taxonomy.qza
+
+
+#Visualize taxonomy
+qiime metadata tabulate --m-input-file taxonomy.qza --o-visualization taxonomy
+
+######!!!!!!Sometimes Assign taxonomy steps generates errors; so to get around this , you may have to do additional work (https://forum.qiime2.org/t/qiime-taxa-filter-table-error/3947/10):
+
+qiime tools export taxonomy.qza \
+  --output-dir taxonomy-with-spaces
+
+qiime metadata tabulate \
+  --m-input-file taxonomy-with-spaces/taxonomy.tsv  \
+  --o-visualization taxonomy-as-metadata.qzv
+
+qiime tools export taxonomy-as-metadata.qzv \
+  --output-dir taxonomy-as-metadata
+
+qiime tools import \
+  --type 'FeatureData[Taxonomy]' \
+  --input-path taxonomy-as-metadata/metadata.tsv \
+  --output-path taxonomy-without-spaces.qza
+
+##then run 
+qiime metadata tabulate --m-input-file taxonomy-without-spaces.qza --o-visualization taxonomy
+###########!!!!done resolving errors for Assign taxonomy######
+
+#view
+qiime tools view taxonomy.qzv
+
+##Make bar plots of taxonomy data
+qiime taxa barplot \
+--i-table core_metrics_results/rarefied_table.qza \
+--i-taxonomy taxonomy.qza \
+--m-metadata-file metadata.tsv \
+--o-visualization taxa_bar_plots
+
+#view
+qiime tools view taxa_bar_plots.qzv
+
+###Additionally############!!!!!!
+#############Filter Data##############
+Can filter based on a number of criteria:
+Frequency: filter out rare ASVs
+Contingency: filter out ASV’s that don’t appear in each sample
+Identifier: keep or discard specific samples
+Metadata: keep samples that meet certain criteria in metadata
+Taxonomy: keep or discard certain taxonomic groups
+
+
+##If you filter out sequences, rarefy AFTER filtering:
+qiime feature-table rarefy \
+--i-table input_table.asv \
+--p-sampling-depth specify_depth \
+--o-rarefied-table rarefied_table
+
+
+################Export data to use outside of Qiime, details here: https://forum.qiime2.org/t/exporting-and-modifying-biom-tables-e-g-adding-taxonomy-annotations/3630
+
+
+qiime tools export table.qza --output-dir ./
+#FeatureTable[Frequency] artifacts are exported as a biom v.1.0 formatted file by above command
+
+##now convert biom table
+biom convert -i feature-table.biom -o feature-table.tsv --to-tsv
+biom head -i feature-table.tsv
+
+#can also create biom table with taxonomy annotations
+##Next, we'll need to modify the exported taxonomy file?s header before using it with BIOM software. Before modifying that file, make a copy:
+
+qiime tools export table.qza --output-dir exported
+qiime tools export taxonomy.qza --output-dir exported
+
+cp exported/taxonomy.tsv biom-taxonomy.tsv
+
+The first few lines in biom-taxonomy.tsv should look something like this (the actual data will differ):
+
+Feature ID	Taxon	Confidence
+0204aa97a655fab087a6f6902be35eb6	k__Bacteria; p__Bacteroidetes; c__Sphingobacteriia; o__Sphingobacteriales; f__Sphingobacteriaceae; g__Sphingobacterium; s__faecium	-1.0
+5cfeeb662c643e512cbfc724c984f53d	k__Bacteria; p__Firmicutes; c__Bacilli; o__Lactobacillales; f__Lactobacillaceae; g__Lactobacillus; s__	-1.0
+4dc10ad4afd35b9803d853e819d3cec5	k__Bacteria; p__Firmicutes; c__Clostridia; o__Clostridiales; f__Lachnospiraceae; g__; s__	-1.0
+
+
+####
+#Change the first line of biom-taxonomy.tsv (i.e. the header) to this:
+
+#OTUID	taxonomy	confidence
+
+Note that you'll need to use tab characters in the header since this is a TSV file.
+
+Your biom-taxonomy.tsv file should now look something like this (the actual data will differ):
+
+OTUID	taxonomy	confidence
+0204aa97a655fab087a6f6902be35eb6	k__Bacteria; p__Bacteroidetes; c__Sphingobacteriia; o__Sphingobacteriales; f__Sphingobacteriaceae; g__Sphingobacterium; s__faecium	-1.0
+5cfeeb662c643e512cbfc724c984f53d	k__Bacteria; p__Firmicutes; c__Bacilli; o__Lactobacillales; f__Lactobacillaceae; g__Lactobacillus; s__	-1.0
+4dc10ad4afd35b9803d853e819d3cec5	k__Bacteria; p__Firmicutes; c__Clostridia; o__Clostridiales; f__Lachnospiraceae; g__; s__	-1.0
+
+##Finally, add the taxonomy data to your .biom file:
+
+biom add-metadata -i exported/feature-table.biom -o table-with-taxonomy.biom --observation-metadata-fp biom-taxonomy.tsv --sc-separated taxonomy
+
+ 
+
+

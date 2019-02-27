@@ -1,0 +1,38 @@
+#database for trinity assembly file
+usearch -makeudb_ublast SRR916888-trinity.fasta -output SRR916888-trinity.nuc.udb
+
+#Use usearch to align the contigs to the proteome database. Usearch is much faster than blastx with a similar level of sensitivity (if nt database,specify -strand).
+
+usearch -ublast reviewer_virus.fasta -db SRR916888-trinity.nuc.udb -evalue 0.0001 -blast6out reviewers_virus_in_trinity_assembled-hits.txt -strand both
+
+#or individually
+usearch -ublast reviewer_SRR916888_1_contig_6252.fasta -db SRR916888-trinity.nuc.udb -evalue 0.0001 -blast6out reviewer_SRR916888_1_contig_6252_assembled-hits.txt -strand both
+
+usearch -ublast reviewer_SRR916888_1_contig_6252.fasta -db Trinity.fasta.nuc.udb -evalue 0.0001 -blast6out reviewer_SRR916888_1_contig_6252_assembled-hits.txt -strand both
+
+
+
+##database for all virus and rhizophagus sequences
+usearch -makeudb_ublast rhir-vir-protein.fasta -output rhir-vir-protein.udb
+
+#Use usearch to align the contigs to the proteome database. Usearch is much faster than blastx with a similar level of sensitivity.
+
+usearch -ublast SRR916888-trinity.fasta -db rhir-vir-protein.udb -evalue 0.01 -blast6out 2008-trinity-vfg-hits.txt
+
+
+##Extract the contigs with significant similarity to reference viruses
+
+perl extract-virus-hits.pl 2008-trinity-vfg-hits.txt SRR916888-trinity.fasta 2008_trinity 2008-trinity-vfg-tab.csv 2008-trinity-vfg-hits.fasta
+
+##extract sequences from fasta given their ids
+#The first one liner is useful if you only want to extract a few sequences by their identifier from a FASTA file.
+
+perl -ne 'if(/^>(\S+)/){$c=grep{/^$1$/}qw(id1 id2)}print if $c' fasta.file
+
+#This will extract the two sequences with the sequence idenfiers id1 and id2. You only have to change the identifiers within the parentheses and separate them by space to extract the sequences you need.
+
+ 
+
+#If you have a large number of sequences that you want to extract, then you most likely have the sequence identifiers in a separate file. Assuming that you have one sequence identifier per line in the file ids.file, then you can use this one line:
+
+perl -ne 'if(/^>(\S+)/){$c=$i{$1}}$c?print:chomp;$i{$_}=1 if @ARGV' ids.file fasta.file

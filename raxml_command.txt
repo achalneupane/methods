@@ -1,0 +1,202 @@
+#automatic protein model test using -T number of processor
+#resources: https://sco.h-its.org/exelixis/web/software/raxml/hands_on.html
+
+##to run in the cluster, use MPI version of raxml
+sftp://blackjack/home/neupanea/phylogenetics/raxml/endornavirus/raxml_pbs-MPI_T13.pbs
+sftp://blackjack/home/neupanea/phylogenetics/raxml/endornavirus/raxml_pbs-MPI_T14.pbs
+These files are also in my dropbox.
+
+##model test using AUTO option to determine best model; T1 indicates the step number 1; -T 20 indicates the number of threads; test_mpkk.fas is the aligned fasta.
+raxmlHPC-PTHREADS -T 20 -m PROTGAMMAAUTO -s test_mpkk.fas -p 12345 -n T12
+
+##This command will generate 20 ML trees on distinct starting trees and also print the tree with #the best likelihood to a file called RAxML_bestTree.T13. Now we will want to get support values #for this tree, so let's conduct a bootstrap search:
+#Note: can use raxmlHPC-PTHREADS, raxmlHPC-PTHREADS-AVX or just raxmlHPC or any other tools avail#able; check the manual!
+
+
+raxmlHPC-PTHREADS -T 20 -m PROTGAMMAVT -p 12345 -# 20 -s mitovirus-aa_Achal.fasta.uniq_clustalw_alignment_without_gap.fasta -n T13
+
+#or depending on the output model from T12
+
+raxmlHPC-PTHREADS -T 20 -m PROTGAMMAPMB -p 12345 -# 20 -s wanted_sequences_mitovirus_alignment.fasta -n T13
+
+ ##or
+
+raxmlHPC-PTHREADS -T 20 -m PROTGAMMAJTT -p 12345 -# 20 -s mitovirus-aa_Achal.fasta.uniq_clustalw_alignment_without_gap.fasta -n T13
+
+
+## need to tell RAxML that we want to do bootstrapping by providing a bootstrap random number seed via -b 12345 and the number of bootstrap replicates we want to compute via -# 100. Note that, #RAxML also allows for automatically determining a sufficient number of bootstrap replicates, in #this case you would replace -# 100 by one of the bootstrap convergence criteria -# autoFC, -# au#toMRE, -# autoMR, -# autoMRE_IGN.
+
+Here, -# 100 indicates 100 bootstraps; we can now use them to draw bipartitions on the best ML tree as follows: 
+raxmlHPC-PTHREADS -f a -x 12345 -T 20 -m PROTGAMMAVT -p 12345 -x 12345 -# 100 -s mitovirus-aa_Achal.fasta.uniq_clustalw_alignment_without_gap.fasta -n T14
+
+##or
+raxmlHPC-PTHREADS -f a -x 12345 -T 20 -m PROTGAMMAPMB -p 12345 -x 12345 -# 100 -s wanted_sequences_mitovirus_alignment.fasta -n T14
+
+#or different model for DNA; notice last JTT and CAT in these; PROT is for protein; GAMMA is selected model, JTT is the best model found
+
+
+
+##Having computed the bootstrap replicate trees that will be printed to a file called RAxML_boots#trap.T14; 
+
+##Now create ML tree for the performed 100 bootstraps and by using best tree generated from 
+#above commands:
+
+raxmlHPC-PTHREADS -m PROTGAMMAVT -p 12345 -f b -t RAxML_bestTree.T13 -z RAxML_bootstrap.T14 -n T15
+ 
+#or select the suitable model
+raxmlHPC-PTHREADS -m PROTCATJTT -p 12345 -f b -t RAxML_bestTree.T13 -z RAxML_bootstrap.T14 -n T15 
+
+##or
+
+raxmlHPC-PTHREADS -m PROTGAMMAPMB -p 12345 -f b -t RAxML_bestTree.T13 -z RAxML_bootstrap.T14 -n T15
+
+
+#The above call will produce to output files that can be visualized with Dendroscope:  RAxML_bipartitions.T15 (support values assigned to nodes) and RAxML_bipartitionsBranchLabels.T15 (support v#alues assigned to branches of the tree). Note that, for unrooted trees the correct representatio#n is actually the one with support values assigned to branches and not nodes of the tree!
+
+##Straight from the manual; need to modify for protein
+#We can also use the Bootstrap replicates to build consensus trees, RAxML supports strict, majori#ty rule, and extended majority rule consenus trees:
+strict consensus:            raxmlHPC -m GTRCAT -J STRICT -z RAxML_bootstrap.T14 -n T16
+majority rule:                   raxmlHPC -m GTRCAT -J MR         -z RAxML_bootstrap.T14 -n T17
+extended majority rule:  raxmlHPC -m GTRCAT -J MRE      -z RAxML_bootstrap.T14 -n T18
+
+
+
+###################raml model test example:########################################
+https://groups.google.com/forum/#!topic/raxml/URU9lCsvUq8
+
+Hi, 
+
+I am running raxml v8.0.26 as following:
+raxmlHPC-PTHREADS-SSE3 -T 16 -f a -x 666 -m PROTGAMMAAUTO -p 666 -# autoMRE
+
+and I see that before the bootstrapping and the topology searches the LG model has a slightly lower likelihood than the VT model. But I can't see which model was actually used for the bootstrapping and the topology search.
+
+Example:
+
+Stopped Rapid BS search after 600 replicates with MRE-based Bootstopping criterion
+WRF Average of 100 random splits: 1.971813
+Overall Time for 600 Rapid Bootstraps 8441.044932 seconds
+Average Time per Rapid Bootstrap 14.068408 seconds
+
+Starting ML Search ...
+
+Automatic protein model assignment algorithm:
+
+        Partition: 0 best-scoring AA model: LG likelihood -103742.667252
+
+
+Automatic protein model assignment algorithm:
+
+        Partition: 0 best-scoring AA model: VT likelihood -103592.128531
+
+
+Automatic protein model assignment algorithm:
+
+        Partition: 0 best-scoring AA model: VT likelihood -103515.754429
+
+
+Automatic protein model assignment algorithm:
+
+        Partition: 0 best-scoring AA model: VT likelihood -103508.315141
+
+
+Automatic protein model assignment algorithm:
+
+        Partition: 0 best-scoring AA model: VT likelihood -103508.023516
+
+
+
+
+
+
+Thanks! Jon
+ 
+
+
+Alexey Kozlov	
+
+8/18/16
+
+
+Hi Jon, 
+
+automatic protein model selection is part of the general model optimization procedure and thus performed multiple times 
+in the course of the topology search (that's why you see several "best scoring model" lines in the log). 
+
+So based on your output, VT model was finally selected in the process of ML search, and for bootstrapping it seems to be 
+LG (it must be clear from the full output, it's simply the last model reported before "Time for BS model parameter 
+optimization" line). 
+
+Best, 
+Alexey 
+
+On 18.08.2016 09:59, Jon Bråte wrote: 
+> Hi, 
+> 
+> I am running raxml v8.0.26 as following: 
+> | 
+> raxmlHPC-PTHREADS-SSE3 -T 16-f a -x 666-m PROTGAMMAAUTO -p 666-# autoMRE 
+> | 
+> 
+> and I see that before the bootstrapping and the topology searches the LG model has a slightly lower likelihood than the 
+> VT model. But I can't see which model was actually used for the bootstrapping and the topology search. 
+> 
+> Example: 
+> | 
+> 
+> StoppedRapidBS search after 600replicates withMRE-based Bootstoppingcriterion 
+> WRF Averageof 100random splits:1.971813 
+> OverallTimefor600RapidBootstraps8441.044932seconds 
+> AverageTimeper RapidBootstrap14.068408seconds 
+> 
+> StartingML Search... 
+> 
+> Automaticprotein model assignment algorithm: 
+> 
+>         Partition:0best-scoring AA model:LG likelihood -103742.667252 
+> 
+> 
+> Automaticprotein model assignment algorithm: 
+> 
+>         Partition:0best-scoring AA model:VT likelihood -103592.128531 
+> 
+> 
+> Automaticprotein model assignment algorithm: 
+> 
+>         Partition:0best-scoring AA model:VT likelihood -103515.754429 
+> 
+> 
+> Automaticprotein model assignment algorithm: 
+> 
+>         Partition:0best-scoring AA model:VT likelihood -103508.315141 
+> 
+> 
+> Automaticprotein model assignment algorithm: 
+> 
+>         Partition:0best-scoring AA model:VT likelihood -103508.023516 
+> | 
+> 
+> 
+> 
+> 
+> 
+> 
+> Thanks! Jon 
+> 
+> -- 
+> You received this message because you are subscribed to the Google Groups "raxml" group. 
+> To unsubscribe from this group and stop receiving emails from it, send an email to raxml+un...@googlegroups.com 
+> <mailto:raxml+un...@googlegroups.com>. 
+> For more options, visit https://groups.google.com/d/optout. 
+ 
+
+
+Jon Bråte	
+
+8/18/16
+
+
+Thank you very much!
+I suspected it was the last model reported, but good to have it confirmed!
+
+Jon

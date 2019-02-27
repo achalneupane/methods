@@ -1,0 +1,25 @@
+#!/bin/bash
+
+#PBS -N RaxML
+#PBS -l nodes=10:ppn=10
+#PBS -l walltime=24:00:00
+#PBS -j oe
+
+. ${MODULESHOME}/init/sh
+
+###Return to the directory where you run the job
+cd $PBS_O_WORKDIR
+start=$(date +%s)
+
+module use /test1/opt/modules
+module load standard-RAxML/8.2.12
+
+
+##Running 100 bootstrap trees; Note -N here indicates bootstrap (unlike PTHREADS version) 
+mpiexec raxmlHPC-MPI -N $PBS_NP -f a -x 12345 -m PROTGAMMALGF -p 12345 -n 12345 -s unique.ALL_endorna_virus_with_ncbi_endornavirus_all_longer_than_4000aa_full_length_non_hypothetical.fas -n T14
+
+end=$(date +%s)
+echo 'Start: '$start
+echo 'End: '$end
+runtime=$((end-start))
+echo 'Runtime: '$runtime

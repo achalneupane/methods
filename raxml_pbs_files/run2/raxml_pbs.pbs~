@@ -1,0 +1,23 @@
+#!/bin/bash
+#PBS -N RAXML_run2
+#PBS -l nodes=2:ppn=10
+#PBS -l walltime=80:00:00
+#PBS -j oe
+
+###Return to the directory where you run the job
+cd $PBS_O_WORKDIR
+start=`date +%s`
+
+##source ~/.bashrc
+
+#first model test
+raxmlHPC-PTHREADS -T $PBS_NP -m PROTGAMMAAUTO -s mitovirus-aa_Achal.fasta.uniq_without_RirMV2_and_RirMV3_clustalw_alignment_without_gap.fasta -p 12345 -n T-AUTO 
+##raxmlHPC-PTHREADS -T $PBS_NP -m PROTGAMMAAUTO -s test_mpkk.fas -p 12345 -n T12
+##raxmlHPC-PTHREADS -T $PBS_NP -m PROTGAMMAJTT -p 12345 -b 12345 -# 20 -s test_mpkk.fas -n T13
+
+end=`date +%s`
+echo 'Start: '$start
+echo 'End: '$end
+runtime=$((end-start))
+echo 'Runtime: '$runtime
+

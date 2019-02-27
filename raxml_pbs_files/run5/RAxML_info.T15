@@ -1,0 +1,44 @@
+
+
+WARNING: RAxML is not checking sequences for duplicate seqs and sites with missing data!
+
+
+
+This is RAxML version 8.2.4 released by Alexandros Stamatakis on October 02 2015.
+
+With greatly appreciated code contributions by:
+Andre Aberer      (HITS)
+Simon Berger      (HITS)
+Alexey Kozlov     (HITS)
+Kassian Kobert    (HITS)
+David Dao         (KIT and HITS)
+Nick Pattengale   (Sandia)
+Wayne Pfeiffer    (SDSC)
+Akifumi S. Tanabe (NRIFS)
+
+RAxML Bipartition Computation: Drawing support values from trees in file RAxML_bootstrap.T14 onto tree in file RAxML_bestTree.T13
+
+
+RAxML was called as follows:
+
+raxmlHPC-PTHREADS -m PROTGAMMAVT -p 12345 -f b -t RAxML_bestTree.T13 -z RAxML_bootstrap.T14 -n T15 
+
+
+
+
+Found 1 tree in File RAxML_bestTree.T13
+
+
+
+Found 100 trees in File RAxML_bootstrap.T14
+
+
+
+Found 1 tree in File RAxML_bestTree.T13
+
+
+
+Time for Computation of Bipartitions 0.024234
+Tree with bipartitions written to file:  /home/owner/Dropbox/methods/raxml_pbs_files/run5/T13/RAxML_bipartitions.T15
+Tree with bipartitions as branch labels written to file:  /home/owner/Dropbox/methods/raxml_pbs_files/run5/T13/RAxML_bipartitionsBranchLabels.T15
+Execution information file written to :  /home/owner/Dropbox/methods/raxml_pbs_files/run5/T13/RAxML_info.T15

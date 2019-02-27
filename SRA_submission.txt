@@ -1,0 +1,70 @@
+#1. Create a bioproject profile by following the link:
+
+Go to : https://submit.ncbi.nlm.nih.gov/subs/sra/
+Select metagenome or environmental then fill out the built-in table
+Where:
+Sample Name is your file name
+
+Fill in everything and submit. You will get SAMN and PRJNA ids, select FTP uploads
+
+
+#2. Then go to link https://submit.ncbi.nlm.nih.gov/subs/sra/
+Open linux terminal and type:
+
+#first move your files (******files you want to submit to sra only*****) to a separate directory in your computer and 
+and cd to that directory. Then in the terminal type:
+
+ftp -i
+open ftp-private.ncbi.nlm.nih.gov
+
+#Then on the prompt, type your username and password from the link in #2
+Username: subftp
+Password: w4pYB9VQ
+
+##cd to your account folder from link in #2
+cd uploads/achalneupane@gmail.com_00YmVxw2
+#or 
+cd uploads/surendra.neupane@sdstate.edu_D8vVS9Oa/glycine_max
+
+##Then enter passive mode
+quote PASV
+
+
+# create a new directory, this directory will be dissolved once submission is complete (so need to create a separate directory as shown below:
+
+mkdir rhizophagus
+#then cd to rhizophagus
+cd rhizophagus
+
+
+#then transfer all fastq files to ncbi directory by typing:
+mput *
+
+#once transfer is complete you have to wait for about 10 minutes (sometimes could take hours) for it to be ready for submission. 
+
+#type ls to see all files you have transferred (after transfer process is complete)
+ls
+
+#you have to then request for upload folder from https://submit.ncbi.nlm.nih.gov/subs/sra/, once the files are available on the database, you can then select the folder and submit.
+
+
+#3. You can track the upload of your files using filezilla as well (this setep is not mandatory):
+log on to filezilla
+
+then copy the  ncbi upload foleder (including rhizobia folder and paste it to the right side panel of filezilla(host folder and not the local folder) and hit enter. It's easy to transfer files to rhizophagus folder using filezilla.
+
+##to login through filezilla:
+host: ftp-private.ncbi.nlm.nih.gov
+username: subftp
+password:w4pYB9VQ
+Remote site: uploads/achalneupane@gmail.com_00YmVxw2
+
+
+##to download sra:
+#create srafile.txt with list of sra numbers
+prefetch --option-file srafile.txt . 
+
+#the prefetch downloaded files often gets saved to home directory, so look there
+
+
+

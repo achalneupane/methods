@@ -1,0 +1,101 @@
+
+
+IMPORTANT WARNING: Sequences sp|Q33339.1|RDRP_CPMV1_RecName_Full_RNA-directed_RNA_polymerase__AltName_Full_p93 and AAA61703.1_putative_RNA-dependent_RNA_polymerase__Cryphonectria_parasitica_mitovirus_1-NB631 are exactly identical
+
+IMPORTANT WARNING
+Found 1 sequence that is exactly identical to other sequences in the alignment.
+Normally they should be excluded from the analysis.
+
+Just in case you might need it, an alignment file with 
+sequence duplicates removed is printed to file micorrhizae_paper_alignment_without_gap.fasta.reduced
+
+
+This is RAxML version 8.2.4 released by Alexandros Stamatakis on October 02 2015.
+
+With greatly appreciated code contributions by:
+Andre Aberer      (HITS)
+Simon Berger      (HITS)
+Alexey Kozlov     (HITS)
+Kassian Kobert    (HITS)
+David Dao         (KIT and HITS)
+Nick Pattengale   (Sandia)
+Wayne Pfeiffer    (SDSC)
+Akifumi S. Tanabe (NRIFS)
+
+Alignment has 1039 distinct alignment patterns
+
+Proportion of gaps and completely undetermined characters in this alignment: 28.28%
+
+RAxML rapid hill-climbing mode
+
+Using 1 distinct models/data partitions with joint branch length optimization
+
+
+Executing 1 inferences on the original alignment using 1 distinct randomized MP trees
+
+All free model parameters will be estimated by RAxML
+GAMMA model of rate heteorgeneity, ML estimate of alpha-parameter
+
+GAMMA Model parameters will be estimated up to an accuracy of 0.1000000000 Log Likelihood units
+
+Partition: 0
+Alignment Patterns: 1039
+Name: No Name Provided
+DataType: AA
+Substitution Matrix: AUTO
+Using fixed base frequencies
+
+
+
+
+RAxML was called as follows:
+
+raxmlHPC-PTHREADS -T 20 -m PROTGAMMAAUTO -s micorrhizae_paper_alignment_without_gap.fasta -p 12345 -n T12 
+
+
+Partition: 0 with name: No Name Provided
+Base frequencies: 0.087 0.044 0.039 0.057 0.019 0.037 0.058 0.083 0.024 0.048 0.086 0.062 0.020 0.038 0.046 0.070 0.061 0.014 0.035 0.071 
+
+Automatic protein model assignment algorithm using ML criterion:
+
+	Partition: 0 best-scoring AA model: VT likelihood -52668.773129 with empirical base frequencies
+
+
+Automatic protein model assignment algorithm using ML criterion:
+
+	Partition: 0 best-scoring AA model: VT likelihood -52668.576971 with empirical base frequencies
+
+
+Automatic protein model assignment algorithm using ML criterion:
+
+	Partition: 0 best-scoring AA model: VT likelihood -52634.604009 with empirical base frequencies
+
+
+Automatic protein model assignment algorithm using ML criterion:
+
+	Partition: 0 best-scoring AA model: VT likelihood -52630.243128 with empirical base frequencies
+
+
+Inference[0]: Time 13401.156756 GAMMA-based likelihood -52630.213749, best rearrangement setting 5
+alpha[0]: 1.048528 
+
+
+Conducting final model optimizations on all 1 trees under GAMMA-based models ....
+
+Automatic protein model assignment algorithm using ML criterion:
+
+	Partition: 0 best-scoring AA model: VT likelihood -52630.220163 with empirical base frequencies
+
+
+Inference[0] final GAMMA-based Likelihood: -52630.209404 tree written to file /home/owner/Dropbox/methods/raxml_pbs_files/run5/RAxML_result.T12
+
+
+Starting final GAMMA-based thorough Optimization on tree 0 likelihood -52630.209404 .... 
+
+Final GAMMA-based Score of best tree -52630.209404
+
+Program execution info written to /home/owner/Dropbox/methods/raxml_pbs_files/run5/RAxML_info.T12
+Best-scoring ML tree written to: /home/owner/Dropbox/methods/raxml_pbs_files/run5/RAxML_bestTree.T12
+
+Overall execution time: 24609.486276 secs or 6.835968 hours or 0.284832 days
+

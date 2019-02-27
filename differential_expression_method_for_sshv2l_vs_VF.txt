@@ -1,0 +1,64 @@
+for f in *.fastq; do
+echo "Processing: " $f
+bowtie -q -p 18 -v 0 //media/owner/7ef86942-96a5-48a7-a325-6c5e1aec7408/symarzano2018June.201875/2018June.201875.bz2_files/trimmed_files/bbmap_trimmed_slagem_name_swapped_with_WTDK3/SsGenome/ShortStack_1539876299/extract_out $f /media/owner/7ef86942-96a5-48a7-a325-6c5e1aec7408/symarzano2018June.201875/2018June.201875.bz2_files/trimmed_files/bbmap_trimmed_slagem_name_swapped_with_WTDK3/SsGenome/fastq.out/fastq.out_zero_mismatch_allowed/new_${f}.out
+done > >(tee /media/owner/7ef86942-96a5-48a7-a325-6c5e1aec7408/symarzano2018June.201875/2018June.201875.bz2_files/trimmed_files/bbmap_trimmed_slagem_name_swapped_with_WTDK3/SsGenome/fastq.out/fastq.out_zero_mismatch_allowed/log.txt) 2>&1
+
+for f in *.fastq; do
+echo "Counting old run, file:" $f
+grep -c "TCCGAATTAGTGTAGGGGTTAACATAACTC" $f
+done >>(tee /media/owner/7ef86942-96a5-48a7-a325-6c5e1aec7408/symarzano2018June.201875/2018June.201875.bz2_files/trimmed_files/bbmap_trimmed_slagem_name_swapped_with_WTDK3/SsGenome/fastq.out/fastq.out_zero_mismatch_allowed/differential_expression/counts_of_small_RNA_reads_in_fastq.txt) 2>&1
+
+
+
+for f in *.out; do
+cut -d$'\t' -f 3,5 "$f" > /media/owner/7ef86942-96a5-48a7-a325-6c5e1aec7408/symarzano2018June.201875/2018June.201875.bz2_files/trimmed_files/bbmap_trimmed_slagem_name_swapped_with_WTDK3/SsGenome/fastq.out/fastq.out_zero_mismatch_allowed/assembly.txt/new_${f}_assembly.txt
+done
+
+
+##Bash loop to change assembly.txt to fasta (cd to assembly.txt folder)
+for f in *_assembly.txt; do
+awk '{printf ">%s\n%s\n",$1,$2}' $f > /media/owner/7ef86942-96a5-48a7-a325-6c5e1aec7408/symarzano2018June.201875/2018June.201875.bz2_files/trimmed_files/bbmap_trimmed_slagem_name_swapped_with_WTDK3/SsGenome/fastq.out/fastq.out_zero_mismatch_allowed/assembly.fasta/new_${f}_assembly.fasta 
+done
+
+
+
+for f in *.fasta; do
+echo "Counting new run, file:" $f
+grep -c "TCCGAATTAGTGTAGGGGTTAACATAACTC" $f
+done >>(tee /media/owner/7ef86942-96a5-48a7-a325-6c5e1aec7408/symarzano2018June.201875/2018June.201875.bz2_files/trimmed_files/bbmap_trimmed_slagem_name_swapped_with_WTDK3/SsGenome/fastq.out/fastq.out_zero_mismatch_allowed/differential_expression/counts_of_small_RNA_read_in_Ss_aligned_fasta.txt) 2>&1
+
+cat new_new_new_trimmed_WT_SSHV2L_1_GCCAAT_L008_R1_001.fastq.out_assembly.txt_assembly.fasta new_new_new_trimmed_WT_SSHV2L_2_CAGATC_L008_R1_001.fastq.out_assembly.txt_assembly.fasta new_new_new_trimmed_WT_SSHV2L_3_ACTTGA_L008_R1_001.fastq.out_assembly.txt_assembly.fasta new_new_new_trimmed_WT_SSHV2L_4_GATCAG_L008_R1_001.fastq.out_assembly.txt_assembly.fasta new_new_new_trimmed_WT_SSHV2L_5_TAGCTT_L008_R1_001.fastq.out_assembly.txt_assembly.fasta new_new_new_trimmed_WT_VF_1_ATCACG_L008_R1_001.fastq.out_assembly.txt_assembly.fasta new_new_new_trimmed_WT_VF_2_CGATGT_L008_R1_001.fastq.out_assembly.txt_assembly.fasta new_new_new_trimmed_WT_VF_3_TTAGGC_L008_R1_001.fastq.out_assembly.txt_assembly.fasta new_new_new_trimmed_WT_VF_4_TGACCA_L008_R1_001.fastq.out_assembly.txt_assembly.fasta new_new_new_trimmed_WT_VF_5_ACAGTG_L008_R1_001.fastq.out_assembly.txt_assembly.fasta  >>merged_sshv2l.fasta
+
+##or for new run
+
+cat *.fasta > merged_sshv2l.fasta
+
+
+
+
+
+##Now get unique sequence from merged_sshv2l.fasta
+perl /home/owner/Dropbox/perl/count-seq.pl merged_sshv2l.fasta merged_sshv2l_count-seq.fasta 18 45 1
+
+#convert this file to fasta
+perl -p -e "s/^Seq/>Seq/g" merged_sshv2l_count-seq.fasta > final_merged_sshv2l_count-seq.fasta
+
+
+bowtie-build final_merged_sshv2l_count-seq.fasta final_merged_sshv2l_count-seq
+
+for f in *.fastq; do
+bowtie -q -p 18 -v 0 /media/owner/b54f3251-5380-4288-9ddf-fa3357ea8294/Domier_26_smallRNA.20171119/trimmed_files/fastq.out/differential_expression/all_Ss_aligned_fasta/sshv2l_and_VF.fasta/final_merged_sshv2l_count-seq $f /media/owner/b54f3251-5380-4288-9ddf-fa3357ea8294/Domier_26_smallRNA.20171119/trimmed_files/fastq.out/differential_expression/all_Ss_aligned_fasta/sshv2l_and_VF.fasta/fastq.out/${f}.out
+done >>(tee /media/owner/b54f3251-5380-4288-9ddf-fa3357ea8294/Domier_26_smallRNA.20171119/trimmed_files/fastq.out/differential_expression/all_Ss_aligned_fasta/sshv2l_and_VF.fasta/fastq.out/log.txt) 2>&1
+
+
+#now get the counts
+
+for f in *.out; do 
+echo "Processing: " $f
+perl /home/owner/Dropbox/perl/bowtie-count.pl $f /media/owner/b54f3251-5380-4288-9ddf-fa3357ea8294/Domier_26_smallRNA.20171119/trimmed_files/fastq.out/differential_expression/all_Ss_aligned_fasta/sshv2l_and_VF.fasta/fastq.out/counts.csv/${f}.csv
+done > >(tee /media/owner/b54f3251-5380-4288-9ddf-fa3357ea8294/Domier_26_smallRNA.20171119/trimmed_files/fastq.out/differential_expression/all_Ss_aligned_fasta/sshv2l_and_VF.fasta/fastq.out/counts.csv/log.txt) 2>&1
+
+##now find the id of the sequence in the merged unique fasta
+grep -B 1 "TCCGAATTAGTGTAGGGGTTAACATAACTC" final_merged_sshv2l_count-seq.fasta
+
+

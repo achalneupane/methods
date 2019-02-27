@@ -1,0 +1,25 @@
+#!/bin/bash
+
+#PBS -N RaxML
+#PBS -l nodes=2:ppn=10
+#PBS -l walltime=20:00:00
+#PBS -j oe
+
+. ${MODULESHOME}/init/sh
+
+###Return to the directory where you run the job
+cd $PBS_O_WORKDIR
+start=$(date +%s)
+
+module use /test1/opt/modules
+module load standard-RAxML/8.2.12
+
+
+##ML trees(best tree among 20 trees); Note MPI version doesn't use -T option
+mpiexec raxmlHPC-MPI -N $PBS_NP -m PROTGAMMALGF -p 12345 -s unique.ALL_endorna_virus_with_ncbi_endornavirus_all_longer_than_4000aa_full_length_non_hypothetical.fas -n T13
+
+end=$(date +%s)
+echo 'Start: '$start
+echo 'End: '$end
+runtime=$((end-start))
+echo 'Runtime: '$runtime

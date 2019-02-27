@@ -1,0 +1,10 @@
+#to create alignment:
+http://espript.ibcp.fr/ESPript/cgi-bin/ESPript.cgi
+
+#split .ps file
+csplit Inp_File '/%%[pp]age:/'+1 {*}
+
+##or
+for (( i=1 ; i<5 ; ++i ));do
+psselect -p$i 0-0-1539633023-esp.ps file$i.ps
+done

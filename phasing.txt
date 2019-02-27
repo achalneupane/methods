@@ -1,0 +1,42 @@
+######extract small RNA cluster aligned to virus (for vsirna phasing)
+
+perl /home/owner/Dropbox/perl/extract-regions.pl /media/owner/7ef86942-96a5-48a7-a325-6c5e1aec7408/symarzano2018June.201875/2018June.201875.bz2_files/trimmed_files/bbmap_trimmed_slagem_name_swapped_with_WTDK3/SshV2l/Rev_ssh_virus2_no_polyA.fasta /media/owner/7ef86942-96a5-48a7-a325-6c5e1aec7408/symarzano2018June.201875/2018June.201875.bz2_files/trimmed_files/bbmap_trimmed_slagem_name_swapped_with_WTDK3/SshV2l/ShortStack_1537384425/region.list >/media/owner/7ef86942-96a5-48a7-a325-6c5e1aec7408/symarzano2018June.201875/2018June.201875.bz2_files/trimmed_files/bbmap_trimmed_slagem_name_swapped_with_WTDK3/SshV2l/ShortStack_1537384425/extract_out.fasta
+
+
+bowtie -q -p 18 -v 0 /media/owner/7ef86942-96a5-48a7-a325-6c5e1aec7408/symarzano2018June.201875/2018June.201875.bz2_files/trimmed_files/bbmap_trimmed_slagem_name_swapped_with_WTDK3/SshV2l/ShortStack_1537384425/extract_out merged_sshv2l_smallRNA_seq.fastq merged_sshv2l_smallRNA_seq.fastq.out
+
+cut -f 3,5 merged_sshv2l_smallRNA_seq.fastq.out > assembly.txt 
+
+awk '{printf ">%s\n%s\n",$1,$2}' assembly.txt > assembly.fasta
+
+perl /home/owner/Dropbox/perl/count-seq.pl assembly.fasta assembly.fasta_shortstactk_cluster.fasta 21 23 200
+
+##make it perl
+perl -p -e "s/^Seq/>Seq/g" /media/owner/newdrive/phasing/small_RNA/assembly.fasta_shortstactk_cluster.fasta > /media/owner/newdrive/phasing/small_RNA/new_assembly.fasta_shortstactk_cluster.fasta
+
+
+##########trim degradome
+for f in *.fastq; do
+bbduk.sh -Xmx1g in=$f out=/media/owner/newdrive/phasing/degradome/Marzano_degradome.20171210/bbduk_trimmed/trimmed_${f} ref=/media/owner/newdrive/phasing/degradome/Marzano_degradome.20171210/NEB-SE.fa ktrim=r k=13 mink=6 minlength=18 hdist=0
+done > >(tee /media/owner/newdrive/phasing/degradome/Marzano_degradome.20171210/bbduk_trimmed/log.txt) 2>&1
+
+##extract fasta from fastq
+sed -n '1~4s/^@/>/p;2~4p' /media/owner/newdrive/phasing/degradome/Marzano_degradome.20171210/bbduk_trimmed/merged_HV2.fastq > /media/owner/newdrive/phasing/degradome/Marzano_degradome.20171210/bbduk_trimmed/merged_HV2.fasta
+
+#or
+
+seqtk seq -a /media/owner/newdrive/phasing/degradome/Marzano_degradome.20171210/bbduk_trimmed/merged_HV2.fastq > /media/owner/newdrive/phasing/degradome/Marzano_degradome.20171210/bbduk_trimmed/merged_HV2.fasta
+
+#extract degradome reads from merged fasta
+##DNUT; use all degradome fasta instead
+##########SKIP
+perl /home/owner/Dropbox/perl/count-seq.pl merged_HV2.fasta merged_degradome_fasta_from_count-seq.pl_output.fasta 18 27 1
+##make it fasta
+perl -p -e "s/^Seq/>Seq/g" /media/owner/newdrive/phasing/degradome/Marzano_degradome.20171210/bbduk_trimmed/merged_degradome_fasta_from_count-seq.pl_output.fasta > /media/owner/newdrive/phasing/degradome/Marzano_degradome.20171210/bbduk_trimmed/new_merged_degradome_fasta_from_count-seq.pl_output.fasta
+##SKIP end!!
+##########Now cleaveland
+###-c 0 indicates category zero for cleaveland
+CleaveLand4.pl -c 0 -e /media/owner/newdrive/phasing/degradome/Marzano_degradome.20171210/bbduk_trimmed/merged_HV2.fasta -u /media/owner/newdrive/phasing/small_RNA/new_assembly.fasta_shortstactk_cluster.fasta -n /media/owner/newdrive/phasing/igr/igr.fasta -o T-plots-IGR > IGR-output.txt 
+
+##for default all categories
+CleaveLand4.pl -e /media/owner/newdrive/phasing/degradome/Marzano_degradome.20171210/bbduk_trimmed/merged_HV2.fasta -u /media/owner/newdrive/phasing/small_RNA/new_assembly.fasta_shortstactk_cluster.fasta -n /media/owner/newdrive/phasing/igr/igr.fasta -o T-plots-IGR > IGR-output.txt 

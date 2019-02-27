@@ -1,0 +1,28 @@
+
+#If you want specific gene sequence
+#get all the gene ids from NCBI for SS 1980 sequences (such as : /media/owner/newdrive/phasing/genes/gene_result.txt)
+#then use gene ids to search for sepcific sequences using R 
+
+######
+esearch -db nuccore -q 'SS1G_01676[gene]' | efilter -source refseq -molecule genomic | efetch -format gene_fasta |  awk -v RS='(^|\n)>' '/SS1G_01676/{print RT $0}'
+
+
+
+##in loop:
+for line in `cat 48_gene_symbol.txt`; 
+do
+sleep 0.1
+esearch -db nuccore -q $line| efilter -source refseq -molecule genomic | efetch -format gene_fasta | awk -v r="$line"  'BEGIN {RS="(^|\n)>"} $0 ~ r {print ">" $0}'  ; done > >(tee esearch_output_for_48_genes.txt) 2>&1
+
+extract all genes symbols and gene id from NCBI in tabular format and extract the genes using 
+elink -db gene -target nuccore -name gene_nuccore_refseqrna  -id 5493342 | efetch -format fasta
+
+#or in loop
+for line in `cat 48_gene_ids.txt`; 
+do
+sleep 0.1
+elink -db gene -target nuccore -name gene_nuccore_refseqrna  -id ${line} | efetch -format fasta; done
+
+###########
+#Search all gene records of Sclerotinia
+esearch -db nuccore -query "Sclerotinia sclerotiorum 1980 [TITLE]"  | efilter -feature gene | efetch -format gene_fasta

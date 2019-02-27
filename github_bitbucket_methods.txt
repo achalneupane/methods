@@ -1,0 +1,31 @@
+1. create repository in bitbucket
+2. clone that folder of bitbucket in local directory; for example, method is the bit repository and you want to save it in local folder called /bitbucket under name method, then do:
+
+cd bitbucket
+git clone https://bitbucket.org/achalneupane/methods
+
+3. Then transfer all your file to /methods you just cloned locally
+4.Then
+cd methods
+git add .
+git status 
+
+git commit -m "Initial commit" 
+
+git push origin master 
+
+#pull the saved version
+git pull origin master
+
+##Initialize new repository 
+#create a folder and cd to that folder
+#then 
+git init .
+
+##remote push
+#In Terminal, add the URL for the remote repository where your local repository will be pushed.
+
+git remote add origin remote-repository-URL
+# Sets the new remote
+git remote -v
+# Verifies the new remote URL

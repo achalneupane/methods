@@ -1,0 +1,86 @@
+1. Install openssh-server for remote access
+
+https://help.ubuntu.com/community/VNC/Servers
+2.
+sudo apt install tigervnc-standalone-server tigervnc-viewer
+sudo apt install tigervnc-standalone-server tigervnc-xorg-extension tigervnc-viewer
+#start vnc
+vncserver :1
+
+##
+Password:
+Verify:
+Would you like to enter a view-only password (y/n)? n
+
+
+#check if working or not
+vncserver -list
+
+#vncserver to kill all
+vncserver -kill :*
+
+#Also need to allow firewall TCP 5901
+https://wiki.archlinux.org/index.php/TigerVNC#Starting_and_stopping_vncserver_via_systemd
+
+#check tcp port
+netstat -tulp | grep vnc
+
+##also disallow local host by typing 
+tigervncserver -localhost no :1
+localhost = "no"
+
+##also check this:
+#https://www.cyberciti.biz/faq/install-and-configure-tigervnc-server-on-ubuntu-18-04/
+
+Additionally, there is this bug on linux system that can be fixed by this command(https://unix.stackexchange.com/questions/77885/how-can-i-connect-to-gnome-3-with-a-windows-vnc-client):
+gsettings set org.gnome.Vino require-encryption false
+
+####Now type: sudo nano ~/.vnc/xstartup
+copy and paste this:
+#!/bin/sh
+# Start Gnome 3 Desktop 
+[ -x /etc/vnc/xstartup ] && exec /etc/vnc/xstartup
+[ -r $HOME/.Xresources ] && xrdb $HOME/.Xresources
+vncconfig -iconic &
+dbus-launch --exit-with-session gnome-session &
+
+
+
+
+##############################
+
+##preventing firewalld:########################
+
+Configure firewalld
+1. Traffic for the displays corresponding port should be allowed by the firewall. Display 0 uses port 5900, display 1 uses port 5901, display 2 uses port 5902, and so on. If you?re using FirewallD, the predefined vnc-server service opens ports 5900-5903:
+
+# firewall-cmd --zone=public --permanent --add-service=vnc-server
+If you need additional ports or if you don't need to open the entire range, you can open just what you need using --add-port:
+
+# firewall-cmd --zone=public --permanent --add-port=5901/tcp
+2. Reload the firewall to make firewall rules effective.
+
+# firewall-cmd  --reload
+3. Reload the configuration:
+
+#  systemctl daemon-reload
+Start the Services and set password
+1. We will now enable the vncserver service for each user on the selected port, this will also enable autostart on system boot, with the commands below:
+
+# systemctl enable vncserver_root@:2.service
+Created symlink from /etc/systemd/system/multi-user.target.wants/vncserver_root@:2.service to /etc/systemd/system/vncserver_root@:2.service.
+# systemctl enable vncserver_oracle@:3.service
+Created symlink from /etc/systemd/system/multi-user.target.wants/vncserver_oracle@:3.service to /etc/systemd/system/vncserver_oracle@:3.service.
+2. Reload systemd?s configuration to make it aware of the new unit files:
+
+# systemctl daemon-reload
+
+##Now finally allow screen sharing on by going to settings and then to sharing. Make screen sharing active.
+check allow connections to control the screen.
+2. require a password. Enter the password you want to use. p in our case.
+
+##Also need to install ubuntu desktop
+https://www.cyberciti.biz/faq/ubuntu-linux-install-gnome-desktop-on-server/
+
+#Then
+https://www.cyberciti.biz/faq/install-and-configure-tigervnc-server-on-ubuntu-18-04/

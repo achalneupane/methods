@@ -1,0 +1,106 @@
+#Download nr and nt databases from ftp://ftp.ncbi.nlm.nih.gov/blast//db/FASTA/nr.gz and nt from ftp://ftp.ncbi.nlm.nih.gov/blast//db/FASTA/nt.gz
+
+#or
+wget 'ftp://ftp.ncbi.nlm.nih.gov/blast/db/nr.*.tar.gz'
+cat nr.*.tar.gz | tar -zxvi -f - -C .
+
+#dowload the blastdb:
+#protein
+update_blastdb.pl --passive --decompress nr
+#nucleotide
+update_blastdb.pl --passive --decompress nt
+##then untar all files
+
+
+
+#then make database for diamond:
+diamond makedb --in nr.gz --db nr
+
+##or download all nr.* files from bladtdb (https://ftp.ncbi.nlm.nih.gov/blast//db/), then untar all of them
+for f in *.tar.gz; do tar xvf $f; done
+
+
+# extracts reads.fna (fasta format) from fastq files (if not in fasta format). Here .fna is fasta format.
+#sed can be used to selectively print the desired lines from a file, so if you print the first and 2rd line of every 4 lines, you get the sequence header and sequence needed for fasta format.
+sed -n '1~4s/^@/>/p;2~4p' INFILE.fastq > OUTFILE.fasta
+
+
+#then align the reads to the database
+##Use m8 for megan:
+diamond blastx -d nr -q reads.fna -o matches.m8
+
+diamond blastx -d nr -q reads.fna -o matches.m0 -f 0
+#or path specified
+diamond blastx -d nr -q /home/owner/Downloads/PriceSource140408/SF_1_2_CGATGT_R1_concatenated.fasta -o matches.m0 -f 0
+
+#diamond long read alignment (Note: I used this method to do megan analysis)
+diamond blastx -d /media/owner/b45f8e7a-003c-4573-8841-bcb5f76f281f/blastdb/ncbi-blast-2.7.1+/ncbi_database/diamond_nrdb/nr -q Trinity.fasta -o Trinity_F15-range-culling.m8 -F 15 --range-culling
+
+
+#blast commands
+
+#makeblastdb
+makeblastdb -in protein_db.fasta -parse_seqids -dbtype prot -out blast_makeblastdb_name_of_Proteins
+
+#blastp
+blastp -query PRoteins.fasta -db blast_makeblastdb_name_of_Proteins -outfmt 6 -out blast_result 
+#or nr database
+blastx -query infant-trinity-phage-table.fasta -db /media/owner/b45f8e7a-003c-4573-8841-bcb5f76f281f/blastdb/ncbi-blast-2.7.1+/ncbi_database/blastdb/nrdb/nr -outfmt 6 -out blast_result_infant-trinity-phage -num_threads 20
+
+# flag max_target_seqs for top 5 hits
+blastx -query ziyi.fasta -db /media/owner/84c287d9-53c7-4145-bf8c-f22aebb71a84/blastdb/ncbi-blast-2.7.1+/data/nrdb/ftp.ncbi.nlm.nih.gov/blast/db/nr -outfmt 6 -out blast_result_infant-trinity-phage -num_threads 20 -max_target_seqs 5
+
+
+##or well formatd output with additional features
+blastx -query infant-trinity-phage-table.fasta -db /media/owner/b45f8e7a-003c-4573-8841-bcb5f76f281f/blastdb/ncbi-blast-2.7.1+/ncbi_database/blastdb/nrdb/nr -outfmt "7 qseqid qlen sseqid sallseqid sallacc slen qend sstart send qseq sseq evalue score length pident nident mismatch staxid ssciname scomname sblastname sskingdom staxids sscinames scomnames sblastnames stitle salltitles qcovs qcovhsp sstrand" -out detailed_blast_result_infant-trinity-phage.txt -evalue 0.01 -num_threads 20
+
+##0r 
+blastx -query infant-trinity-phage-table.fasta -db /media/owner/b45f8e7a-003c-4573-8841-bcb5f76f281f/blastdb/ncbi-blast-2.7.1+/ncbi_database/blastdb/nrdb/nr -outfmt "6 qseqid qlen sallseqid sallacc salltitles slen evalue length pident nident qcovs" -out detailed_blast_outfmt6_result_infant-trinity-phage.txt -evalue 0.01 -num_threads 20
+##or
+blastx -query infant-trinity-phage-table.fasta -db /media/owner/b45f8e7a-003c-4573-8841-bcb5f76f281f/blastdb/ncbi-blast-2.7.1+/ncbi_database/blastdb/nrdb/nr -outfmt "6 qseqid qlen sseqid sallseqid sallacc slen qend sstart send qseq sseq evalue score length pident nident mismatch ssciname scomname sblastname sskingdom sscinames scomnames sblastnames stitle salltitles qcovs qcovhsp sstrand" -out detailed_blast_outfmt6_result_infant-trinity-phage.txt -evalue 0.01 -num_threads 20
+##or for blastn with megablast or blastn(somewhat similar sequences, use task option)
+blastn -query Ss.fasta -db /media/owner/84c287d9-53c7-4145-bf8c-f22aebb71a84/virus_host_terminal_region/ssdb/ssdb -outfmt "6 qseqid qlen slen sallseqid sallacc salltitles evalue pident nident qcovs length sstart send qstart qend" -out detailed_blast_outfmt6_result_merged_viral_genomic.txt -evalue 0.01 -num_threads 20 -task="blastn"
+
+#or megablast; see https://www.biostars.org/p/143644/
+blastn -query Ss.fasta -db /media/owner/84c287d9-53c7-4145-bf8c-f22aebb71a84/virus_host_terminal_region/ssdb/ssdb -outfmt "6 qseqid qlen slen sallseqid sallacc salltitles evalue pident nident qcovs length sstart send qstart qend" -out detailed_blast_outfmt6_result_merged_viral_genomic.txt -evalue 0.01 -num_threads 20 -task="megablast"
+
+
+##sort by top 1 hit:
+blastn -query transcripts.fa -db Targets.fa [other options you like ] -outfmt 7 -out blast_output.txt
+#or
+blastn -query /media/owner/newdrive/phasing/Domier_10RNAseq.2017104.tgz_transcriptome/Domier_10RNAseq.2017104/RNAseq/bbmap_trimmed/filtered_bbtrimmed/deseq2/new_esearch.fasta -db /media/owner/newdrive/phasing/Domier_10RNAseq.2017104.tgz_transcriptome/Domier_10RNAseq.2017104/RNAseq/bbmap_trimmed/filtered_bbtrimmed/deseq2/blastdb/blast_makeblastd_Sschromosomes -outfmt "7 qseqid qlen slen sallseqid sallacc salltitles evalue pident nident qcovs length sstart send qstart qend" -out blast_result_deseq_genes_against_ssgenome -num_threads 20 -max_target_seqs 1
+##then
+cat blast_result_deseq_genes_against_ssgenome |awk '/hits found/{getline;print}' | grep -v "#" > top_hits.txt
+
+#LAST alignment
+#We created databases for LAST for the same sets of proteins for each organism, with command(-p entails input sequences are protein sequences):
+lastdb -p -cR01 lastdb protein.faa
+
+#We then aligned reads against this protein database, using LAST with a frameshift cost of 15 : -F15 ; and stored the output in MAF format. These MAF files were then sorted using sort-last-maf script in MEGAN's tools directory and were imported into MEGAN using blast2rma script, selecting longReads as the LCA algorithm: -alg longReads. We exported MEGAN's assignments using the rma2info script (available here: /media/owner/b45f8e7a-003c-4573-8841-bcb5f76f281f/LAST/megan-ce/tools) and also at git clone https://github.com/danielhuson/megan-ce.git. 
+#commands:
+lastal -F15 protdb dnas.fa
+
+
+#after alignment, sort the .maf file . This need to be sorted in antbuild directory(for some reason couldn't set the env variable):
+
+cd /media/owner/b45f8e7a-003c-4573-8841-bcb5f76f281f/LAST/megan-ce/antbuild
+
+sort-last-maf -i /media/owner/b45f8e7a-003c-4573-8841-bcb5f76f281f/SF1_SF2_reads/trinity_assembled_SF1/LAST_output/uniprot/aligned_file_Trinity_SF1_with_uniprot_trembldb.maf -r /media/owner/b45f8e7a-003c-4573-8841-bcb5f76f281f/SF1_SF2_reads/trinity_assembled_SF1/Trinity.fasta -o /media/owner/b45f8e7a-003c-4573-8841-bcb5f76f281f/SF1_SF2_reads/trinity_assembled_SF1/LAST_output/uniprot/sorted_aligned_file_Trinity_SF1_with_uniprot_trembldb.maf 
+
+blast2rma --in /media/owner/b45f8e7a-003c-4573-8841-bcb5f76f281f/SF1_SF2_reads/trinity_assembled_SF1/LAST_output/uniprot/sorted_aligned_file_Trinity_SF1_with_uniprot_trembldb.maf --format LastMAF --out /media/owner/b45f8e7a-003c-4573-8841-bcb5f76f281f/SF1_SF2_reads/trinity_assembled_SF1/LAST_output/uniprot/sorted_aligned_file_Trinity_SF1_with_uniprot_trembldb.maf.rma6 --blastMode BlastX --acc2eggnog /media/owner/b45f8e7a-003c-4573-8841-bcb5f76f281f/diamond/accession_files/acc2eggnog-Oct2016X.abin --acc2interpro2go /media/owner/b45f8e7a-003c-4573-8841-bcb5f76f281f/diamond/accession_files/acc2interpro-June2018X.abin --acc2kegg /media/owner/b45f8e7a-003c-4573-8841-bcb5f76f281f/diamond/accession_files/acc2kegg-Dec2017X1-ue.abin --acc2seed /media/owner/b45f8e7a-003c-4573-8841-bcb5f76f281f/diamond/accession_files/acc2seed-May2015XX.abin --acc2taxa /media/owner/b45f8e7a-003c-4573-8841-bcb5f76f281f/diamond/accession_files/prot_acc2tax-Jun2018X1.abin -alg longReads
+
+
+rma2info --in /media/owner/b45f8e7a-003c-4573-8841-bcb5f76f281f/SF1_SF2_reads/trinity_assembled_SF1/LAST_output/uniprot/sorted_aligned_file_Trinity_SF1_with_uniprot_trembldb.maf.rma6 --read2class Taxonomy --paths --majorRanksOnly > /media/owner/b45f8e7a-003c-4573-8841-bcb5f76f281f/SF1_SF2_reads/trinity_assembled_SF1/LAST_output/uniprot/sorted_aligned_file_Trinity_SF1_with_uniprot_trembldb.txt
+
+
+##abbreviated form
+blast2rma -i /media/owner/b45f8e7a-003c-4573-8841-bcb5f76f281f/SF1_SF2_reads/trinity_assembled_SF1/LAST_output/uniprot/sorted_aligned_file_Trinity_SF1_with_uniprot_trembldb.maf -f LastMAF -o /media/owner/b45f8e7a-003c-4573-8841-bcb5f76f281f/SF1_SF2_reads/trinity_assembled_SF1/LAST_output/uniprot/ --blastMode BlastX -a2eggnog /media/owner/b45f8e7a-003c-4573-8841-bcb5f76f281f/diamond/accession_files/acc2eggnog-Oct2016X.abin -a2interpro2go /media/owner/b45f8e7a-003c-4573-8841-bcb5f76f281f/diamond/accession_files/acc2interpro-June2018X.abin -a2kegg /media/owner/b45f8e7a-003c-4573-8841-bcb5f76f281f/diamond/accession_files/acc2kegg-Dec2017X1-ue.abin -a2seed /media/owner/b45f8e7a-003c-4573-8841-bcb5f76f281f/diamond/accession_files/acc2seed-May2015XX.abin -a2t /media/owner/b45f8e7a-003c-4573-8841-bcb5f76f281f/diamond/accession_files/prot_acc2tax-Jun2018X1.abin -alg longReads
+
+##without a2kegg file
+blast2rma -i /media/owner/b45f8e7a-003c-4573-8841-bcb5f76f281f/SF1_SF2_reads/trinity_assembled_SF1/LAST_output/uniprot/sorted_aligned_file_Trinity_SF1_with_uniprot_trembldb.maf -f LastMAF -o /media/owner/b45f8e7a-003c-4573-8841-bcb5f76f281f/SF1_SF2_reads/trinity_assembled_SF1/LAST_output/uniprot/without_a2kegg_sorted_aligned_file_Trinity_SF1_with_uniprot_trembldb.maf --blastMode BlastX -a2eggnog /media/owner/b45f8e7a-003c-4573-8841-bcb5f76f281f/diamond/accession_files/acc2eggnog-Oct2016X.abin -a2interpro2go /media/owner/b45f8e7a-003c-4573-8841-bcb5f76f281f/diamond/accession_files/acc2interpro-June2018X.abin -a2seed /media/owner/b45f8e7a-003c-4573-8841-bcb5f76f281f/diamond/accession_files/acc2seed-May2015XX.abin -a2t /media/owner/b45f8e7a-003c-4573-8841-bcb5f76f281f/diamond/accession_files/prot_acc2tax-Jun2018X1.abin -alg longReads
+
+
+#using maf2daa
+maf2daa -i /media/owner/b45f8e7a-003c-4573-8841-bcb5f76f281f/SF1_SF2_reads/trinity_assembled_SF1/LAST_output/uniprot/sorted_aligned_file_Trinity_SF1_with_uniprot_trembldb.maf -r /media/owner/b45f8e7a-003c-4573-8841-bcb5f76f281f/SF1_SF2_reads/trinity_assembled_SF1/Trinity.fasta -o /media/owner/b45f8e7a-003c-4573-8841-bcb5f76f281f/SF1_SF2_reads/trinity_assembled_SF1/LAST_output/uniprot/sorted_aligned_file_Trinity_SF1_with_uniprot_trembldb.daa
+
+##Using diamond's long read alignment option

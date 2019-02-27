@@ -1,0 +1,27 @@
+## declare an array variable
+##this bit below searches for the gene names with full annotation:
+declare -a arr=("ALD89117.1" "ALD89128.1" "ALD89126.1" "ANR02692.1" "AVA17449.1" "YP_009272901.1" "AIS39016.1" "YP_002284334.2" "AVH76945.1" "CAJ32468.1" "DAB41758.1" "DAB41742.1" "DAB41759.1" "CEZ26296.1" "DAB41757.1" "CEZ26300.1" "ALD89119.1" "AMM45292.1" "DAB41743.1" "ALD89120.1" "AWY10970.1" "YP_009465716.1" "ALD89121.1" "AWY10969.1" "DAB41749.1" "AWY10986.1" "AHE13866.1" "ALM62243.1" "AIF33766.2" "DAB41747.1" "AHE13867.1" "DAB41753.1" "DAB41741.1" "NP_660176.1" "AAO21337.1" "AWY10971.1" "AXI69836.1" "ANR02693.1" "AHF48623.1" "YP_009259483.1" "BAN85985.1" "AAD17381.1" "ALD89100.1" "AHF48630.1" "AHX84133.1" "YP_009182161.1" "ANJ77670.1" "ANR02691.1" "AWY10988.1" "AGC24232.1" "XP_015159341.1" "YP_004564622.1" "AHX84134.1" "AHY03257.1" "YP_009182164.1" "YP_717161.1" "YP_004927571.1" "CEZ26302.1" "YP_009259482.1" "YP_005352912.1" "AHL25281.1" "YP_009228112.1" "AHF48631.1" "CAJ32466.1" "YP_009388498.1" "AIE42599.1" "AEX57677.1" "DAB41740.1" "YP_009465717.1" "DAB41745.1" "AHF48632.1" "BAJ23143.2" "AEX91879.1" "AOX47577.1" "NP_660181.1" "NP_660180.1" "AWY10972.1" "AHF48625.1" "AHF48627.1" "AAR01970.1" "AGC81676.1" "YP_009165597.1" "AAR01975.1" "DAB41756.1" "YP_009408146.1" "AAR01974.1" "AAR01973.1" "YP_009182160.1" "AWY10985.1" "AWY10980.1" "YP_009121785.1" "AWY10963.1" "AHX84129.1" "AGW51760.1" "CEZ26301.1" "YP_009182162.1" "DAB41746.1" "NP_660174.1" "AKN79252.1" "ANR02694.1")
+
+for i in "${arr[@]}"
+do
+   echo "myid : $i" 
+esearch -db protein -query "$i" | elink -target nuccore | efetch -format ft 
+done > >(tee eutils_output.txt) 2>&1
+
+
+####NOw extract what you want- either 'gene','CDS', 'mRNA'..etc, OR search for GeneID so you can use batchentrez r code to extract sequences
+#extract line matching pattern
+awk '/myid/ || /CDS/{print}' eutils_output.txt
+#or this way
+grep -e 'CDS' -e 'myid' eutils_output.txt
+
+##or extract GeneID:
+grep -e 'GeneID' -e 'myid' eutils_output.txt >> geneIDS.txt 
+
+#####This part is Not working, or is not giving right results
+##To delete the line containing myID
+cat geneIDS.txt | sed '/myid/d' > final_geneID.txt
+# or delete duplicate records 
+awk '!seen[$0]++' final_geneID.txt > final_unique_geneID.txt
+
+

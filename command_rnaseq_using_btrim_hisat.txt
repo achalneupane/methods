@@ -1,0 +1,30 @@
+
+Download source package using wget http://ccb.jhu.edu/software/hisat2/downloads/hisat2-2.0.0-beta-source.zip
+##link: http://ccb.jhu.edu/software/hisat2/downloads/
+
+Unzip the package file using unzip hisat2-2.0.0-beta-source.zip
+
+cd to unizipped
+
+#install btrim64
+http://graphics.med.yale.edu/trim/
+
+chmod 777 *
+
+export PATH=$PATH:/Users/owner1/Box/febina.mathew/rnaseq/data/hisat2-2.0.0-beta/
+
+#trim
+
+btrim64-static -q -t myfile.fastq -o trimmed_myfile.fastq
+
+
+mkdir hisatindex
+
+#build the index
+hisat2-build -f Mdomestica_196_v1.0.fa /hisatindex/Mdomestica_196_v1.0
+
+#mapping
+hisat2 -x Mdomestica_196_v1.0 -U trimmed_myfile.fastq -S trimmed_myfile.sam
+
+#count
+htseq-count -s no -i parent trimmed_myfile.sam Mdomestica_196_v1.0.gene.gff3 > my_counts.csv

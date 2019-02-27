@@ -1,0 +1,77 @@
+##bbmap to map reads; use out for aligned and outm for mapped instead of out= for both
+bbmap.sh in=reads.fq ref=/media/owner/7ef86942-96a5-48a7-a325-6c5e1aec7408/symarzano2018June.201875/2018June.201875.bz2_files/trimmed_files/bbmap_trimmed/virus2_ssh/Rev_ssh_virus2_no_polyA.fasta outu=/media/owner/7ef86942-96a5-48a7-a325-6c5e1aec7408/symarzano2018June.201875/2018June.201875.bz2_files/trimmed_files/bbmap_trimmed/virus2_ssh/unaligned_to_virus_fastq/unaligned.sam 
+
+##or using bowtie
+#discard all reads from fastq that are aligned to reference sequences with option -v 1
+for f in *.fastq; do
+bowtie -q -p 18 -v 1 /media/owner/7ef86942-96a5-48a7-a325-6c5e1aec7408/symarzano2018June.201875/2018June.201875.bz2_files/trimmed_files/bbmap_trimmed/virus2_ssh/ShortStack_1532710824/extract_out $f --un /media/owner/7ef86942-96a5-48a7-a325-6c5e1aec7408/symarzano2018June.201875/2018June.201875.bz2_files/trimmed_files/bbmap_trimmed/virus2_ssh/unaligned_to_virus_fastq/unaligned_${f} --al /media/owner/7ef86942-96a5-48a7-a325-6c5e1aec7408/symarzano2018June.201875/2018June.201875.bz2_files/trimmed_files/bbmap_trimmed/virus2_ssh/aligned_to_virus_fastq/aligned_${f}
+done > >(tee /media/owner/7ef86942-96a5-48a7-a325-6c5e1aec7408/symarzano2018June.201875/2018June.201875.bz2_files/trimmed_files/bbmap_trimmed/virus2_ssh/unaligned_to_virus_fastq/log.txt) 2>&1
+
+
+##allowing zero mismatch; completely aligned and unaligned reads
+for f in *.fastq; do
+bowtie -q -p 18 -v 0 /media/owner/7ef86942-96a5-48a7-a325-6c5e1aec7408/symarzano2018June.201875/2018June.201875.bz2_files/trimmed_files/bbmap_trimmed/virus2_ssh/ShortStack_1532710824/extract_out $f --un /media/owner/7ef86942-96a5-48a7-a325-6c5e1aec7408/symarzano2018June.201875/2018June.201875.bz2_files/trimmed_files/bbmap_trimmed/virus2_ssh/unaligned_to_virus_fastq/unaligned_to_virus_with_zero_mismatch_option/unaligned_${f} --al /media/owner/7ef86942-96a5-48a7-a325-6c5e1aec7408/symarzano2018June.201875/2018June.201875.bz2_files/trimmed_files/bbmap_trimmed/virus2_ssh/aligned_to_virus_fastq/aligned_to_virus_with_zero_mismatch_option/aligned_${f}
+done > >(tee /media/owner/7ef86942-96a5-48a7-a325-6c5e1aec7408/symarzano2018June.201875/2018June.201875.bz2_files/trimmed_files/bbmap_trimmed/virus2_ssh/unaligned_to_virus_fastq/unaligned_to_virus_with_zero_mismatch_option/log.txt) 2>&1
+
+##checking the difference between fastq with 1 mismatch allowed and zero mismatch allowed; i.e. samples in /media/owner/7ef86942-96a5-48a7-a325-6c5e1aec7408/symarzano2018June.201875/2018June.201875.bz2_files/trimmed_files/bbmap_trimmed/virus2_ssh/aligned_to_virus_fastq and samples in /media/owner/7ef86942-96a5-48a7-a325-6c5e1aec7408/symarzano2018June.201875/2018June.201875.bz2_files/trimmed_files/bbmap_trimmed/virus2_ssh/aligned_to_virus_fastq/aligned_to_virus_with_zero_mismatch_option:
+
+cd /media/owner/7ef86942-96a5-48a7-a325-6c5e1aec7408/symarzano2018June.201875/2018June.201875.bz2_files/trimmed_files/bbmap_trimmed/virus2_ssh/aligned_to_virus_fastq
+
+for f in *.fastq; do
+filterbyname.sh in=/media/owner/7ef86942-96a5-48a7-a325-6c5e1aec7408/symarzano2018June.201875/2018June.201875.bz2_files/trimmed_files/bbmap_trimmed/virus2_ssh/aligned_to_virus_fastq/${f} names=/media/owner/7ef86942-96a5-48a7-a325-6c5e1aec7408/symarzano2018June.201875/2018June.201875.bz2_files/trimmed_files/bbmap_trimmed/virus2_ssh/aligned_to_virus_fastq/aligned_to_virus_with_zero_mismatch_option/${f} out=/media/owner/7ef86942-96a5-48a7-a325-6c5e1aec7408/symarzano2018June.201875/2018June.201875.bz2_files/trimmed_files/bbmap_trimmed/virus2_ssh/aligned_to_virus_fastq/aligned_to_virus_with_zero_mismatch_option/difference_between_aligned_zero_mismatc_and_1_mismatch_fastq/difference_${f} include=f
+done
+
+#now calculating the number reads in the difference files with A,T,G,C as 3' terminal base. This number doesn't meant they are mismatches. I just wanted to check/compare  the terminal bases that have potentially come from adapter sequence.
+
+for f in *.fastq; do 
+echo "Processing: " $f
+seqtk seq -A $f | mawk '$1 ~ ">" {print ">foo";next} {n=split($1,A,""); print A[n]}' | seqtk comp | mawk 'OFS="\t" {sumA+=$3; sumC+=$4; sumG+=$5; sumT+=$6} END {print "A:"sumA,"C:"sumC,"G:"sumG,"T:"sumT}'
+done > >(tee /media/owner/7ef86942-96a5-48a7-a325-6c5e1aec7408/symarzano2018June.201875/2018June.201875.bz2_files/trimmed_files/bbmap_trimmed/virus2_ssh/aligned_to_virus_fastq/aligned_to_virus_with_zero_mismatch_option/difference_between_aligned_zero_mismatc_and_1_mismatch_fastq/log_of_terminal_nucleotide.txt) 2>&1
+done
+
+#terminal mismatches of virus unaligned reads that aligned with Ssgenome
+##first get fastq.out
+for f in *.fastq; do
+echo "Processing: " $f
+bowtie -q -p 18 -v 1 /media/owner/7ef86942-96a5-48a7-a325-6c5e1aec7408/symarzano2018June.201875/2018June.201875.bz2_files/trimmed_files/bbmap_trimmed/virus2_ssh/ShortStack_1532710824/extract_out $f /media/owner/7ef86942-96a5-48a7-a325-6c5e1aec7408/symarzano2018June.201875/2018June.201875.bz2_files/trimmed_files/bbmap_trimmed/virus2_ssh/fastq.out/${f}.out
+done > >(tee /media/owner/7ef86942-96a5-48a7-a325-6c5e1aec7408/symarzano2018June.201875/2018June.201875.bz2_files/trimmed_files/bbmap_trimmed/virus2_ssh/fastq.out/log.txt) 2>&1
+
+##then run perl script to get terminal mismatch###########################
+
+for f in *SsHV2L*; do 
+echo "Processing: " $f
+for i in $(seq 18 24); do
+echo "Doing: " $i
+perl /home/owner/Dropbox/perl/bowtie-count-term.pl $f $i > /media/owner/7ef86942-96a5-48a7-a325-6c5e1aec7408/symarzano2018June.201875/2018June.201875.bz2_files/trimmed_files/bbmap_trimmed/virus2_ssh/unaligned_to_virus_fastq/fastq.out_fastq_unaligned_to_virus_getting_aligned_with_ssgenome/terminal_mismatches/${f}_${i}.txt
+done 
+done
+
+#then 
+for f in *.txt; do
+echo "Processing: " $f
+grep -v '^[ATGCD]' $f > /media/owner/7ef86942-96a5-48a7-a325-6c5e1aec7408/symarzano2018June.201875/2018June.201875.bz2_files/trimmed_files/bbmap_trimmed/virus2_ssh/unaligned_to_virus_fastq/fastq.out_fastq_unaligned_to_virus_getting_aligned_with_ssgenome/terminal_mismatches/clean/clean_${f}
+done
+
+
+##checking if there is any mismatches in virus free samples
+#then
+for f in *_VF_*; do 
+echo "Processing: " $f
+for i in $(seq 18 24); do
+echo "Doing: " $i
+perl /home/owner/Dropbox/perl/bowtie-count-term.pl $f $i > /media/owner/7ef86942-96a5-48a7-a325-6c5e1aec7408/symarzano2018June.201875/2018June.201875.bz2_files/trimmed_files/bbmap_trimmed/virus2_ssh/unaligned_to_virus_fastq/fastq.out_fastq_unaligned_to_virus_getting_aligned_with_ssgenome/terminal_mismatches/virus_free_samples/${f}_${i}.txt
+done 
+done
+
+#then 
+for f in *.txt; do
+echo "Processing: " $f
+grep -v '^[ATGCD]' $f > /media/owner/7ef86942-96a5-48a7-a325-6c5e1aec7408/symarzano2018June.201875/2018June.201875.bz2_files/trimmed_files/bbmap_trimmed/virus2_ssh/unaligned_to_virus_fastq/fastq.out_fastq_unaligned_to_virus_getting_aligned_with_ssgenome/terminal_mismatches/virus_free_samples/clean/clean_${f}
+done
+
+#then use terminal_mismatch_histogram.r
+
+##discard reads with 3' terminal in fastq
+for f in *.fastq; do
+cat $f | paste - - - - | awk -F '\t' '{if ($2 !~/A$/){ print $0}}'| tr "\t" "\n" > /media/owner/7ef86942-96a5-48a7-a325-6c5e1aec7408/symarzano2018June.201875/2018June.201875.bz2_files/trimmed_files/bbmap_trimmed/fastq_without_3prime_terminal_A/without_3_prime_A_${f}
+done

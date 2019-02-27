@@ -1,0 +1,123 @@
+
+
+This is RAxML version 8.2.4 released by Alexandros Stamatakis on October 02 2015.
+
+With greatly appreciated code contributions by:
+Andre Aberer      (HITS)
+Simon Berger      (HITS)
+Alexey Kozlov     (HITS)
+Kassian Kobert    (HITS)
+David Dao         (KIT and HITS)
+Nick Pattengale   (Sandia)
+Wayne Pfeiffer    (SDSC)
+Akifumi S. Tanabe (NRIFS)
+
+Alignment has 1138 distinct alignment patterns
+
+Proportion of gaps and completely undetermined characters in this alignment: 40.49%
+
+RAxML rapid hill-climbing mode
+
+Using 1 distinct models/data partitions with joint branch length optimization
+
+
+Executing 20 inferences on the original alignment using 20 distinct randomized MP trees
+
+All free model parameters will be estimated by RAxML
+GAMMA model of rate heteorgeneity, ML estimate of alpha-parameter
+
+GAMMA Model parameters will be estimated up to an accuracy of 0.1000000000 Log Likelihood units
+
+Partition: 0
+Alignment Patterns: 1138
+Name: No Name Provided
+DataType: AA
+Substitution Matrix: VT
+Using fixed base frequencies
+
+
+
+
+RAxML was called as follows:
+
+raxmlHPC-PTHREADS -T 20 -m PROTGAMMAVT -p 12345 -# 20 -s With_MG256173_76_mitovirus-aa_Achal.fasta.uniq_without_RirMV2_and_RirMV3_alignment.fasta -n T13 
+
+
+Partition: 0 with name: No Name Provided
+Base frequencies: 0.077 0.050 0.046 0.054 0.014 0.041 0.063 0.066 0.022 0.059 0.098 0.059 0.022 0.041 0.048 0.071 0.057 0.013 0.032 0.067 
+
+Inference[0]: Time 121.449970 GAMMA-based likelihood -45316.945528, best rearrangement setting 5
+alpha[0]: 1.388865 
+Inference[1]: Time 143.772806 GAMMA-based likelihood -45316.786123, best rearrangement setting 5
+alpha[0]: 1.373926 
+Inference[2]: Time 143.009148 GAMMA-based likelihood -45316.786136, best rearrangement setting 5
+alpha[0]: 1.374710 
+Inference[3]: Time 109.801985 GAMMA-based likelihood -45316.945527, best rearrangement setting 5
+alpha[0]: 1.388869 
+Inference[4]: Time 141.861048 GAMMA-based likelihood -45316.786563, best rearrangement setting 5
+alpha[0]: 1.376486 
+Inference[5]: Time 159.065704 GAMMA-based likelihood -45316.786343, best rearrangement setting 5
+alpha[0]: 1.375837 
+Inference[6]: Time 127.071689 GAMMA-based likelihood -45316.946019, best rearrangement setting 5
+alpha[0]: 1.387506 
+Inference[7]: Time 128.343369 GAMMA-based likelihood -45316.945528, best rearrangement setting 5
+alpha[0]: 1.388863 
+Inference[8]: Time 127.946983 GAMMA-based likelihood -45316.945528, best rearrangement setting 5
+alpha[0]: 1.388863 
+Inference[9]: Time 181.167260 GAMMA-based likelihood -45316.786174, best rearrangement setting 5
+alpha[0]: 1.373401 
+Inference[10]: Time 121.408250 GAMMA-based likelihood -45316.946019, best rearrangement setting 5
+alpha[0]: 1.387505 
+Inference[11]: Time 190.585865 GAMMA-based likelihood -45316.786883, best rearrangement setting 5
+alpha[0]: 1.377187 
+Inference[12]: Time 189.431953 GAMMA-based likelihood -45316.945358, best rearrangement setting 5
+alpha[0]: 1.390010 
+Inference[13]: Time 223.016662 GAMMA-based likelihood -45316.786173, best rearrangement setting 5
+alpha[0]: 1.373408 
+Inference[14]: Time 274.925882 GAMMA-based likelihood -45316.945358, best rearrangement setting 5
+alpha[0]: 1.390613 
+Inference[15]: Time 192.039213 GAMMA-based likelihood -45316.945359, best rearrangement setting 5
+alpha[0]: 1.389983 
+Inference[16]: Time 251.755951 GAMMA-based likelihood -45316.786845, best rearrangement setting 5
+alpha[0]: 1.377112 
+Inference[17]: Time 240.051989 GAMMA-based likelihood -45316.786181, best rearrangement setting 5
+alpha[0]: 1.373355 
+Inference[18]: Time 209.551508 GAMMA-based likelihood -45316.945356, best rearrangement setting 5
+alpha[0]: 1.390061 
+Inference[19]: Time 155.964390 GAMMA-based likelihood -45316.946019, best rearrangement setting 5
+alpha[0]: 1.387506 
+
+
+Conducting final model optimizations on all 20 trees under GAMMA-based models ....
+
+Inference[0] final GAMMA-based Likelihood: -45316.960348 tree written to file /home/owner/Dropbox/methods/raxml_pbs_files/run2/new_raxml_analysis_aug23/RAxML_result.T13.RUN.0
+Inference[1] final GAMMA-based Likelihood: -45316.786860 tree written to file /home/owner/Dropbox/methods/raxml_pbs_files/run2/new_raxml_analysis_aug23/RAxML_result.T13.RUN.1
+Inference[2] final GAMMA-based Likelihood: -45316.786831 tree written to file /home/owner/Dropbox/methods/raxml_pbs_files/run2/new_raxml_analysis_aug23/RAxML_result.T13.RUN.2
+Inference[3] final GAMMA-based Likelihood: -45316.960348 tree written to file /home/owner/Dropbox/methods/raxml_pbs_files/run2/new_raxml_analysis_aug23/RAxML_result.T13.RUN.3
+Inference[4] final GAMMA-based Likelihood: -45316.786831 tree written to file /home/owner/Dropbox/methods/raxml_pbs_files/run2/new_raxml_analysis_aug23/RAxML_result.T13.RUN.4
+Inference[5] final GAMMA-based Likelihood: -45316.786831 tree written to file /home/owner/Dropbox/methods/raxml_pbs_files/run2/new_raxml_analysis_aug23/RAxML_result.T13.RUN.5
+Inference[6] final GAMMA-based Likelihood: -45316.960348 tree written to file /home/owner/Dropbox/methods/raxml_pbs_files/run2/new_raxml_analysis_aug23/RAxML_result.T13.RUN.6
+Inference[7] final GAMMA-based Likelihood: -45316.960348 tree written to file /home/owner/Dropbox/methods/raxml_pbs_files/run2/new_raxml_analysis_aug23/RAxML_result.T13.RUN.7
+Inference[8] final GAMMA-based Likelihood: -45316.960348 tree written to file /home/owner/Dropbox/methods/raxml_pbs_files/run2/new_raxml_analysis_aug23/RAxML_result.T13.RUN.8
+Inference[9] final GAMMA-based Likelihood: -45316.786831 tree written to file /home/owner/Dropbox/methods/raxml_pbs_files/run2/new_raxml_analysis_aug23/RAxML_result.T13.RUN.9
+Inference[10] final GAMMA-based Likelihood: -45316.960348 tree written to file /home/owner/Dropbox/methods/raxml_pbs_files/run2/new_raxml_analysis_aug23/RAxML_result.T13.RUN.10
+Inference[11] final GAMMA-based Likelihood: -45316.786831 tree written to file /home/owner/Dropbox/methods/raxml_pbs_files/run2/new_raxml_analysis_aug23/RAxML_result.T13.RUN.11
+Inference[12] final GAMMA-based Likelihood: -45316.960348 tree written to file /home/owner/Dropbox/methods/raxml_pbs_files/run2/new_raxml_analysis_aug23/RAxML_result.T13.RUN.12
+Inference[13] final GAMMA-based Likelihood: -45316.786831 tree written to file /home/owner/Dropbox/methods/raxml_pbs_files/run2/new_raxml_analysis_aug23/RAxML_result.T13.RUN.13
+Inference[14] final GAMMA-based Likelihood: -45316.960348 tree written to file /home/owner/Dropbox/methods/raxml_pbs_files/run2/new_raxml_analysis_aug23/RAxML_result.T13.RUN.14
+Inference[15] final GAMMA-based Likelihood: -45316.960348 tree written to file /home/owner/Dropbox/methods/raxml_pbs_files/run2/new_raxml_analysis_aug23/RAxML_result.T13.RUN.15
+Inference[16] final GAMMA-based Likelihood: -45316.786831 tree written to file /home/owner/Dropbox/methods/raxml_pbs_files/run2/new_raxml_analysis_aug23/RAxML_result.T13.RUN.16
+Inference[17] final GAMMA-based Likelihood: -45316.786831 tree written to file /home/owner/Dropbox/methods/raxml_pbs_files/run2/new_raxml_analysis_aug23/RAxML_result.T13.RUN.17
+Inference[18] final GAMMA-based Likelihood: -45316.960348 tree written to file /home/owner/Dropbox/methods/raxml_pbs_files/run2/new_raxml_analysis_aug23/RAxML_result.T13.RUN.18
+Inference[19] final GAMMA-based Likelihood: -45316.960348 tree written to file /home/owner/Dropbox/methods/raxml_pbs_files/run2/new_raxml_analysis_aug23/RAxML_result.T13.RUN.19
+
+
+Starting final GAMMA-based thorough Optimization on tree 16 likelihood -45316.786831 .... 
+
+Final GAMMA-based Score of best tree -45316.786831
+
+Program execution info written to /home/owner/Dropbox/methods/raxml_pbs_files/run2/new_raxml_analysis_aug23/RAxML_info.T13
+Best-scoring ML tree written to: /home/owner/Dropbox/methods/raxml_pbs_files/run2/new_raxml_analysis_aug23/RAxML_bestTree.T13
+
+Overall execution time: 3536.637424 secs or 0.982399 hours or 0.040933 days
+
