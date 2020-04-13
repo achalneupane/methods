@@ -1,6 +1,3 @@
-#mkdir GATK_tutorial
-#cd GATK_tutorial
-
 srun -N 2 --cpus-per-task=30 --time=5:00:00 --partition=compute --pty bash
 
 
